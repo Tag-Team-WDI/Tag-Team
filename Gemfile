@@ -46,3 +46,6 @@ group :development do
   gem 'spring'
 end
 
+#faker gem to generate fake information
+gem 'faker'
+
