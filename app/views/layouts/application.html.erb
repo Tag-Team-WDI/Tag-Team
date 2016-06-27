@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TagTeamApp</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+  <title>Tag</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Tag</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sign Up</a></li>
+          <li><a href="badges.html">Log In</a></li>
+          <li><a href="collapsible.html">Log Out</a></li>
+          <li><a href="collapsible.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
 <%= yield %>
 
 </body>
