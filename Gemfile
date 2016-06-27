@@ -46,3 +46,4 @@ group :development do
   gem 'spring'
 end
 
+gem "factory_girl_rails", "~> 4.0"
