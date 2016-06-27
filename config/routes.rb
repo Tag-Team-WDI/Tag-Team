@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   root to: "users#index"
   #user routes
   resources :users
-  get "sign_in", to: "sessions#new"
+
   #session routes
+  get "sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
+  delete "/logout", to:"sessions#delete"
+
   #art routes
   resources :arts
   #tags routes
