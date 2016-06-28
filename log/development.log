@@ -880,3 +880,5 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
   [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
 >>>>>>> seed
 >>>>>>> master
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
