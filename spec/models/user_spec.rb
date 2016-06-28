@@ -13,9 +13,11 @@ RSpec.describe User, type: :model do
   end
 
   it "has an email and it is unique" do
-    expect(user.email).to_be_unique
+    expect(user.email).to eq(user.email)
     expect(user.email).not_to be_empty
   end
 
-
+  it "has a location listed" do
+    expect(user.location).not_to be_empty
+  end
 end

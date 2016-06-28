@@ -189,3 +189,76 @@
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Allan"], ["last_name", "Balistreri"], ["password_digest", "$2a$04$QK5M1SPKYKjbYuv7iDCk5uluvJroK.Ro04t7dH89QA6YcKd6jVo1i"], ["email", "nicole_mccullough@murphy.biz"], ["created_at", "2016-06-28 00:13:43.851592"], ["updated_at", "2016-06-28 00:13:43.851592"]]
   [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kennith@bayer.net' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Bailey"], ["last_name", "Kutch"], ["password_digest", "$2a$04$MIcdKYpiHhIgWbspNoxFPO5zL1CVk8gzySIltR/CRtFuwBNSzLVP6"], ["email", "kennith@bayer.net"], ["created_at", "2016-06-28 00:56:28.968054"], ["updated_at", "2016-06-28 00:56:28.968054"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'clotilde@kuvalis.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Stephany"], ["last_name", "Roberts"], ["password_digest", "$2a$04$Qku8l9y3CtjnD0pl6Fy22ejxHoFGIGgF.tpPBDl65XFCT86jzbCOm"], ["email", "clotilde@kuvalis.org"], ["created_at", "2016-06-28 00:56:28.974096"], ["updated_at", "2016-06-28 00:56:28.974096"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'frankie.muller@baumbachwiza.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Curt"], ["last_name", "Labadie"], ["password_digest", "$2a$04$Ou7XiBVDfkj5OlOilaqDYuvpm2S4Tmm4.NQ05HR1NAANIjBH1YFPi"], ["email", "frankie.muller@baumbachwiza.com"], ["created_at", "2016-06-28 00:56:28.980041"], ["updated_at", "2016-06-28 00:56:28.980041"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'eduardo@hansenhackett.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Favian"], ["last_name", "Gerlach"], ["password_digest", "$2a$04$AF8rCr0sS5e.8KPCN/0tCuvnI/ZNB3j/507TU445OewogpJC6yuxq"], ["email", "eduardo@hansenhackett.com"], ["created_at", "2016-06-28 00:59:13.560268"], ["updated_at", "2016-06-28 00:59:13.560268"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rita@borerullrich.biz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Kiara"], ["last_name", "Rosenbaum"], ["password_digest", "$2a$04$.Q2.DyIqHQJs/hDZjMBw2ehJQwIFVu9wy.2HBUwP1fp/RcAwlmj.i"], ["email", "rita@borerullrich.biz"], ["created_at", "2016-06-28 00:59:13.565788"], ["updated_at", "2016-06-28 00:59:13.565788"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'austin_jakubowski@zulauf.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Eddie"], ["last_name", "Lind"], ["password_digest", "$2a$04$AvbQXNL8cd9gf0b08n03feeA/ATpopzlpfIEIg1DdYbgkCKZUzCoe"], ["email", "austin_jakubowski@zulauf.net"], ["created_at", "2016-06-28 00:59:13.573701"], ["updated_at", "2016-06-28 00:59:13.573701"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mandy_auer@homenickjones.org' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Mikayla"], ["last_name", "Mayer"], ["password_digest", "$2a$04$GusVHlXUF28InRkqSdlYo.2wdxKoML64VCgMePoFEjdj22f3YgUdG"], ["email", "mandy_auer@homenickjones.org"], ["created_at", "2016-06-28 00:59:50.532938"], ["updated_at", "2016-06-28 00:59:50.532938"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jarred@lynchdouglas.io' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Franz"], ["last_name", "Mosciski"], ["password_digest", "$2a$04$YwC67MrfidqG3OCgJLqRpuhvDc.25.Oq4McmV/luYJIqEnoTGyOZ6"], ["email", "jarred@lynchdouglas.io"], ["created_at", "2016-06-28 00:59:50.539574"], ["updated_at", "2016-06-28 00:59:50.539574"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'roberto@stoltenbergortiz.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Providenci"], ["last_name", "Cormier"], ["password_digest", "$2a$04$zIQ9cs0pAQdKfa4gs3NLSe0LnSI7SJvpFlkAVujesnrGFUWqMecpa"], ["email", "roberto@stoltenbergortiz.net"], ["created_at", "2016-06-28 00:59:50.545977"], ["updated_at", "2016-06-28 00:59:50.545977"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dominic_mante@berge.org' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Stuart"], ["last_name", "Goyette"], ["password_digest", "$2a$04$1je9WlsNzEUJdyHnlHnb7e7yujQ1CC8FnUC/6JcSdF.SdQw3nYPDm"], ["email", "dominic_mante@berge.org"], ["created_at", "2016-06-28 01:01:08.307204"], ["updated_at", "2016-06-28 01:01:08.307204"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'albertha.wisoky@wolfcollier.io' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Jolie"], ["last_name", "Rowe"], ["password_digest", "$2a$04$jJzZUTDKNaczptiDfrXC/.Moo4aUAPien0E878T5I03w1evJadHxK"], ["email", "albertha.wisoky@wolfcollier.io"], ["created_at", "2016-06-28 01:01:08.313683"], ["updated_at", "2016-06-28 01:01:08.313683"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'johnathan@larson.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Blake"], ["last_name", "Hilpert"], ["password_digest", "$2a$04$1fEm7Nei94LJoe2Gv0yrC.ZBm/iJvYxq6vVTq44STOvDqIlHuaL0G"], ["email", "johnathan@larson.com"], ["created_at", "2016-06-28 01:01:08.320287"], ["updated_at", "2016-06-28 01:01:08.320287"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'caie@bartoletti.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Shaun"], ["last_name", "Bashirian"], ["password_digest", "$2a$04$oXs3s.aC6hUvUmyQcTvZi.CsZvUDBgERBMYxWYlkKqy45Xoemyxkq"], ["email", "caie@bartoletti.net"], ["created_at", "2016-06-28 01:01:08.325295"], ["updated_at", "2016-06-28 01:01:08.325295"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'janick@hauckkonopelski.net' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Franz"], ["last_name", "Upton"], ["password_digest", "$2a$04$.rV4uYWa5bL77/wgqCEK9uQHeCF2g.TuPWcS1C/7m3XOk33STEA86"], ["email", "janick@hauckkonopelski.net"], ["created_at", "2016-06-28 01:01:30.303330"], ["updated_at", "2016-06-28 01:01:30.303330"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'alexys.stanton@robertsmoriette.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Domenica"], ["last_name", "Jenkins"], ["password_digest", "$2a$04$gq1FwKhImhdZTC5g21QZluvPWbadKTU7xNpyy41KId2DDr8fdl0US"], ["email", "alexys.stanton@robertsmoriette.com"], ["created_at", "2016-06-28 01:01:30.310128"], ["updated_at", "2016-06-28 01:01:30.310128"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sofia@lind.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Deon"], ["last_name", "Jerde"], ["password_digest", "$2a$04$gy/sMbtsOONd1Xnr3rMsLunCm6eJd1DAoS9Hq1PCn/Y/1YfkF2fXG"], ["email", "sofia@lind.org"], ["created_at", "2016-06-28 01:01:30.316424"], ["updated_at", "2016-06-28 01:01:30.316424"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tracy_schimmel@glovermarquardt.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Emerson"], ["last_name", "Bruen"], ["password_digest", "$2a$04$ubGuUV8Ogcr7N5F8DUgtoep60QLKUKWhiTB8SubHIUzdV2yzGcUOG"], ["email", "tracy_schimmel@glovermarquardt.net"], ["created_at", "2016-06-28 01:01:30.322121"], ["updated_at", "2016-06-28 01:01:30.322121"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
