@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+#errors {
+  padding-top: 10px;
+  color:red;
+}

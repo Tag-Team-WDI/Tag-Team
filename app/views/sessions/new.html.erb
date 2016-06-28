@@ -1,3 +1,4 @@
+<div class="container"
 <%= form_for @user, url: "/sessions", method: "post" do |f| %>
   <div>
     <%= f.text_field :email, placeholder: "Email" %>
@@ -5,5 +6,12 @@
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
-  <%= f.submit "Sign In" %>
+
+
+  <button class="btn waves-effect waves-light pink">
+    <%= f.submit "Sign In" %>
+    <i class="material-icons right">send</i>
+  </button>
+
 <% end %>
+</div>
