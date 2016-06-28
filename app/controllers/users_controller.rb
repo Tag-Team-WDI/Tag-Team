@@ -37,12 +37,25 @@ class UsersController < ApplicationController
   end
 
 
+
+  def index
+    @user = Post.all
+    if params[:search]
+      @posts = Post.search(params[:search]).order("created_at DESC")
+    else
+      @posts = Post.all.order('created_at DESC')
+    end
+  end
+
+
   def update
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
     if @user.save
-       redirect_to "/users/#{@user.id}"
+      flash[:notice] = "Profile Updated!"
+      redirect_to "/users/#{@user.id}"
     else
+      flash[:error] = @user.errors.full_messages.join(", ")
       redirect_to "/"
   end
 end
