@@ -1,2 +1,10 @@
 <h1>This is the Show Page for users </h1>
 <p>Welcome <%= @user.first_name %></p>
+
+
+
+<img class="responsive-img" id="profileImg" src= "<%= @user.image %>" class="profileImage">
+
+
+<h5><%= link_to "Edit", edit_user_path(@user.id) %></h5>
+  	
