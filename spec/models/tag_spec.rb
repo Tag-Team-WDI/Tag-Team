@@ -1,5 +1,13 @@
 require 'rails_helper'
-
 RSpec.describe Tag, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:tag) { FactoryGirl.create(:tag)}
+  it "has a art_id from tag " do
+    expect(tag.art_id).to be_truthy
+  end
+  it "has a user_id from tag" do
+    expect(tag.user_id).to be_truthy
+  end
+  it "has a category from a user" do
+    expect(tag.category).not_to be_empty
+  end
 end
