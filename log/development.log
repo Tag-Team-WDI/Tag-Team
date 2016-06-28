@@ -9425,3 +9425,112 @@ Processing by UsersController#edit as HTML
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 22]]
 Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
   [1m[35mUser Load (8.4ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for ::1 at 2016-06-28 10:40:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 335ms (Views: 318.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 10:41:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 274ms (Views: 265.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-28 10:41:46 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2016-06-28 10:41:56 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4R67TiM9hbkG2GUkoZh3Ld4jhQEg4n1C6p/74WbMkvdJGMdF6GPrcc/s0X1LdKfd6NqqQaiJ27i8ZpRh/um9aw==", "user"=>{"first_name"=>"Min", "last_name"=>"Kim", "location"=>"San Francisco", "email"=>"hello@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'hello@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Min"], ["last_name", "Kim"], ["email", "hello@gmail.com"], ["location", "San Francisco"], ["password_digest", "$2a$10$XqJOSvOklOY.eshZFedXxesVCdVwq5N4wSrdth.uHJXEZlwHFdMSq"], ["created_at", "2016-06-28 17:41:56.470874"], ["updated_at", "2016-06-28 17:41:56.470874"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 89ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 10:41:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 34ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/23/edit" for ::1 at 2016-06-28 10:42:04 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered users/edit.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/23" for ::1 at 2016-06-28 10:42:37 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8N+y9UpTTkmKoLCEzGCplQEjKOQTiQkJyaajlzCd7aZY2c7+gQ0ggUOUBN0mjHllN9oHpJvir/OfX8wXqLjCOg==", "user"=>{"first_name"=>"Min", "last_name"=>"Kim", "email"=>"hello@gmail.com", "location"=>"San Francisco", "image"=>"https://ucarecdn.com/44fcdd70-53c8-4729-875c-17388bb1212b/"}, "commit"=>"Update Profile", "id"=>"23"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'hello@gmail.com' AND "users"."id" != 23) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "image" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["image", "https://ucarecdn.com/44fcdd70-53c8-4729-875c-17388bb1212b/"], ["updated_at", "2016-06-28 17:42:37.302903"], ["id", 23]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'hello@gmail.com' AND "users"."id" != 23) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 10:42:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 10:42:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-06-28 10:43:11 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-06-28 10:43:18 -0700
+Processing by SessionsController#delete as HTML
+  Parameters: {"authenticity_token"=>"eqxPQiWhVsDekqOmhtK2FKlwmqWJCWpHuut4jaIzJfLSqjNJ7v84CBemF/9sPmbkn4m15QFizL3sEhcNOhYKbg=="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-28 10:43:18 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 10:43:26 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
