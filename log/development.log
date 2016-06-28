@@ -4044,3 +4044,103 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
 >>>>>>> c2ab301db86cc79eab697b769207b623d727ff92
+
+
+Started GET "/" for ::1 at 2016-06-27 17:38:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb___3858189526338642010_70238437068260'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.6ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.1ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/minkim/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'madyson@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Julio"], ["last_name", "Emard"], ["email", "madyson@yahoo.com"], ["password_digest", "$2a$10$GUIcKV.Jv4t9qgg0g/4StehiG9D2nLjaTmDVXGst6vD1EkP6HISnC"], ["location", "San Francisco"], ["created_at", "2016-06-28 00:48:20.489096"], ["updated_at", "2016-06-28 00:48:20.489096"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jamison@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Rodger"], ["last_name", "Mohr"], ["email", "jamison@hotmail.com"], ["password_digest", "$2a$10$MgXFBIPMbxXP0aq5bnwn4OznuZv8Psv6v1Jo3me49walSSntPFtlS"], ["location", "San Francisco"], ["created_at", "2016-06-28 00:48:20.556448"], ["updated_at", "2016-06-28 00:48:20.556448"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'geo_walter@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Jeremie"], ["last_name", "Smith"], ["email", "geo_walter@hotmail.com"], ["password_digest", "$2a$10$bQ0zE5NR5mGnwW1YbgRU8O5A1TDQ35wozyZvUPNri9vsShLLoFRB2"], ["location", "San Francisco"], ["created_at", "2016-06-28 00:48:20.624456"], ["updated_at", "2016-06-28 00:48:20.624456"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rodolfo.macgyver@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Elizabeth"], ["last_name", "Murray"], ["email", "rodolfo.macgyver@hotmail.com"], ["password_digest", "$2a$10$OUNL6hdQtIXdKqiYxZ.HTuBgtru.SYX21LonLWxv1JA1x3Etyv216"], ["location", "San Francisco"], ["created_at", "2016-06-28 00:48:20.694882"], ["updated_at", "2016-06-28 00:48:20.694882"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'giovanny@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Reba"], ["last_name", "Little"], ["email", "giovanny@yahoo.com"], ["password_digest", "$2a$10$MgtnN7TN/ua20UqYxzonl.gSf.HyhmCe8.5dzfXNMbbZmu3sHdCK."], ["location", "San Francisco"], ["created_at", "2016-06-28 00:48:20.762648"], ["updated_at", "2016-06-28 00:48:20.762648"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2016-06-27 17:48:45 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-27 17:48:45 -0700
+
+
+Started DELETE "/logout" for ::1 at 2016-06-27 17:48:48 -0700
+Processing by SessionsController#delete as HTML
+  Parameters: {"authenticity_token"=>"qfGmOcZDUc7Y8u9LAPsuxXsfNaXoYAP8/neO1Z+NrazQg3AnbgIlZtfQRj4oNK/zXrAH+3Hpyn/nhqUYoeFvBg=="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-27 17:48:48 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-06-27 17:48:55 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-27 17:49:02 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-27 17:49:06 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/Z8b4i4SDSUuF19fy4jEvUUA59xCcYZOEloE2KXo9zihKpxIPk8nJua9AhX4aIk0LsxweiAD5ohuEPeXPthdg==", "user"=>{"first_name"=>"d", "last_name"=>"", "location"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 17ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-27 17:49:06 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
