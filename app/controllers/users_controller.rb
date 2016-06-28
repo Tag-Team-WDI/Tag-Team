@@ -39,20 +39,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if current_user == @user
-      @user.update_attributes(user_params)
-      if @user.save
-        flash[:notice] = "Profile Updated!"
-        redirect_to "/users/#{@user.id}"
-      else
-        flash[:error] = @user.errors.full_messages.join(", ")
-        redirect_to "/users/#{@user.id}/edit"
-      end
+    @user.update_attributes(user_params)
+    if @user.save
+       redirect_to "/users/#{@user.id}"
     else
-      flash[:notice] = "Bad Hacker!"
       redirect_to "/"
-    end
   end
+end
 
 
   private

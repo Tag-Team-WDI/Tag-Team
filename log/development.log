@@ -9595,3 +9595,92 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
 >>>>>>> 7fa2bbc6b3d1a0804011f6ff2248ab7bd0958fb3
+  [1m[36mUser Load (54.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 12:02:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (12.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/camilacrawford/GA_Training/Tag-Team/app/controllers/users_controller.rb:66: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/users_controller.rb:66: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (36.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (202.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (173.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (358.9ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 12:03:08 -0700
+
+ActionController::RoutingError (undefined local variable or method `user_params' for UsersController:Class):
+  app/controllers/users_controller.rb:45:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (155.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (488.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (254.9ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 12:09:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1654ms (Views: 1005.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/23/edit" for ::1 at 2016-06-28 12:09:21 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered users/edit.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/23" for ::1 at 2016-06-28 12:09:28 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8nUSsyt7jOZozDFVpYaf4PE2NthEcvdVVklyIRspBrn9jaVM6SI6qpA285Me/zpSSUIjUbPoNhrMdcFERpzWQ==", "user"=>{"first_name"=>"Mrs. Anthony", "last_name"=>"Kim", "email"=>"hello@gmail.com", "location"=>"San Francisco", "image"=>"https://ucarecdn.com/44fcdd70-53c8-4729-875c-17388bb1212b/"}, "commit"=>"Update Profile", "id"=>"23"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'hello@gmail.com' AND "users"."id" != 23) LIMIT 1
+  [1m[36mSQL (18.3ms)[0m  [1mUPDATE "users" SET "first_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "Mrs. Anthony"], ["updated_at", "2016-06-28 19:09:28.379199"], ["id", 23]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'hello@gmail.com' AND "users"."id" != 23) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 118ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/users/23" for ::1 at 2016-06-28 12:09:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
