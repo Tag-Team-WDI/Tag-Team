@@ -1,11 +1,425 @@
+<<<<<<< HEAD
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+=======
   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
   [1m[35m (0.6ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
   [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
   [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
   [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
   [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+>>>>>>> master
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627175315')
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627174708')[0m
   [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627175101')
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$EgfsISgPGX.vFalBY97CN.XynOvYSlJV57lQidipJeZ496XtIjRnK"], ["created_at", "2016-06-27 23:10:08.023647"], ["updated_at", "2016-06-27 23:10:08.023647"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$LLpp1wkeY/rPWsMjYXiWl.IQNKn2kMogzfXH1coYA2OxbVsj84eUm"], ["created_at", "2016-06-27 23:11:04.801449"], ["updated_at", "2016-06-27 23:11:04.801449"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$lKQwRTQIUuRgC9lsS0U71uKrcWmixlmsNyRctZflXq6OQm3A9iaSS"], ["created_at", "2016-06-27 23:11:28.310213"], ["updated_at", "2016-06-27 23:11:28.310213"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$cGZvdEKeexE1A7Bje4adYuGPf2MyyMAwaFsdouPzTUyTtMu2gg3R."], ["created_at", "2016-06-27 23:22:13.346279"], ["updated_at", "2016-06-27 23:22:13.346279"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$F7X2cRtRXWfO6eI.a5LLe.iEPQI1tN1m3P2cPzBKb1vW/9RUNmJc2"], ["created_at", "2016-06-27 23:27:11.148151"], ["updated_at", "2016-06-27 23:27:11.148151"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$LuM.IavBwpJ./UFIKfZ54u07T6tIh7hxdEiQk9Xq/4HUU/YU8EL7i"], ["created_at", "2016-06-27 23:31:30.996454"], ["updated_at", "2016-06-27 23:31:30.996454"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["password_digest", "$2a$04$pXRXp40WGX6JQTWRLFoUleA1VugojEuQnx.IOX4AEUNdi0q6fMufu"], ["created_at", "2016-06-27 23:33:31.182072"], ["updated_at", "2016-06-27 23:33:31.182072"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Jackie"], ["password_digest", "$2a$04$JolkUvyXujMHF8UGho1xj.1PwbWLWJpjzEl/gz4FaDVY7SdAKkZvG"], ["created_at", "2016-06-27 23:43:26.905619"], ["updated_at", "2016-06-27 23:43:26.905619"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Frida"], ["password_digest", "$2a$04$7lDz4FZRkSPc6Yi9e.v08eOra4QoR3C/y4R5zVsm8L22Te1qP..s."], ["created_at", "2016-06-27 23:44:46.571094"], ["updated_at", "2016-06-27 23:44:46.571094"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Verner"], ["password_digest", "$2a$04$3Vcn40SMRdu.0ZUy.A9Hw..ClppZbUY92uxQoujIMun3shYswGLVq"], ["created_at", "2016-06-27 23:44:46.578499"], ["updated_at", "2016-06-27 23:44:46.578499"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Mabelle"], ["password_digest", "$2a$04$awqsgrR3yh3t5.DR3GJ91Od7uBzXEbEzFoMs4KTjxSoWPeNpNQwFC"], ["created_at", "2016-06-27 23:45:09.804125"], ["updated_at", "2016-06-27 23:45:09.804125"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Donavon"], ["password_digest", "$2a$04$Pk/POXx.mNL4eAUFUlL4r.x4EvMSlLAyHNxFwWzwU9PwBGki/qDZO"], ["created_at", "2016-06-27 23:45:30.415901"], ["updated_at", "2016-06-27 23:45:30.415901"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Amber"], ["password_digest", "$2a$04$MmPGrxjEvjKAXdTQvR6NV.VkhQUWcAt/ZQBDUOCjrvyACWOouSr32"], ["created_at", "2016-06-27 23:45:30.423233"], ["updated_at", "2016-06-27 23:45:30.423233"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Odell"], ["password_digest", "$2a$04$f4RcQOfFRWy77JHAf4N1h.3epGi7G3sno8YkRRjh0qLgWkPOReX/m"], ["created_at", "2016-06-27 23:46:35.346248"], ["updated_at", "2016-06-27 23:46:35.346248"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Zakary"], ["password_digest", "$2a$04$k1IkyCrBPeeyAcKlKoSqWePvh6y18iMQgoCihjtOGujOLQ.Q3aaPK"], ["created_at", "2016-06-27 23:46:35.353735"], ["updated_at", "2016-06-27 23:46:35.353735"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Terry"], ["last_name", "Johnston"], ["password_digest", "$2a$04$p8UIdHcFOHkfEwf9bSvFE.81g0lmCfohqfXGk3.YO6ECF6EuvOEJS"], ["created_at", "2016-06-27 23:47:02.570623"], ["updated_at", "2016-06-27 23:47:02.570623"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Myrtis"], ["last_name", "Pacocha"], ["password_digest", "$2a$04$j2tR1UYDVpsfot0fdEaZt.kKh1qH0adddOS5qt9HS7D2yBROE.kDe"], ["created_at", "2016-06-27 23:47:02.578858"], ["updated_at", "2016-06-27 23:47:02.578858"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Marcelo"], ["last_name", "Goldner"], ["password_digest", "$2a$04$IL3ArIF8m1jji3DHG7fzPu7g2W9hynoOkYcuSzPPiYhofp3YXlGiS"], ["created_at", "2016-06-27 23:47:23.736781"], ["updated_at", "2016-06-27 23:47:23.736781"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ruthe"], ["last_name", "Lueilwitz"], ["password_digest", "$2a$04$M73fd.5GcCQbnbZEetLk0eMHSk1SA7xMMRMNpXTzlDVu0HqyAY5NC"], ["created_at", "2016-06-27 23:47:23.744935"], ["updated_at", "2016-06-27 23:47:23.744935"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Lila"], ["last_name", "Hammes"], ["password_digest", "$2a$04$WMViGE6UwMZ5cW7URQMgw.8.xVgJPNPYXu6SCtyLmIjBJP623MoiO"], ["created_at", "2016-06-27 23:49:47.263187"], ["updated_at", "2016-06-27 23:49:47.263187"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Mara"], ["last_name", "McGlynn"], ["password_digest", "$2a$04$ghhVcKq81ZkU56bNf4ClDuJpGinC0CAzJFe/D8KAEOJaR9TBOJc0O"], ["created_at", "2016-06-27 23:49:47.271661"], ["updated_at", "2016-06-27 23:49:47.271661"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Frank"], ["last_name", "Sporer"], ["password_digest", "$2a$04$aDzuZT7VralbGwyHSxpINuoDaZGl5nFuL68dkA8j9zuYOvXRFWowW"], ["created_at", "2016-06-27 23:51:39.247012"], ["updated_at", "2016-06-27 23:51:39.247012"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ara"], ["last_name", "Brown"], ["password_digest", "$2a$04$YLU2bD6rkYEISZ40wEEBxOeMWLybqmMBHu0VbCaGj96kJyqJQgKCy"], ["created_at", "2016-06-27 23:51:39.255041"], ["updated_at", "2016-06-27 23:51:39.255041"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Darwin"], ["last_name", "Cremin"], ["password_digest", "$2a$04$jcosgZlnW8SS95k.kl4lDe4iZsP4bsohnNTv9Zx3RT9dCwJbCnH4C"], ["created_at", "2016-06-27 23:51:39.259868"], ["updated_at", "2016-06-27 23:51:39.259868"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["last_name", "Breitenberg"], ["password_digest", "$2a$04$iHLjDpW5WJx8dq9ZC4RFcO5RUu9HcHJCZT6.ivAyxed2lOvBNiBx."], ["created_at", "2016-06-27 23:52:08.501142"], ["updated_at", "2016-06-27 23:52:08.501142"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["last_name", "Gaylord"], ["password_digest", "$2a$04$6YTyRZ.hMDwT.vks3031huUSB3VHN05gOE8bFGt1/YLJ9Uw0pXeP6"], ["created_at", "2016-06-27 23:52:27.749477"], ["updated_at", "2016-06-27 23:52:27.749477"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["last_name", "Weimann"], ["password_digest", "$2a$04$OR2vNWRuWufuGaKtr92Loess9stCoE4U4U5V1RzbkU.1x8sTXcIoC"], ["created_at", "2016-06-27 23:53:19.485135"], ["updated_at", "2016-06-27 23:53:19.485135"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Madisen"], ["last_name", "Cassin"], ["password_digest", "$2a$04$duM6BVyS/0w87P1KGl3iXOkl4CoM9pkOdDgQhsxnx5WzmlTrRbUNa"], ["created_at", "2016-06-27 23:53:34.923000"], ["updated_at", "2016-06-27 23:53:34.923000"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Emiliano"], ["last_name", "Willms"], ["password_digest", "$2a$04$Syk/HQYjNBFm/XexiYEe/u5NKdDU.HvR0g9gNqJFG.n85e3kPpSBC"], ["created_at", "2016-06-28 00:10:51.311465"], ["updated_at", "2016-06-28 00:10:51.311465"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Alessandra"], ["last_name", "Crona"], ["password_digest", "$2a$04$Yj46SRWpxNPdIRmrRWP03.SnOlbDMK1mLk7rVUmTshvGgkeBhHP9W"], ["created_at", "2016-06-28 00:10:51.318870"], ["updated_at", "2016-06-28 00:10:51.318870"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Odie"], ["last_name", "McDermott"], ["password_digest", "$2a$04$IU8ECn5kw1IhwLXq.GPFLOtE78EMrADWHnoVC5b7f99Jn61Xyg9Xe"], ["created_at", "2016-06-28 00:11:03.806529"], ["updated_at", "2016-06-28 00:11:03.806529"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Claire"], ["last_name", "Olson"], ["password_digest", "$2a$04$Guyhc/4//PEBUp7lsMN9JeNX8e5pX8lXaUEw4FjVo4fRMuo4.FRTu"], ["created_at", "2016-06-28 00:11:03.815207"], ["updated_at", "2016-06-28 00:11:03.815207"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Lenny"], ["last_name", "Fay"], ["password_digest", "$2a$04$PSyV2ZivgkRdFMdcbEjuKe4Fidqlf65ICvFO1vnIFk8qmJq.wTTJi"], ["created_at", "2016-06-28 00:11:03.821547"], ["updated_at", "2016-06-28 00:11:03.821547"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Brent"], ["last_name", "Lowe"], ["password_digest", "$2a$04$DUW678okyXPyA9FuqwP3KuCd1ZiNjvvorxjbY30iQCTtZ1zt9clDq"], ["email", "janelle.marks@langosh.org"], ["created_at", "2016-06-28 00:12:25.043795"], ["updated_at", "2016-06-28 00:12:25.043795"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Remington"], ["last_name", "Kris"], ["password_digest", "$2a$04$bGMRSkUh3xSq4yR4rSgYTeSV5kZUO.C13PbRjFDYeoMNs.EHooRbm"], ["email", "myrl@schadenbednar.org"], ["created_at", "2016-06-28 00:12:25.050830"], ["updated_at", "2016-06-28 00:12:25.050830"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kenton"], ["last_name", "Tremblay"], ["password_digest", "$2a$04$cGdfULMUq6fc5.4AJ5N.3en7mJwrywtGW7d61zrnnOxRSfLixJ5b."], ["email", "nicklaus@herzog.biz"], ["created_at", "2016-06-28 00:12:25.055851"], ["updated_at", "2016-06-28 00:12:25.055851"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kelli"], ["last_name", "Schinner"], ["password_digest", "$2a$04$evkivcVJQJaS1bDFFNSFQeYnBOvcUdNWVTVd8Ct1pw3el6.g6h4D2"], ["email", "lucile@handemmerich.biz"], ["created_at", "2016-06-28 00:13:43.836364"], ["updated_at", "2016-06-28 00:13:43.836364"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Kelsie"], ["last_name", "Gusikowski"], ["password_digest", "$2a$04$dcxh.AjTmffQlon7upB.Hul4NYQONrD6Sp5uEeyt5JE9Sms58eyWK"], ["email", "neil.collins@beattyrobel.biz"], ["created_at", "2016-06-28 00:13:43.845697"], ["updated_at", "2016-06-28 00:13:43.845697"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Allan"], ["last_name", "Balistreri"], ["password_digest", "$2a$04$QK5M1SPKYKjbYuv7iDCk5uluvJroK.Ro04t7dH89QA6YcKd6jVo1i"], ["email", "nicole_mccullough@murphy.biz"], ["created_at", "2016-06-28 00:13:43.851592"], ["updated_at", "2016-06-28 00:13:43.851592"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kennith@bayer.net' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Bailey"], ["last_name", "Kutch"], ["password_digest", "$2a$04$MIcdKYpiHhIgWbspNoxFPO5zL1CVk8gzySIltR/CRtFuwBNSzLVP6"], ["email", "kennith@bayer.net"], ["created_at", "2016-06-28 00:56:28.968054"], ["updated_at", "2016-06-28 00:56:28.968054"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'clotilde@kuvalis.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Stephany"], ["last_name", "Roberts"], ["password_digest", "$2a$04$Qku8l9y3CtjnD0pl6Fy22ejxHoFGIGgF.tpPBDl65XFCT86jzbCOm"], ["email", "clotilde@kuvalis.org"], ["created_at", "2016-06-28 00:56:28.974096"], ["updated_at", "2016-06-28 00:56:28.974096"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'frankie.muller@baumbachwiza.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Curt"], ["last_name", "Labadie"], ["password_digest", "$2a$04$Ou7XiBVDfkj5OlOilaqDYuvpm2S4Tmm4.NQ05HR1NAANIjBH1YFPi"], ["email", "frankie.muller@baumbachwiza.com"], ["created_at", "2016-06-28 00:56:28.980041"], ["updated_at", "2016-06-28 00:56:28.980041"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'eduardo@hansenhackett.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Favian"], ["last_name", "Gerlach"], ["password_digest", "$2a$04$AF8rCr0sS5e.8KPCN/0tCuvnI/ZNB3j/507TU445OewogpJC6yuxq"], ["email", "eduardo@hansenhackett.com"], ["created_at", "2016-06-28 00:59:13.560268"], ["updated_at", "2016-06-28 00:59:13.560268"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rita@borerullrich.biz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Kiara"], ["last_name", "Rosenbaum"], ["password_digest", "$2a$04$.Q2.DyIqHQJs/hDZjMBw2ehJQwIFVu9wy.2HBUwP1fp/RcAwlmj.i"], ["email", "rita@borerullrich.biz"], ["created_at", "2016-06-28 00:59:13.565788"], ["updated_at", "2016-06-28 00:59:13.565788"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'austin_jakubowski@zulauf.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Eddie"], ["last_name", "Lind"], ["password_digest", "$2a$04$AvbQXNL8cd9gf0b08n03feeA/ATpopzlpfIEIg1DdYbgkCKZUzCoe"], ["email", "austin_jakubowski@zulauf.net"], ["created_at", "2016-06-28 00:59:13.573701"], ["updated_at", "2016-06-28 00:59:13.573701"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mandy_auer@homenickjones.org' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Mikayla"], ["last_name", "Mayer"], ["password_digest", "$2a$04$GusVHlXUF28InRkqSdlYo.2wdxKoML64VCgMePoFEjdj22f3YgUdG"], ["email", "mandy_auer@homenickjones.org"], ["created_at", "2016-06-28 00:59:50.532938"], ["updated_at", "2016-06-28 00:59:50.532938"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'jarred@lynchdouglas.io' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Franz"], ["last_name", "Mosciski"], ["password_digest", "$2a$04$YwC67MrfidqG3OCgJLqRpuhvDc.25.Oq4McmV/luYJIqEnoTGyOZ6"], ["email", "jarred@lynchdouglas.io"], ["created_at", "2016-06-28 00:59:50.539574"], ["updated_at", "2016-06-28 00:59:50.539574"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'roberto@stoltenbergortiz.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Providenci"], ["last_name", "Cormier"], ["password_digest", "$2a$04$zIQ9cs0pAQdKfa4gs3NLSe0LnSI7SJvpFlkAVujesnrGFUWqMecpa"], ["email", "roberto@stoltenbergortiz.net"], ["created_at", "2016-06-28 00:59:50.545977"], ["updated_at", "2016-06-28 00:59:50.545977"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dominic_mante@berge.org' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Stuart"], ["last_name", "Goyette"], ["password_digest", "$2a$04$1je9WlsNzEUJdyHnlHnb7e7yujQ1CC8FnUC/6JcSdF.SdQw3nYPDm"], ["email", "dominic_mante@berge.org"], ["created_at", "2016-06-28 01:01:08.307204"], ["updated_at", "2016-06-28 01:01:08.307204"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'albertha.wisoky@wolfcollier.io' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Jolie"], ["last_name", "Rowe"], ["password_digest", "$2a$04$jJzZUTDKNaczptiDfrXC/.Moo4aUAPien0E878T5I03w1evJadHxK"], ["email", "albertha.wisoky@wolfcollier.io"], ["created_at", "2016-06-28 01:01:08.313683"], ["updated_at", "2016-06-28 01:01:08.313683"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'johnathan@larson.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Blake"], ["last_name", "Hilpert"], ["password_digest", "$2a$04$1fEm7Nei94LJoe2Gv0yrC.ZBm/iJvYxq6vVTq44STOvDqIlHuaL0G"], ["email", "johnathan@larson.com"], ["created_at", "2016-06-28 01:01:08.320287"], ["updated_at", "2016-06-28 01:01:08.320287"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'caie@bartoletti.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Shaun"], ["last_name", "Bashirian"], ["password_digest", "$2a$04$oXs3s.aC6hUvUmyQcTvZi.CsZvUDBgERBMYxWYlkKqy45Xoemyxkq"], ["email", "caie@bartoletti.net"], ["created_at", "2016-06-28 01:01:08.325295"], ["updated_at", "2016-06-28 01:01:08.325295"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'janick@hauckkonopelski.net' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Franz"], ["last_name", "Upton"], ["password_digest", "$2a$04$.rV4uYWa5bL77/wgqCEK9uQHeCF2g.TuPWcS1C/7m3XOk33STEA86"], ["email", "janick@hauckkonopelski.net"], ["created_at", "2016-06-28 01:01:30.303330"], ["updated_at", "2016-06-28 01:01:30.303330"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'alexys.stanton@robertsmoriette.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Domenica"], ["last_name", "Jenkins"], ["password_digest", "$2a$04$gq1FwKhImhdZTC5g21QZluvPWbadKTU7xNpyy41KId2DDr8fdl0US"], ["email", "alexys.stanton@robertsmoriette.com"], ["created_at", "2016-06-28 01:01:30.310128"], ["updated_at", "2016-06-28 01:01:30.310128"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sofia@lind.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Deon"], ["last_name", "Jerde"], ["password_digest", "$2a$04$gy/sMbtsOONd1Xnr3rMsLunCm6eJd1DAoS9Hq1PCn/Y/1YfkF2fXG"], ["email", "sofia@lind.org"], ["created_at", "2016-06-28 01:01:30.316424"], ["updated_at", "2016-06-28 01:01:30.316424"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tracy_schimmel@glovermarquardt.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Emerson"], ["last_name", "Bruen"], ["password_digest", "$2a$04$ubGuUV8Ogcr7N5F8DUgtoep60QLKUKWhiTB8SubHIUzdV2yzGcUOG"], ["email", "tracy_schimmel@glovermarquardt.net"], ["created_at", "2016-06-28 01:01:30.322121"], ["updated_at", "2016-06-28 01:01:30.322121"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'christina@millerhuel.co' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Micah"], ["last_name", "Marks"], ["password_digest", "$2a$04$Ik9q1jLDGSVw6kwiIwhsueVUGLBQrjMA5eXTQqE2nyh6PUrKYetXG"], ["email", "christina@millerhuel.co"], ["location", "Lawsonmouth"], ["created_at", "2016-06-28 01:06:27.825338"], ["updated_at", "2016-06-28 01:06:27.825338"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'oliver_emmerich@bauch.net' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Hertha"], ["last_name", "Lynch"], ["password_digest", "$2a$04$l.6glwYEkSmLSqhSUbHRiuYUCG5kLmpO5cSwYX5U3djsZgbMcQ3Ae"], ["email", "oliver_emmerich@bauch.net"], ["location", "East Arianna"], ["created_at", "2016-06-28 01:06:27.831896"], ["updated_at", "2016-06-28 01:06:27.831896"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'maegan.hegmann@nadervonrueden.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Carleton"], ["last_name", "Lang"], ["password_digest", "$2a$04$pZ4CJL9TCF6Hv9FaXx1QeeMdYNiAhfjnwmMqHklP1O4D4ErUHpaDW"], ["email", "maegan.hegmann@nadervonrueden.org"], ["location", "Stoltenbergport"], ["created_at", "2016-06-28 01:06:27.839045"], ["updated_at", "2016-06-28 01:06:27.839045"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'austin.hudson@zemlakfisher.biz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Durward"], ["last_name", "Leffler"], ["password_digest", "$2a$04$NuOrxuoNYhvvIcSf2MjLzOW8jBhgtoBgW.f6Yyzagzx0Y6AhXA4Gm"], ["email", "austin.hudson@zemlakfisher.biz"], ["location", "Sauerport"], ["created_at", "2016-06-28 01:06:27.844161"], ["updated_at", "2016-06-28 01:06:27.844161"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 7], ["created_at", "2016-06-28 01:35:16.272414"], ["updated_at", "2016-06-28 01:35:16.272414"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 6], ["created_at", "2016-06-28 01:35:49.773419"], ["updated_at", "2016-06-28 01:35:49.773419"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 4], ["created_at", "2016-06-28 01:36:57.713888"], ["updated_at", "2016-06-28 01:36:57.713888"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 9], ["created_at", "2016-06-28 01:37:25.959058"], ["updated_at", "2016-06-28 01:37:25.959058"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-06-28 01:39:56.508307"], ["updated_at", "2016-06-28 01:39:56.508307"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-06-28 01:42:00.630439"], ["updated_at", "2016-06-28 01:42:00.630439"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 8], ["created_at", "2016-06-28 01:42:10.889845"], ["updated_at", "2016-06-28 01:42:10.889845"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 4], ["created_at", "2016-06-28 01:42:25.392527"], ["updated_at", "2016-06-28 01:42:25.392527"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-06-28 01:43:49.252181"], ["updated_at", "2016-06-28 01:43:49.252181"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 2], ["created_at", "2016-06-28 01:43:57.710164"], ["updated_at", "2016-06-28 01:43:57.710164"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["art_id", 3], ["created_at", "2016-06-28 01:47:46.289263"], ["updated_at", "2016-06-28 01:47:46.289263"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "created_at", "updated_at") VALUES (?, ?, ?)  [["art_id", 9], ["created_at", "2016-06-28 01:47:46.294729"], ["updated_at", "2016-06-28 01:47:46.294729"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 7], ["user_id", 8], ["created_at", "2016-06-28 01:48:15.258510"], ["updated_at", "2016-06-28 01:48:15.258510"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 7], ["user_id", 4], ["created_at", "2016-06-28 01:48:15.265483"], ["updated_at", "2016-06-28 01:48:15.265483"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 8], ["user_id", 3], ["created_at", "2016-06-28 01:48:38.830948"], ["updated_at", "2016-06-28 01:48:38.830948"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 8], ["user_id", 2], ["created_at", "2016-06-28 01:48:38.836471"], ["updated_at", "2016-06-28 01:48:38.836471"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 4], ["user_id", 9], ["created_at", "2016-06-28 01:51:00.455063"], ["updated_at", "2016-06-28 01:51:00.455063"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 1], ["user_id", 2], ["created_at", "2016-06-28 01:51:00.461154"], ["updated_at", "2016-06-28 01:51:00.461154"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 9], ["user_id", 9], ["created_at", "2016-06-28 01:51:00.463922"], ["updated_at", "2016-06-28 01:51:00.463922"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["user_id", 4], ["category", ":bento:"], ["created_at", "2016-06-28 01:51:37.222058"], ["updated_at", "2016-06-28 01:51:37.222058"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 8], ["user_id", 2], ["category", ":lollipop:"], ["created_at", "2016-06-28 01:51:37.226959"], ["updated_at", "2016-06-28 01:51:37.226959"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 9], ["user_id", 3], ["category", ":tomato:"], ["created_at", "2016-06-28 01:51:37.230193"], ["updated_at", "2016-06-28 01:51:37.230193"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 2], ["user_id", 9], ["created_at", "2016-06-28 01:53:13.263489"], ["updated_at", "2016-06-28 01:53:13.263489"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 6], ["user_id", 0], ["created_at", "2016-06-28 01:53:13.268938"], ["updated_at", "2016-06-28 01:53:13.268938"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 9], ["user_id", 8], ["created_at", "2016-06-28 01:53:13.271570"], ["updated_at", "2016-06-28 01:53:13.271570"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["user_id", 7], ["category", ":cherries:"], ["created_at", "2016-06-28 01:53:35.386289"], ["updated_at", "2016-06-28 01:53:35.386289"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 9], ["user_id", 5], ["category", ":pizza:"], ["created_at", "2016-06-28 01:53:35.392390"], ["updated_at", "2016-06-28 01:53:35.392390"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["user_id", 9], ["category", ":fork_and_knife:"], ["created_at", "2016-06-28 01:53:35.395148"], ["updated_at", "2016-06-28 01:53:35.395148"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "arts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-06-28 01:57:30.573385"], ["updated_at", "2016-06-28 01:57:30.573385"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 8], ["created_at", "2016-06-28 01:57:56.411572"], ["updated_at", "2016-06-28 01:57:56.411572"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 4], ["created_at", "2016-06-28 02:00:32.146058"], ["updated_at", "2016-06-28 02:00:32.146058"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["user_id", 1], ["category", ":icecream:"], ["created_at", "2016-06-28 02:00:39.118861"], ["updated_at", "2016-06-28 02:00:39.118861"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["user_id", 3], ["category", ":tomato:"], ["created_at", "2016-06-28 02:00:39.124406"], ["updated_at", "2016-06-28 02:00:39.124406"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "user_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["user_id", 5], ["category", ":hamburger:"], ["created_at", "2016-06-28 02:00:39.126938"], ["updated_at", "2016-06-28 02:00:39.126938"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'deion@maggioleffler.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Cornelius"], ["last_name", "Leuschke"], ["password_digest", "$2a$04$tpPda6bnfytXy7wBsaPswuxf4OzKcbUENCfZ76/aAlCHo.6qY0u.."], ["email", "deion@maggioleffler.com"], ["location", "Corkeryview"], ["created_at", "2016-06-28 02:00:51.965751"], ["updated_at", "2016-06-28 02:00:51.965751"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'elaina_wilderman@yost.co' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Rogelio"], ["last_name", "Senger"], ["password_digest", "$2a$04$QxjYazFzFV.R8rfQPgmf0.XD8c1HS7JuNkGqMnpGkssmrg.4Qu/qK"], ["email", "elaina_wilderman@yost.co"], ["location", "North Elna"], ["created_at", "2016-06-28 02:00:51.971298"], ["updated_at", "2016-06-28 02:00:51.971298"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'virgie_hettinger@collinsblock.co' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Carlo"], ["last_name", "Feest"], ["password_digest", "$2a$04$9gw.8Ren1U/.qVHwZNiAiOpNbASvPWynwHWtZmH9WuRan9/6ewiQu"], ["email", "virgie_hettinger@collinsblock.co"], ["location", "Rohanstad"], ["created_at", "2016-06-28 02:00:51.977142"], ["updated_at", "2016-06-28 02:00:51.977142"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'caie_rice@klockowatsica.io' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Caleb"], ["last_name", "Botsford"], ["password_digest", "$2a$04$An74iwGL0fiyRqHFaKdLQu96sb6FOyUoZPVgwQbng2YK9rnhLUGbm"], ["email", "caie_rice@klockowatsica.io"], ["location", "West Kileybury"], ["created_at", "2016-06-28 02:00:51.983628"], ["updated_at", "2016-06-28 02:00:51.983628"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m

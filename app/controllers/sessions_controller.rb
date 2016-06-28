@@ -14,4 +14,10 @@ class SessionsController < ApplicationController
       redirect_to "/sign_in"
     end
   end
+
+  def delete
+   logout
+   redirect_to users_path
+  end
+
 end
