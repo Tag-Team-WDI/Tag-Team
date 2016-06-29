@@ -22328,6 +22328,17 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
 >>>>>>> 65cd532b9efc72b88d55b7dfe575c90c75b86959
+<<<<<<< HEAD
+
+
+Started GET "/" for ::1 at 2016-06-28 21:58:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1331ms (Views: 242.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+=======
   [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36m (2.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -31095,3 +31106,365 @@ Processing by ArtsController#show as HTML
   [1m[35mArt Load (0.1ms)[0m  SELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1  [["id", 31]]
   Rendered arts/show.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.1ms)
+>>>>>>> c806311f660dad7ca3d2455748ddc9575ce373c9
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDescriptionToTags (20160629180226)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "tags" ADD "description" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160629180226"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovesIdFromTags (20160629180441)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "atags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "tags"
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "tags"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "atags"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "atags"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160629180441"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 18:11:17.360618"], ["updated_at", "2016-06-29 18:11:17.360618"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 18:11:17.362640"], ["updated_at", "2016-06-29 18:11:17.362640"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 18:11:17.364099"], ["updated_at", "2016-06-29 18:11:17.364099"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 18:11:17.365579"], ["updated_at", "2016-06-29 18:11:17.365579"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 18:11:17.367029"], ["updated_at", "2016-06-29 18:11:17.367029"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 18:11:17.368524"], ["updated_at", "2016-06-29 18:11:17.368524"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 18:11:17.374482"], ["updated_at", "2016-06-29 18:11:17.374482"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 18:11:17.376336"], ["updated_at", "2016-06-29 18:11:17.376336"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 18:11:17.378002"], ["updated_at", "2016-06-29 18:11:17.378002"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 18:11:17.379617"], ["updated_at", "2016-06-29 18:11:17.379617"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 18:11:17.381170"], ["updated_at", "2016-06-29 18:11:17.381170"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:11:17.382686"], ["updated_at", "2016-06-29 18:11:17.382686"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mTag Load (1.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 18:12:36.845473"], ["updated_at", "2016-06-29 18:12:36.845473"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 18:12:36.848825"], ["updated_at", "2016-06-29 18:12:36.848825"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 18:12:36.850389"], ["updated_at", "2016-06-29 18:12:36.850389"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 18:12:36.852197"], ["updated_at", "2016-06-29 18:12:36.852197"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 18:12:36.853904"], ["updated_at", "2016-06-29 18:12:36.853904"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 18:12:36.855453"], ["updated_at", "2016-06-29 18:12:36.855453"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 18:12:36.862588"], ["updated_at", "2016-06-29 18:12:36.862588"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 18:12:36.865171"], ["updated_at", "2016-06-29 18:12:36.865171"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 18:12:36.867707"], ["updated_at", "2016-06-29 18:12:36.867707"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 18:12:36.870136"], ["updated_at", "2016-06-29 18:12:36.870136"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 18:12:36.872322"], ["updated_at", "2016-06-29 18:12:36.872322"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:12:36.875123"], ["updated_at", "2016-06-29 18:12:36.875123"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mTag Load (1.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 18:13:15.937960"], ["updated_at", "2016-06-29 18:13:15.937960"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 18:13:15.941258"], ["updated_at", "2016-06-29 18:13:15.941258"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 18:13:15.942957"], ["updated_at", "2016-06-29 18:13:15.942957"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 18:13:15.944573"], ["updated_at", "2016-06-29 18:13:15.944573"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 18:13:15.946151"], ["updated_at", "2016-06-29 18:13:15.946151"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 18:13:15.947796"], ["updated_at", "2016-06-29 18:13:15.947796"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 18:13:15.953704"], ["updated_at", "2016-06-29 18:13:15.953704"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 18:13:15.955848"], ["updated_at", "2016-06-29 18:13:15.955848"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 18:13:15.957876"], ["updated_at", "2016-06-29 18:13:15.957876"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 18:13:15.959933"], ["updated_at", "2016-06-29 18:13:15.959933"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 18:13:15.961729"], ["updated_at", "2016-06-29 18:13:15.961729"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:13:15.963409"], ["updated_at", "2016-06-29 18:13:15.963409"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36mTag Load (3.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags"  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160627174708)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160627174708"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateArts (20160627175101)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160627175101"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to CreateTags (20160627175315)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160627175315"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddImageToUsers (20160628024634)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "image" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160628024634"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddArtImageToArts (20160629020421)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "arts" ADD "image" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160629020421"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to AddDescriptionToTags (20160629180226)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "tags" ADD "description" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160629180226"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Migrating to RemovesIdFromTags (20160629180441)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "atags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "tags"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "tags"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "atags"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "atags"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160629180441"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$desKGmlz6j26oj8e.sr3w.6jNJLvEMC1dKNjs7RjxzGms2Z8kSFye"], ["created_at", "2016-06-29 18:15:45.009210"], ["updated_at", "2016-06-29 18:15:45.009210"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$a1kmm2C8OGm993d8h1XsNu.ZIwGPeO4xA5845Kv2NlL5fzD4zJKHy"], ["created_at", "2016-06-29 18:15:45.079087"], ["updated_at", "2016-06-29 18:15:45.079087"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$v5o.FFLGMW2VbR3avqb4luyU6vT4y2MYHPu0jkKcsr/0OMEnUnCuu"], ["created_at", "2016-06-29 18:15:45.147746"], ["updated_at", "2016-06-29 18:15:45.147746"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 18:15:45.154069"], ["updated_at", "2016-06-29 18:15:45.154069"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 18:15:45.156692"], ["updated_at", "2016-06-29 18:15:45.156692"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 18:15:45.158828"], ["updated_at", "2016-06-29 18:15:45.158828"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 18:15:45.162632"], ["updated_at", "2016-06-29 18:15:45.162632"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 18:15:45.167013"], ["updated_at", "2016-06-29 18:15:45.167013"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 18:15:45.169379"], ["updated_at", "2016-06-29 18:15:45.169379"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 18:15:45.176522"], ["updated_at", "2016-06-29 18:15:45.176522"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 18:15:45.179915"], ["updated_at", "2016-06-29 18:15:45.179915"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 18:15:45.182327"], ["updated_at", "2016-06-29 18:15:45.182327"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 18:15:45.183989"], ["updated_at", "2016-06-29 18:15:45.183989"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 18:15:45.185636"], ["updated_at", "2016-06-29 18:15:45.185636"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:15:45.187251"], ["updated_at", "2016-06-29 18:15:45.187251"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mTag Load (1.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 6]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$vzBT4tjH8sUs9Vlo0w/pgOGdxUZAaxM9dfnjP/w0U8tSJFd11fVb."], ["created_at", "2016-06-29 18:17:13.921617"], ["updated_at", "2016-06-29 18:17:13.921617"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$wwb0FX058TdnPeaDuFg7euX6G7WqVK5J6DK4c9niJWLVNxdikB61a"], ["created_at", "2016-06-29 18:17:13.991531"], ["updated_at", "2016-06-29 18:17:13.991531"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$ws876mCQJcQ0KigZb0l/We3OOGO/ksKgz1waflfJrUpxzTuxwpEam"], ["created_at", "2016-06-29 18:17:14.063203"], ["updated_at", "2016-06-29 18:17:14.063203"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 18:17:14.066261"], ["updated_at", "2016-06-29 18:17:14.066261"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 2], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 18:17:14.068083"], ["updated_at", "2016-06-29 18:17:14.068083"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 18:17:14.069940"], ["updated_at", "2016-06-29 18:17:14.069940"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 4], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 18:17:14.071757"], ["updated_at", "2016-06-29 18:17:14.071757"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 18:17:14.073451"], ["updated_at", "2016-06-29 18:17:14.073451"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 18:17:14.075436"], ["updated_at", "2016-06-29 18:17:14.075436"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 18:17:14.078888"], ["updated_at", "2016-06-29 18:17:14.078888"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 18:17:14.080883"], ["updated_at", "2016-06-29 18:17:14.080883"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 18:17:14.082578"], ["updated_at", "2016-06-29 18:17:14.082578"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 18:17:14.084183"], ["updated_at", "2016-06-29 18:17:14.084183"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 18:17:14.085856"], ["updated_at", "2016-06-29 18:17:14.085856"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:17:14.087916"], ["updated_at", "2016-06-29 18:17:14.087916"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mArt Load (1.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m

@@ -1,7 +1,8 @@
 # ArtTag.destroy_all
 Art.destroy_all
-# Tag.destroy_all
+Tag.destroy_all
 User.destroy_all
+# User.destroy_all
 
 User.create([
   {first_name:"John",last_name:"Ankle",email:"kidon@street.com",location:"San FranPsycho",image:"http://pickaface.net/includes/themes/clean/img/slide4.png", password: "password"
@@ -13,23 +14,26 @@ User.create([
   ])
 
 Art.create!([
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  {user_id: 1, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
   },
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
+  {user_id: 2,image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
   },
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
+  {user_id: 3,image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
   },
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"
+  {user_id: 4,image:"http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"
   },
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"
+  {user_id: 5,image:"http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"
   },
-  {image:"http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"
+  {user_id: 6,image:"http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"
   }
   ])
 
-
-# Tag.create!([
-#  {user_id:"",art_id:"",category:"",
-#  },
-# ])
+Tag.create([
+  {art_id: 1,category: "3D",description: "man"},
+  {art_id: 2,category: "3D",description: "Fishing"},
+  {art_id: 3,category: "3D",description: "Cars"},
+  {art_id: 4,category: "3D",description: "SnowMan"},
+  {art_id: 5,category: "3D",description: "Woman"},
+  {art_id: 6,category: "3d",description: "Tiger"}
+  ])
 

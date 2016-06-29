@@ -15,16 +15,21 @@ RSpec.describe User, type: :model do
     expect(user.last_name).not_to be_empty
   end
   
-  it "has an email and it is unique" do
-    expect(user.email).to eq(user.email)
-    expect(user.email).not_to be_empty
-  end
-  
   it "has a location listed" do
     expect(user.location).not_to be_empty
   end
 
   it "should have a valid email" do
   FactoryGirl.build(:user, :email => "EmailNoAtSymbol").should_not be_valid
+  end
+
+  describe "when email address is already taken" do
+    before do
+      @test_email = FactoryGirl.build(:user, :email => "Tapioca@gmail.com")
+    end
+  
+  it "should have a unique email" do
+      expect(@test_email).not_to be_valid
+    end 
   end
 end
