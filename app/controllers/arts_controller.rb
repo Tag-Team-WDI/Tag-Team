@@ -17,17 +17,18 @@ def index
     render :new
   end
 
-  
-  def create
-    @art = Art.create(art_params)
-      # if @art.save
-        # login(@art)
-        @user = current_user
-        @user.arts << @art
-        redirect_to "/arts"
-  end
 
-  
+  def create
+    art_params = params[:art]
+    @art = Art.new({image: art_params[:image]})
+    @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
+    @user = current_user[{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+    if @art.save
+      redirect_to "/"
+    end
+end
+
+
 
   def edit
     @art = Art.find(params[:id])
@@ -59,7 +60,7 @@ end
   private
 
   def art_params
-    params.require(:art).permit(:user_id)
+    params.require(:art).permit(:user_id, :image)
   end
 
 
