@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "arts#index"
-
+  #routes to about/contact page
+  get "/about", to: "home#about", as: "about"
+  get "/contact" , to: "home#contact", as: "contact"
   #user routes
   resources :users
 
