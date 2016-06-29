@@ -1,10 +1,16 @@
 class ArtsController < ApplicationController
 
+
+
 def index
     @arts = Art.all
     render :index
   end
 
+  def show
+    @art = Art.find(params[:id])
+    render :show
+  end
 
   def new
     @art = Art.new
@@ -13,21 +19,17 @@ def index
 
 
   def create
-    @art = Art.new(art_params)
-      if @art.save
-        # login(@art)
-        redirect_to "/arts/#{@art.id}"
-      else
-        flash[:error] = @art.errors.full_messages.join(", ")
-        redirect_to arts_path
-      end
-  end
+    @user = current_user
 
+    @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
+    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
 
-  def show
-    @art = Art.find(params[:id])
-    render :show
-  end
+    @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @art_tags})
+
+    if @art.save
+      redirect_to "/"
+    end
+end
 
 
   def edit
@@ -35,17 +37,14 @@ def index
     render :edit
   end
 
-
-
-  # def index
-  #   @user = Art.all
-  #   if params[:search]
-  #     @arts = Art.search(params[:search]).order("created_at DESC")
-  #   else
-  #     @arts = Art.all.order('created_at DESC')
-  #   end
-  # end
-
+#   # def index
+#   #   @user = Art.all
+#   #   if params[:search]
+#   #     @arts = Art.search(params[:search]).order("created_at DESC")
+#   #   else
+#   #     @arts = Art.all.order('created_at DESC')
+#   #   end
+#   # end
 
   def update
     @art = Art.find(params[:id])
@@ -63,7 +62,7 @@ end
   private
 
   def art_params
-    params.require(:art).permit(:user_id)
+    params.require(:art).permit(:user_id, :image, :vision)
   end
 
 

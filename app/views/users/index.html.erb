@@ -1,19 +1,6 @@
-<h1>Index Page</h1>
-<%= @art %>
 <div class="container">
-  <nav>
-   <div class="nav-wrapper">
-     <form>
-       <div class="input-field">
-         <input id="search" type="search" required>
-         <label for="search"><i class="material-icons">search</i></label>
-         <i class="material-icons">close</i>
-       </div>
-     </form>
-   </div>
- </nav>
-  <h1>This is the Home Page</h1>
-
+ 
+ <h1>Users Index Page</h1>
   <div class="row">
 
 <% @users.each do |user| %>
@@ -29,11 +16,15 @@
               <%= user.location %>
               </div> <!-- card-content -->
               <div class="card-action">
-                <a href='/users/<%= user.id %>'>User Page</a>
+                <a href='/users/<%= user.id %>'>Tagger Profile</a>
               </div> <!-- card-action -->
             </div> <!-- card -->
           </div> <!-- col s12 m7 -->
                   <% end %>
-                  <a class="btn-floating btn-large waves-effect waves-light red" id="add-image-button"><i class="material-icons">add</i></a>
+                  <button class="btn-floating btn-large waves-effect waves-light red" id="add-image-button" type="submit" name="action"><i class="material-icons">add</i></button>
+<!-- 
+        button goes to add new art post
+        then when creates a post, redirected to arts ALL -->
+
         </div> <!-- row -->
 </div>  <!-- container -->
