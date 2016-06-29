@@ -1,9 +1,9 @@
-
+<!-- users/:id -->
 <div class="container">
   <div class="row">
   <!--   <div class="col s3"></div> -->
     <div class="col s12">
-    <h1>This is the Show Page for users </h1>
+    <h1> Tagger Profile Page </h1>
     <p>Welcome <%= @user.first_name %></p>
   </div>
    <!--   <div class="col s3"></div> -->
@@ -15,3 +15,4 @@
 
 
 <h5><%= link_to "Edit", edit_user_path(@user.id) %></h5>
+<h5><%= link_to "All Users", users_path(@user.id) %></h5>

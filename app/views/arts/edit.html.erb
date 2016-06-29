@@ -3,28 +3,14 @@
     <div class="col s3"></div>
       <div class="col s6">
 
-<%= form_for @art, url: art_path(@art), method: :patch  do |f| %>
+<%= form_for @art, url: edit_art_path(@art), method: :patch  do |f| %>
 
-  <div>
-  <%= f.text_field :first_name, placeholder: "First Name" %>
-  </div>
-  <div>
-  <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </div>
-  <div>
-  <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-
-  <div>
-    <%= f.text_field :location, placeholder: "Location" %>
-  </div>
-  <br>
 
   <div>
   <%= f.hidden_field :image, role: "uploadcare-uploader" %>
   </div>
 
-  <%= f.submit "Update Profile" %>
+  <%= f.submit "Edit Tag" %>
 
         <% end %>
       </div>
