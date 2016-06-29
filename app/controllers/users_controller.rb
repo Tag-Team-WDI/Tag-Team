@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @art = GoogleCloudVision::Classifier.new(ENV["vision"],
-    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+    # @art = GoogleCloudVision::Classifier.new(ENV["vision"],
+    # [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
     render :index
   end
 
