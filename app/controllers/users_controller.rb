@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
-        flash[:notice] = "Hello, #{@user.first_name}! Welcome to Vagabond!"
+        flash[:notice] = "Hello, #{@user.first_name}! Welcome to Tag!"
         login(@user)
         redirect_to "/users/#{@user.id}"
       else
@@ -38,14 +38,14 @@ class UsersController < ApplicationController
 
 
 
-  def index
-    @user = Post.all
-    if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC")
-    else
-      @posts = Post.all.order('created_at DESC')
-    end
-  end
+  # def index
+  #   @user = Post.all
+  #   if params[:search]
+  #     @posts = Post.search(params[:search]).order("created_at DESC")
+  #   else
+  #     @posts = Post.all.order('created_at DESC')
+  #   end
+  # end
 
 
   def update

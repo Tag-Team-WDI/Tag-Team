@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+  <!--   <div class="col s3"></div> -->
+    <div class="col s12">
+    <h1>This is the Show Page for arts </h1>
+    <p>Welcome <%= @art.first_name %></p>
+  </div>
+   <!--   <div class="col s3"></div> -->
+  </div>
+</div>
+
+
+<img class="responsive-img" id="profileImg" src= "<%= @art.image %>" class="profileImage">
+
+
+<h5><%= link_to "Edit", edit_art_path(@art.id) %></h5>
