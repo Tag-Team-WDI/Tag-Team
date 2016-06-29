@@ -31468,3 +31468,283 @@ Migrating to RemovesIdFromTags (20160629180441)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 18:17:14.087916"], ["updated_at", "2016-06-29 18:17:14.087916"]]
   [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
   [1m[36mArt Load (1.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+
+
+Started GET "/" for ::1 at 2016-06-29 12:24:04 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 430ms (Views: 409.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.self-73fd81e4127fc325a108405e123fc6a761b0aea254e13f7f1ffd15be25ba9812.css?body=1" for ::1 at 2016-06-29 12:24:04 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 12:24:14 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 65ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:24:26 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y0k1HwR1koelUUOG7EC5VK+5Xeu0VM5nz3xV+agXOIJGX8rLCH5PZxxdOTjO/0pLmpNJkT7LH7AHJrdCcIpvTg==", "art"=>{"image"=>"https://ucarecdn.com/aba2bb4a-d017-4acd-b9bf-c5e1cbaf26a9/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/arts_controller.rb:25:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (107.3ms)
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "arts"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "tags"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) 
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629180441')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627174708')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627175101')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627175315')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160628024634')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629020421')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629180226')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$pIJI2F3TVbWdK36o1YAJHO6qmF2uCaBw9.iVZfT1urzCPIW.zeqlm"], ["created_at", "2016-06-29 19:25:05.557108"], ["updated_at", "2016-06-29 19:25:05.557108"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$Y3NKWQfsNBKjZiwup5IQZuC/Fo6OW32viDyz2bfMnf43U8Jule01C"], ["created_at", "2016-06-29 19:25:05.621472"], ["updated_at", "2016-06-29 19:25:05.621472"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$7KzWFmAf60966jDZE8LKWen8tyG.sjGW.ZKXpIbKeYRENGo1mt6O."], ["created_at", "2016-06-29 19:25:05.684404"], ["updated_at", "2016-06-29 19:25:05.684404"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-29 19:25:05.690303"], ["updated_at", "2016-06-29 19:25:05.690303"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 2], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-29 19:25:05.693093"], ["updated_at", "2016-06-29 19:25:05.693093"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-29 19:25:05.695400"], ["updated_at", "2016-06-29 19:25:05.695400"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 4], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-29 19:25:05.697589"], ["updated_at", "2016-06-29 19:25:05.697589"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-29 19:25:05.699935"], ["updated_at", "2016-06-29 19:25:05.699935"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-29 19:25:05.704654"], ["updated_at", "2016-06-29 19:25:05.704654"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-29 19:25:05.714244"], ["updated_at", "2016-06-29 19:25:05.714244"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-29 19:25:05.718527"], ["updated_at", "2016-06-29 19:25:05.718527"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-29 19:25:05.722747"], ["updated_at", "2016-06-29 19:25:05.722747"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-29 19:25:05.725758"], ["updated_at", "2016-06-29 19:25:05.725758"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-29 19:25:05.728607"], ["updated_at", "2016-06-29 19:25:05.728607"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-29 19:25:05.730817"], ["updated_at", "2016-06-29 19:25:05.730817"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:25:09 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y0k1HwR1koelUUOG7EC5VK+5Xeu0VM5nz3xV+agXOIJGX8rLCH5PZxxdOTjO/0pLmpNJkT7LH7AHJrdCcIpvTg==", "art"=>{"image"=>"https://ucarecdn.com/aba2bb4a-d017-4acd-b9bf-c5e1cbaf26a9/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/arts_controller.rb:25:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.6ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-06-29 12:25:18 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-29 12:25:20 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 12:25:21 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-29 12:25:23 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-29 12:25:37 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYgFbE15T+Ht/GJbHO6RTDRDEejP2sXFWiopPYfwg2GUnvq4QXKSAVTwGOU+UWJTAWkFkkVFFBKScMuGX23UrQ==", "user"=>{"first_name"=>"anthony", "last_name"=>"schurz", "location"=>"san francisco", "email"=>"anthony.schurz@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'anthony.schurz@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "anthony"], ["last_name", "schurz"], ["email", "anthony.schurz@gmail.com"], ["location", "san francisco"], ["password_digest", "$2a$10$yMQOif2AGp.rx1sKr6aR3u7yJ28W4B6Y1Nytm1LRW6HZwVK/HAXR."], ["created_at", "2016-06-29 19:25:37.303186"], ["updated_at", "2016-06-29 19:25:37.303186"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 93ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/4" for ::1 at 2016-06-29 12:25:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 44ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 12:25:44 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 12:25:51 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:26:00 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u8qlVRR2nRQngMaWQ+Y98ncYbgJhOwjsir4Rx01oehie3FqBGH1A9J6MvChhWc7tQjJ6eOuk2TtC5PN8lfUt1A==", "art"=>{"image"=>"https://ucarecdn.com/e4151ad3-fcc9-421b-a55c-b854d0d14fd1/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `each' for nil:NilClass):
+  app/controllers/arts_controller.rb:24:in `new'
+  app/controllers/arts_controller.rb:24:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (77.6ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:27:04 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u8qlVRR2nRQngMaWQ+Y98ncYbgJhOwjsir4Rx01oehie3FqBGH1A9J6MvChhWc7tQjJ6eOuk2TtC5PN8lfUt1A==", "art"=>{"image"=>"https://ucarecdn.com/e4151ad3-fcc9-421b-a55c-b854d0d14fd1/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `each' for nil:NilClass):
+  app/controllers/arts_controller.rb:24:in `new'
+  app/controllers/arts_controller.rb:24:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started GET "/users/4" for ::1 at 2016-06-29 12:27:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 12:27:21 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 12:27:33 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/6" for ::1 at 2016-06-29 12:27:52 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered arts/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)

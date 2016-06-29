@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :arts
   has_secure_password
 
   validates :first_name, presence: true
@@ -9,5 +10,5 @@ class User < ActiveRecord::Base
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])
   end
-  
+
 end
