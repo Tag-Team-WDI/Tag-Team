@@ -11,7 +11,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+
   <!-- uploadcare -->
   <script src="https://ucarecdn.com/widget/2.9.0/uploadcare/uploadcare.full.min.js" charset="utf-8"></script>
   <script>
@@ -22,7 +22,7 @@
 <body>
   <nav>
       <div class="nav-wrapper light-blue darken-4">
-        <a href="/" class="brand-logo">Tag</a>
+        <a href="/" class="brand-logo tag">Tag</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
 
           <% if session[:user_id].nil? %>
@@ -33,7 +33,7 @@
           <% else %>
 
           <li><%= link_to "Profile", user_path(current_user[:id]) %> </li>
-          <li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+          <li id="sign-out"><%= link_to "Sign Out", logout_path, method: "delete" %></li>
 
           <% end %>
 

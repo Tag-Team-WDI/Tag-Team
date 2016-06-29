@@ -1,0 +1,37 @@
+<div class="container">
+  <nav>
+   <div class="nav-wrapper">
+     <form>
+       <div class="input-field">
+         <input id="search" type="search" required>
+         <label for="search"><i class="material-icons">search</i></label>
+         <i class="material-icons">close</i>
+       </div>
+     </form>
+   </div>
+ </nav>
+  <h1>This is the Home Page</h1>
+
+  <div class="row">
+
+<% @arts.each do |art| %>
+
+          <div class="col s12 m4 12">
+            <div class="card">
+              <div class="card-image">
+
+              <a href='/arts/<%= art.id %>'><img src="<%= art.image %>" class="indexArtImg" ></a>
+           <!--    <span class="card-title">Card Title</span> -->
+              </div> <!-- card-image -->
+              <div class="card-content">
+              <%= art.location %>
+              </div> <!-- card-content -->
+              <div class="card-action">
+                <a href='/arts/<%= art.id %>'>Art Page</a>
+              </div> <!-- card-action -->
+            </div> <!-- card -->
+          </div> <!-- col s12 m7 -->
+                  <% end %>
+                  <a class="btn-floating btn-large waves-effect waves-light red" id="add-image-button"><i class="material-icons">add</i></a>
+        </div> <!-- row -->
+</div>  <!-- container -->
