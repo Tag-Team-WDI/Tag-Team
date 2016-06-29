@@ -1,4 +1,5 @@
 require 'rails_helper'
+#NOT DONE! LOOK AWAY!
 RSpec.describe Tag, type: :model do
   subject(:tag) { FactoryGirl.create(:tag)}
   it "has a art_id from tag " do
