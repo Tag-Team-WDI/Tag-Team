@@ -1,3 +1,35 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+ }
+
+ .indexUserImg {
+  height: 200px;
+  width: 400px;
+ }
+
+#add-image-button {
+  position: fixed;
+  margin-right: 10px;
+  bottom: 45px;
+  right: 25px;
+}
+
+.tag {
+  margin-left: 10px;
+}
+
+#sign-out {
+  margin-right: 10px;
+}
+
+/* .card.small {
+  min-height: 250px;
+ }*/
+
+/*#upload_index_btn {
+  float: right;
+}*/
