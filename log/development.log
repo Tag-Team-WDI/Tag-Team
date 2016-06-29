@@ -22495,3 +22495,117 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
 >>>>>>> 65cd532b9efc72b88d55b7dfe575c90c75b86959
 >>>>>>> 66752106a8581780a6077d40c9bf195c72365a64
+
+
+Started GET "/" for ::1 at 2016-06-29 09:59:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (16.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 2030ms (Views: 1211.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/users.self-0cf37351c764c9dd800d3e27649c1d4f587cb725a0d95bcafcfdf0266693b273.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/" for ::1 at 2016-06-29 10:00:14 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 822ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/users.self-0cf37351c764c9dd800d3e27649c1d4f587cb725a0d95bcafcfdf0266693b273.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/arts" for ::1 at 2016-06-29 10:00:19 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (11.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 108ms (Views: 79.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-29 10:21:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1096ms (Views: 276.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-29 10:21:14 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 758ms (Views: 34.5ms | ActiveRecord: 0.2ms)
