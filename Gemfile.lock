@@ -65,6 +65,7 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    google_cloud_vision (0.1.1)
     i18n (0.7.0)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -151,7 +152,7 @@ GEM
     sprockets (3.6.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.4)
+    sprockets-rails (3.1.0)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
@@ -182,6 +183,7 @@ DEPENDENCIES
   database_cleaner (~> 1.5)
   factory_girl_rails
   faker
+  google_cloud_vision
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.6)
