@@ -1,13 +1,17 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
+#google vision api
+# require 'googleauth'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module TagTeamApp
   class Application < Rails::Application
+    #google vision API
+# scopes = ['https://www.googleapis.com/auth/cloud-platform']
+# authorization = Google::Auth.get_application_default(scopes)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

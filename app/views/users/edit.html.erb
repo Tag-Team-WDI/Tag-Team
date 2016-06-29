@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="row">
+    <div class="col s3"></div>
+      <div class="col s6">
 
 <%= form_for @user, url: user_path(@user), method: :patch  do |f| %>
 
@@ -11,7 +14,7 @@
   <div>
   <%= f.text_field :email, placeholder: "Email" %>
   </div>
-  
+
   <div>
     <%= f.text_field :location, placeholder: "Location" %>
   </div>
@@ -23,6 +26,8 @@
 
   <%= f.submit "Update Profile" %>
 
-  <% end %>
-
+        <% end %>
+      </div>
+    <div class="col s3"></div>
+  </div>
 </div>
