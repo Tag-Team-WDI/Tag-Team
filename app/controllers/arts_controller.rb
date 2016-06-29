@@ -19,15 +19,17 @@ def index
 
 
   def create
-    art_params = params[:art]
-    @art = Art.new({image: art_params[:image]})
+    @user = current_user
+
     @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
-    @user = current_user[{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+
+    @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @art_tags})
+
     if @art.save
       redirect_to "/"
     end
 end
-
 
 
   def edit
@@ -60,7 +62,7 @@ end
   private
 
   def art_params
-    params.require(:art).permit(:user_id, :image)
+    params.require(:art).permit(:user_id, :image, :vision)
   end
 
 
