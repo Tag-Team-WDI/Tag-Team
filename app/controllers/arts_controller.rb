@@ -1,7 +1,5 @@
 class ArtsController < ApplicationController
 
-
-
 def index
     @arts = Art.all
     render :index
@@ -19,16 +17,15 @@ def index
 
   
   def create
-    @art = Art.create(art_params)
-      # if @art.save
-        # login(@art)
-        @user = current_user
-        @user.arts << @art
-        redirect_to "/arts"
+    art_params = params[:art]
+    @art = Art.new({image: art_params[:image]})
+    @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
+    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+      if @art.save
+        redirect_to "/"
   end
-
+end
   
-
   def edit
     @art = Art.find(params[:id])
     render :edit
@@ -59,7 +56,7 @@ end
   private
 
   def art_params
-    params.require(:art).permit(:user_id)
+    params.require(:art).permit(:user_id, :image)
   end
 
 

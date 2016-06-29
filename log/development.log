@@ -31095,3 +31095,1034 @@ Processing by ArtsController#show as HTML
   [1m[35mArt Load (0.1ms)[0m  SELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1  [["id", 31]]
   Rendered arts/show.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (7.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mArt Load (2.3ms)[0m  SELECT "arts".* FROM "arts"
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:16:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/Users/vanessafarias/Desktop/GA_Projects/Tag-Team-Project/Tag-Team/app/controllers/arts_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/arts_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (95.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (183.9ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:16:13 -0700
+
+SyntaxError (/Users/vanessafarias/Desktop/GA_Projects/Tag-Team-Project/Tag-Team/app/controllers/arts_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/arts_controller.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.2ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:16:39 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (2.7ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 530ms (Views: 508.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/users.self-32c6eff9cadb52e88798239850fb92c7172fc6f83d8f3b1c0ff3289e621d9c7d.css?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 11:16:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 11:16:40 -0700
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:16:44 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  Rendered arts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/30/edit" for ::1 at 2016-06-29 11:16:57 -0700
+Processing by ArtsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  Rendered arts/edit.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"arts", :id=>nil} missing required keys: [:id]):
+    3:     <div class="col s3"></div>
+    4:       <div class="col s6">
+    5: 
+    6: <%= form_for @art, url: edit_art_path(@art), method: :patch  do |f| %>
+    7: 
+    8: 
+    9:   <div>
+  app/views/arts/edit.html.erb:6:in `_app_views_arts_edit_html_erb___4085012322113654719_70127262791860'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:17:04 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 109ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:17:53 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUr4sdknqsIWX9a3IBOtBfuz2AJN97vEEEHRGFQr2WOemR/yK1EMzvjiei/gUgET6ne2tkMqMRqsxpzo9KKvjg==", "art"=>{"image"=>"https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `art_params' for #<ArtsController:0x007f8f90fd9d38>):
+  app/controllers/arts_controller.rb:20:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.8ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:23:12 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUr4sdknqsIWX9a3IBOtBfuz2AJN97vEEEHRGFQr2WOemR/yK1EMzvjiei/gUgET6ne2tkMqMRqsxpzo9KKvjg==", "art"=>{"image"=>"https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.8ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:23:25 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUr4sdknqsIWX9a3IBOtBfuz2AJN97vEEEHRGFQr2WOemR/yK1EMzvjiei/gUgET6ne2tkMqMRqsxpzo9KKvjg==", "art"=>{"image"=>"https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.3ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:23:34 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUr4sdknqsIWX9a3IBOtBfuz2AJN97vEEEHRGFQr2WOemR/yK1EMzvjiei/gUgET6ne2tkMqMRqsxpzo9KKvjg==", "art"=>{"image"=>"https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/145f039f-7923-4ddb-8771-dffdb9c3e6b2/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:23:41 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (2.9ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 115ms (Views: 111.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/new" for ::1 at 2016-06-29 11:23:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.7ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:24:10 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:24:33 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuZDKsrnAcD9gSFVe3Y2Gb8ci2bzctFOEUwFUGPzRkbFNaRpOJGnzBM8jc27N5oPrtjl0v2vW5Cty0igw3owqw==", "art"=>{"image"=>"https://ucarecdn.com/6206160f-dfb0-46da-9efc-26fde95ec51c/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/6206160f-dfb0-46da-9efc-26fde95ec51c/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:27:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (2.8ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 598ms (Views: 567.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:28:00 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:28:30 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ugn8TNE1I9IhZL/ddTokmy9l1yzxW7hSrr9O78rPaY9O8CywTJyg6Y4Pme1lUSEfXn56L0Y5D/2PbDLH6JLSw==", "art"=>{"image"=>"https://ucarecdn.com/06437a98-7362-400c-83bc-1eed9707aa3c/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/06437a98-7362-400c-83bc-1eed9707aa3c/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.7ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:30:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ugn8TNE1I9IhZL/ddTokmy9l1yzxW7hSrr9O78rPaY9O8CywTJyg6Y4Pme1lUSEfXn56L0Y5D/2PbDLH6JLSw==", "art"=>{"image"=>"https://ucarecdn.com/06437a98-7362-400c-83bc-1eed9707aa3c/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/06437a98-7362-400c-83bc-1eed9707aa3c/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (85.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.8ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:36:05 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ugn8TNE1I9IhZL/ddTokmy9l1yzxW7hSrr9O78rPaY9O8CywTJyg6Y4Pme1lUSEfXn56L0Y5D/2PbDLH6JLSw==", "art"=>{"image"=>"https://ucarecdn.com/06437a98-7362-400c-83bc-1eed9707aa3c/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/arts_controller.rb:21:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:36:13 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (2.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 449ms (Views: 445.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:37:25 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mArt Load (2.4ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  Rendered arts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 231ms (Views: 175.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:37:25 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mArt Load (0.2ms)[0m  SELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1  [["id", 30]]
+  Rendered arts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:37:33 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:38:03 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EhdjO7M2fuvuuvwxTIf8c+FD5Qqb5G6R9wCO5yePxK/xxIR4QUDY5wAHUKmMxlBl8IeLvpU55E9Lh8MXhwayQg==", "art"=>{"image"=>"https://ucarecdn.com/1058fcdc-9434-43c8-89d9-b22c29f5b0aa/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/arts_controller.rb:21:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.7ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:39:19 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EhdjO7M2fuvuuvwxTIf8c+FD5Qqb5G6R9wCO5yePxK/xxIR4QUDY5wAHUKmMxlBl8IeLvpU55E9Lh8MXhwayQg==", "art"=>{"image"=>"https://ucarecdn.com/1058fcdc-9434-43c8-89d9-b22c29f5b0aa/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/arts_controller.rb:21:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.5ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:39:24 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:39:41 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aoEnjIfvwI0LKXh6FNeIPZTaL0tL+fzIV8r6t5rPekSJUsDPdZlmgeWU1OLUliQrhR5B/0UkdhbrTbdHOkYMqQ==", "art"=>{"image"=>"https://ucarecdn.com/9653fee9-d158-4154-b8d1-5899409bab09/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/arts_controller.rb:21:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:40:29 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aoEnjIfvwI0LKXh6FNeIPZTaL0tL+fzIV8r6t5rPekSJUsDPdZlmgeWU1OLUliQrhR5B/0UkdhbrTbdHOkYMqQ==", "art"=>{"image"=>"https://ucarecdn.com/9653fee9-d158-4154-b8d1-5899409bab09/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `art_params' for #<ArtsController:0x007faf46860338>):
+  app/controllers/arts_controller.rb:20:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:40:33 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 88ms (Views: 83.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:40:51 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L5gyF20F3guqk2wbxwJdI6URirdEy/4vLpNCrIfMDw7MS9VUn3N4B0QuwIMHQ/E1tNXkA0oWdPGSFA9cJ0V54w==", "art"=>{"image"=>"https://ucarecdn.com/d82dff27-9106-4489-84c0-81c6c0868106/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `art_params' for #<ArtsController:0x007faf46d7b9f8>):
+  app/controllers/arts_controller.rb:20:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.4ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:44:01 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L5gyF20F3guqk2wbxwJdI6URirdEy/4vLpNCrIfMDw7MS9VUn3N4B0QuwIMHQ/E1tNXkA0oWdPGSFA9cJ0V54w==", "art"=>{"image"=>"https://ucarecdn.com/d82dff27-9106-4489-84c0-81c6c0868106/"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "https://ucarecdn.com/d82dff27-9106-4489-84c0-81c6c0868106/"], ["created_at", "2016-06-29 18:44:02.023746"], ["updated_at", "2016-06-29 18:44:02.023746"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 4.0ms)
+
+NameError (undefined local variable or method `private' for #<ArtsController:0x007faf45674ae8>):
+  app/controllers/arts_controller.rb:56:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (124.9ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:44:05 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:44:07 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  Rendered arts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 60ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:44:12 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:44:29 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lqaXRNaip6lWuo/h3l04jjX0+zHMwhiYVKNbDwrd6oF1dXAHJNQBpbgHI3keHJSYJDCVhcIfkkboJBb/qlScbA==", "art"=>{"image"=>"https://ucarecdn.com/2b10f3c9-9d51-4f52-a653-36f304e46bdd/"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://ucarecdn.com/2b10f3c9-9d51-4f52-a653-36f304e46bdd/"], ["created_at", "2016-06-29 18:44:29.106059"], ["updated_at", "2016-06-29 18:44:29.106059"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.1ms)
+
+NameError (undefined local variable or method `private' for #<ArtsController:0x007faf46d91618>):
+  app/controllers/arts_controller.rb:56:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.3ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:45:04 -0700
+
+SyntaxError (/Users/vanessafarias/Desktop/GA_Projects/Tag-Team-Project/Tag-Team/app/controllers/arts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/arts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.3ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:45:39 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lqaXRNaip6lWuo/h3l04jjX0+zHMwhiYVKNbDwrd6oF1dXAHJNQBpbgHI3keHJSYJDCVhcIfkkboJBb/qlScbA==", "art"=>{"image"=>"https://ucarecdn.com/2b10f3c9-9d51-4f52-a653-36f304e46bdd/"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)  [["image", "https://ucarecdn.com/2b10f3c9-9d51-4f52-a653-36f304e46bdd/"], ["created_at", "2016-06-29 18:45:39.161349"], ["updated_at", "2016-06-29 18:45:39.161349"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:45:39 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/users.self-32c6eff9cadb52e88798239850fb92c7172fc6f83d8f3b1c0ff3289e621d9c7d.css?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:45:39 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:45:40 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 11:45:40 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 11:45:40 -0700
+
+
+Started GET "/arts/30" for ::1 at 2016-06-29 11:45:42 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mArt Load (0.5ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  Rendered arts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 54.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:45:48 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:46:05 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f+L6S4dGM08X02PDh9Duw4rSNaoh5oaCShVLV5GJt56cMR0IdTCVQ/luz1tHkULVmxZbHi87DFz2kganMQDBcw==", "art"=>{"image"=>"https://ucarecdn.com/475ec9ca-1d44-45e6-80e1-29ac0069dbd8/"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://ucarecdn.com/475ec9ca-1d44-45e6-80e1-29ac0069dbd8/"], ["created_at", "2016-06-29 18:46:05.359176"], ["updated_at", "2016-06-29 18:46:05.359176"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:46:05 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:47:57 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.5ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 117ms (Views: 109.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/new" for ::1 at 2016-06-29 11:48:01 -0700
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.9ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-06-29 11:48:10 -0700
+
+ActionController::RoutingError (No route matches [GET] "/artists/new"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/vanessafarias/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.7ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:48:25 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 284ms (Views: 282.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:49:00 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTCKauKxKs4/09avDjlpIe9mkpDzvg97/l/z4j6arxe6420pEMeMwtFuejfOeMU3/qL8JP1jhaVC2L4SnhPZ+g==", "art"=>{"image"=>"https://ucarecdn.com/80642da5-08df-4731-8676-68b2791113f0/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - https://ucarecdn.com/80642da5-08df-4731-8676-68b2791113f0/):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (195.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (244.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (412.8ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:50:16 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 149ms (Views: 137.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:50:21 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:50:40 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0CbXV8EsF+XLi+x7G/mLjSmJqu1vNhVMESa3taP7n5kz9TAUM1qx6SU2QOPbuCebOE3EWWHrn5KtofpFA3LpdA==", "art"=>{"image"=>"https://ucarecdn.com/be1cc988-133a-4a9e-beec-1908ba914f57/"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "arts" ("image", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["image", "https://ucarecdn.com/be1cc988-133a-4a9e-beec-1908ba914f57/"], ["created_at", "2016-06-29 18:50:40.206840"], ["updated_at", "2016-06-29 18:50:40.206840"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 11:50:40 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:53:16 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 124ms (Views: 116.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:53:21 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 135ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:53:31 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcXZt20Cbj9FNZtGWsWSXz8mRbcdOe95XGMVm58DKmt2Fj70n3TIM6uIN96ahD5JLuIrAxPkZafg5FhrP4pchg==", "art"=>{"image"=>"https://ucarecdn.com/6ac569f2-e195-4098-b95a-5697aae0603f/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - @art.image):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.0ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 11:57:55 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.5ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 157ms (Views: 144.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 11:58:01 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 11:58:15 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrGugksEqIjn62ukccAZmtCoztq1GCdDQEuYmVnxM9u1YknBuXIOhAlWxzyxgbWMwWygbrvFrZ38zNVp+XhFNg==", "art"=>{"image"=>"https://ucarecdn.com/ec7b1055-a583-4c8b-9a11-149f36338fe4/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 663ms (ActiveRecord: 0.0ms)
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:00:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrGugksEqIjn62ukccAZmtCoztq1GCdDQEuYmVnxM9u1YknBuXIOhAlWxzyxgbWMwWygbrvFrZ38zNVp+XhFNg==", "art"=>{"image"=>"https://ucarecdn.com/ec7b1055-a583-4c8b-9a11-149f36338fe4/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.4ms)
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.0ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-29 12:00:07 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (3.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 513ms (Views: 508.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-29 12:00:20 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-29 12:00:41 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmdUYTD/lvp32eVThjbgoHVtCKCKQSvfNkgfhy/cPhR9tLMiwokw9plkSctGd0y2ZKlmFIScoQGKz1J3j1VI+Q==", "art"=>{"image"=>"https://ucarecdn.com/e4965dbb-d801-4938-8a2c-0390714d3084/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 579ms (ActiveRecord: 0.0ms)
+
+OpenSSL::SSL::SSLError (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/arts_controller.rb:22:in `new'
+  app/controllers/arts_controller.rb:22:in `create'
+
+
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (27.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.1ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.8ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/vanessafarias/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (147.2ms)
