@@ -18838,3 +18838,105 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
   Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 19:44:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 682ms (Views: 651.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/users.self-5292b19aba4baeb28f347559c2f71549c57e53b2a4d7faa5331d6f61dddc53d9.css?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 19:44:51 -0700
+
+
+Started GET "/users" for ::1 at 2016-06-28 19:46:00 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-28 19:46:04 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 120ms (Views: 95.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2016-06-28 19:46:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GwYbi+Ilfc8m352Us3UZ6VzdQZfd7QyYvbjdNsNQ4D6zAGeAKXsTB+/rKc1ZmckZaiRu11WGqmLrQbK2W3XPog==", "user"=>{"first_name"=>"Min", "last_name"=>"Kim", "location"=>"San Francisco", "email"=>"min@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'min@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Min"], ["last_name", "Kim"], ["email", "min@gmail.com"], ["location", "San Francisco"], ["password_digest", "$2a$10$iGKDrYRQeo3qRmPxrABQP.D9xE7d0hQxAmVudUk.ghrgJqmKxMdSm"], ["created_at", "2016-06-29 02:46:25.109854"], ["updated_at", "2016-06-29 02:46:25.109854"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 207ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-06-28 19:46:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 59ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-28 19:46:32 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-06-28 19:46:38 -0700
+Processing by SessionsController#delete as HTML
+  Parameters: {"authenticity_token"=>"q1gG0tmYun3bK3aQ3ZPMOxIpRxypTAR8jvlIU7Dty/0DXnrZEsbUtRIfwsk3fxzLJNBoXCEnoobYACfTKMjkYQ=="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-28 19:46:38 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
