@@ -30,6 +30,6 @@ RSpec.describe User, type: :model do
   
   it "should have a unique email" do
       expect(@test_email).not_to be_valid
-    end
+    end 
   end
 end

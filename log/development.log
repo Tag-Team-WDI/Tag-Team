@@ -22328,3 +22328,12 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
 >>>>>>> 65cd532b9efc72b88d55b7dfe575c90c75b86959
+
+
+Started GET "/" for ::1 at 2016-06-28 21:58:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1331ms (Views: 242.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
