@@ -1,3 +1,5 @@
+require 'pull_tempfile'
+
 class ArtsController < ApplicationController
 
 
@@ -16,24 +18,26 @@ def index
     @art = Art.new
     render :new
   end
-# def create
-#      post_params = params.require(:post).permit(:title, :description, :image, :period_id, :post_date)
-#    @post = Post.create(post_params)
-#    @user = current_user
-#    @user.posts << @post
-#    redirect_to '/posts'
+
+
 
   def create
     @user = current_user
 
+    art_image = art_params[:image]
+    original_filename = "no idea.png"
+
+    @file = PullTempfile.pull_tempfile(url: art_image, original_filename: original_filename)
+
     @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
-    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
+    [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response
 
     @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @art_tags})
 
     if @art.save
       redirect_to "/"
     end
+
 end
 
 

@@ -36820,3 +36820,726 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-30 01:30:55.271571"], ["updated_at", "2016-06-30 01:30:55.271571"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[36mUser Load (9.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for ::1 at 2016-06-30 13:00:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__1398317787318549124_70328080537920'
+  app/controllers/arts_controller.rb:11:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (127.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:00:11 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 13:00:11 -0700
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 13:00:16 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 13:00:27 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t3VXnrIsKuA859+ggnmJRxjPOADz6mMfFT1KBxcrpP3q1/ByC1xpIqHe3eO34ELoJTl+5Z/G+y/NfOVerrYBZg==", "user"=>{"first_name"=>"anttlkmger", "last_name"=>"lsfmsdlkm", "location"=>";zldmf;sldfm", "email"=>"afmdsl;fms@saf", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'afmdsl;fms@saf' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "anttlkmger"], ["last_name", "lsfmsdlkm"], ["email", "afmdsl;fms@saf"], ["location", ";zldmf;sldfm"], ["password_digest", "$2a$10$6ZDsQaC5cM7HezeWTCenZeQdExVjmbMYfd28Vt/iOQSEnzNI.NJ0."], ["created_at", "2016-06-30 20:00:27.975921"], ["updated_at", "2016-06-30 20:00:27.975921"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 84ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/11" for ::1 at 2016-06-30 13:00:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts" WHERE "arts"."user_id" = ?  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (28.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:00:42 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:00:55 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9N1Sf6SpJ1OwSrgrtwQeTNt/h08dy1IWGnpmMkyBTvCpf/WTHdlkkS1zumiCndXj5onBqnHnyibCO8lr9Rzraw==", "art"=>{"image"=>"https://ucarecdn.com/37d54bda-73a1-48c1-8402-8b07cef8c6e0/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 566ms (ActiveRecord: 0.1ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - wb+/var/folders/1l/0l9rlqc57s532s5p0plhw9kc0000gn/T20160630-80249-vt3714):
+  app/controllers/arts_controller.rb:29:in `new'
+  app/controllers/arts_controller.rb:29:in `block in save_to_tempfile'
+  app/controllers/arts_controller.rb:27:in `save_to_tempfile'
+  app/controllers/arts_controller.rb:41:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:01:42 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9N1Sf6SpJ1OwSrgrtwQeTNt/h08dy1IWGnpmMkyBTvCpf/WTHdlkkS1zumiCndXj5onBqnHnyibCO8lr9Rzraw==", "art"=>{"image"=>"https://ucarecdn.com/37d54bda-73a1-48c1-8402-8b07cef8c6e0/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 471ms (ActiveRecord: 0.7ms)
+
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  app/controllers/arts_controller.rb:29:in `new'
+  app/controllers/arts_controller.rb:29:in `block in save_to_tempfile'
+  app/controllers/arts_controller.rb:27:in `save_to_tempfile'
+  app/controllers/arts_controller.rb:41:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:01:50 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:02:00 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:02:05 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:02:16 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahmIab43SSxz02EvSpzFR1p+DV2lgpQQ814OyYCm2lI3uy+FB0cK7u7qY2x/BQ7oZ4hLuMmuDCArH6GQOTt/yQ==", "art"=>{"image"=>"https://ucarecdn.com/d2a9b0f3-6a9d-454d-bcbe-f157b98117de/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 0.1ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - /var/folders/1l/0l9rlqc57s532s5p0plhw9kc0000gn/T/var/folders/1l/0l9rlqc57s532s5p0plhw9kc0000gn/T20160630-80249-mrsgmc):
+  app/controllers/arts_controller.rb:29:in `new'
+  app/controllers/arts_controller.rb:29:in `block in save_to_tempfile'
+  app/controllers/arts_controller.rb:27:in `save_to_tempfile'
+  app/controllers/arts_controller.rb:41:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:13:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__3335662187725562394_70100908621880'
+  app/controllers/arts_controller.rb:9:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:13:30 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:13:37 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:13:47 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vTv3IcVI2WSL6L2Q0Bzm8OUIgBG5JnzQH6J+7qg8V87gmVDNfDiaphbRv9PlhS1f2P7G9NUK5ODH49G3EaHyVQ==", "art"=>{"image"=>"https://ucarecdn.com/f586e515-e908-4c8a-bb9d-689f6ea4ccbf/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ArgumentError (missing keyword: original_filename):
+  app/controllers/arts_controller.rb:28:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:14:48 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:14:51 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:15:02 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d5QfiWlvXwbSrixiKxWA27+r9IyUN0RbafJQNUR1DtEqNrhl0B8cxE+XLiEejEt0gl2yafgb3Guxs/9s/eirSg==", "art"=>{"image"=>"https://ucarecdn.com/b9ed57e0-1a87-4650-9f3c-7158e731973b/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/b9ed57e0-1a87-4650-9f3c-7158e731973b/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/07s6nbt\", \"description\"=>\"text\", \"score\"=>0.94959313}, {\"mid\"=>\"/m/0dwx7\", \"description\"=>\"logo\", \"score\"=>0.81913662}, {\"mid\"=>\"/m/016nqd\", \"description\"=>\"shape\", \"score\"=>0.59555}, {\"mid\"=>\"/m/0n0j\", \"description\"=>\"area\", \"score\"=>0.57691193}, {\"mid\"=>\"/m/06pj2k\", \"description\"=>\"lip\", \"score\"=>0.5309093}, {\"mid\"=>\"/m/03scnj\", \"description\"=>\"line\", \"score\"=>0.507358}]}]}"], ["created_at", "2016-06-30 20:15:05.503951"], ["updated_at", "2016-06-30 20:15:05.503951"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3360ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:15:05 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:16:14 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 13:16:14 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:16:18 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:16:29 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ltM5TFhhrEAyL+xXyPH9fQ2JCzQKnj319gyjpfcvSiH+esJiBHFc53xvfJqugxaycBiybwG4McPmZ3XLkEYsw==", "art"=>{"image"=>"https://ucarecdn.com/65137e3d-9e1e-4a78-a7e2-26e6c62bd98e/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/65137e3d-9e1e-4a78-a7e2-26e6c62bd98e/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/01n5jq\", \"description\"=>\"poster\", \"score\"=>0.66103166}, {\"mid\"=>\"/m/015bv3\", \"description\"=>\"document\", \"score\"=>0.61074013}, {\"mid\"=>\"/m/067408\", \"description\"=>\"album cover\", \"score\"=>0.59786767}, {\"mid\"=>\"/m/058sv\", \"description\"=>\"magazine\", \"score\"=>0.56026334}, {\"mid\"=>\"/m/03c31\", \"description\"=>\"graphic design\", \"score\"=>0.50703257}]}]}"], ["created_at", "2016-06-30 20:16:34.247066"], ["updated_at", "2016-06-30 20:16:34.247066"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4492ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:16:34 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:18:35 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:18:49 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MsfTq4bfXHbgBh3ao7IHcXIfSbY0igZYKlY+buOJ6s9vZXRHP68ftH0/H5mWK8zeT+kPU1imnmjyF5E3WhRPVA==", "art"=>{"image"=>"https://ucarecdn.com/631cf8e2-69b6-4b5b-9fda-a4acf9856c70/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/631cf8e2-69b6-4b5b-9fda-a4acf9856c70/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/015p6\", \"description\"=>\"bird\", \"score\"=>0.9718796}, {\"mid\"=>\"/m/01c4rd\", \"description\"=>\"beak\", \"score\"=>0.96773773}, {\"mid\"=>\"/m/0jbk\", \"description\"=>\"animal\", \"score\"=>0.93483716}, {\"mid\"=>\"/m/01c_0l\", \"description\"=>\"ducks geese and swans\", \"score\"=>0.87864143}, {\"mid\"=>\"/m/09686\", \"description\"=>\"vertebrate\", \"score\"=>0.87427855}, {\"mid\"=>\"/m/01280g\", \"description\"=>\"wildlife\", \"score\"=>0.86066431}, {\"mid\"=>\"/m/05s0c\", \"description\"=>\"poultry\", \"score\"=>0.75645691}, {\"mid\"=>\"/m/08t9c_\", \"description\"=>\"grass\", \"score\"=>0.75213557}, {\"mid\"=>\"/m/02cqfm\", \"description\"=>\"close up\", \"score\"=>0.74145651}, {\"mid\"=>\"/m/09ddx\", \"description\"=>\"duck\", \"score\"=>0.73984289}]}]}"], ["created_at", "2016-06-30 20:18:54.106582"], ["updated_at", "2016-06-30 20:18:54.106582"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4335ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:18:54 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:19:37 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:19:50 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXB3gp5UsFmNeQndMYWm8A9qZgek130Iye7pnmgoTaw80tBuJyTzmxBAC54EHG1fMpwg4sj75TgRr0bH0bXoNw==", "art"=>{"image"=>"https://ucarecdn.com/aca59010-08cc-4a5d-a71c-59d47f34cd6c/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/aca59010-08cc-4a5d-a71c-59d47f34cd6c/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/0dwx7\", \"description\"=>\"logo\", \"score\"=>0.96057987}, {\"mid\"=>\"/m/03gq5hm\", \"description\"=>\"font\", \"score\"=>0.85868973}, {\"mid\"=>\"/m/01kr8f\", \"description\"=>\"illustration\", \"score\"=>0.6553508}, {\"mid\"=>\"/m/03c31\", \"description\"=>\"graphic design\", \"score\"=>0.64782578}, {\"mid\"=>\"/m/0dgsmq8\", \"description\"=>\"artwork\", \"score\"=>0.62675178}, {\"mid\"=>\"/m/01cd9\", \"description\"=>\"brand\", \"score\"=>0.50445187}]}]}"], ["created_at", "2016-06-30 20:19:55.379177"], ["updated_at", "2016-06-30 20:19:55.379177"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5314ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:19:55 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:20:38 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 33ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:20:49 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qSy9weB5Ps80acUag1Hcy/K36KX9BTJIx87dH3Tioj/0jhotWQl9DalQx1m2yBdkz0GuQJEpqngfj3JGzX8HpA==", "art"=>{"image"=>"https://ucarecdn.com/b767fd29-aa54-4fbf-a268-0cb462d11919/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/b767fd29-aa54-4fbf-a268-0cb462d11919/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/015p6\", \"description\"=>\"bird\", \"score\"=>0.9718796}, {\"mid\"=>\"/m/01c4rd\", \"description\"=>\"beak\", \"score\"=>0.96773773}, {\"mid\"=>\"/m/0jbk\", \"description\"=>\"animal\", \"score\"=>0.93483716}, {\"mid\"=>\"/m/01c_0l\", \"description\"=>\"ducks geese and swans\", \"score\"=>0.87864143}, {\"mid\"=>\"/m/09686\", \"description\"=>\"vertebrate\", \"score\"=>0.87427855}, {\"mid\"=>\"/m/01280g\", \"description\"=>\"wildlife\", \"score\"=>0.86066431}, {\"mid\"=>\"/m/05s0c\", \"description\"=>\"poultry\", \"score\"=>0.75645691}, {\"mid\"=>\"/m/08t9c_\", \"description\"=>\"grass\", \"score\"=>0.75213557}, {\"mid\"=>\"/m/02cqfm\", \"description\"=>\"close up\", \"score\"=>0.74145651}, {\"mid\"=>\"/m/09ddx\", \"description\"=>\"duck\", \"score\"=>0.73984289}]}]}"], ["created_at", "2016-06-30 20:20:56.342043"], ["updated_at", "2016-06-30 20:20:56.342043"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6839ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:20:56 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+  [1m[35mArt Load (0.3ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+
+
+Started GET "/" for ::1 at 2016-06-30 13:24:09 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:24:13 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:24:24 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IwS9C/o6mMRV3WG7z+99JLgaaj9M2Uwq8yjocruSiLN+phrnQ0rbBsjkY/j6draLhews2iD11BoraUcrAg8tKA==", "art"=>{"image"=>"https://ucarecdn.com/3e4d634f-9e74-4ee4-a3b7-3e9d407b055c/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/3e4d634f-9e74-4ee4-a3b7-3e9d407b055c/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/01n5jq\", \"description\"=>\"poster\", \"score\"=>0.66103244}, {\"mid\"=>\"/m/015bv3\", \"description\"=>\"document\", \"score\"=>0.61074013}, {\"mid\"=>\"/m/067408\", \"description\"=>\"album cover\", \"score\"=>0.5978682}, {\"mid\"=>\"/m/058sv\", \"description\"=>\"magazine\", \"score\"=>0.56026387}, {\"mid\"=>\"/m/03c31\", \"description\"=>\"graphic design\", \"score\"=>0.50703222}]}]}"], ["created_at", "2016-06-30 20:24:29.461417"], ["updated_at", "2016-06-30 20:24:29.461417"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5138ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:24:29 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+  [1m[35mArt Load (0.2ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:25:24 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:25:34 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sP6PPGbR9lJYaFZKAdhtikafom7Jaed128HHyvaA3zvtXCjQ36G1kMVRVAk0QaYle2nki6VFf0UDgGiTTx16oA==", "art"=>{"image"=>"https://ucarecdn.com/5cb6eac6-1308-4c3e-b397-cd7d3c35a7e3/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/5cb6eac6-1308-4c3e-b397-cd7d3c35a7e3/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/0ch_cf\", \"description\"=>\"fish\", \"score\"=>0.96688128}, {\"mid\"=>\"/m/03fj2\", \"description\"=>\"goldfish\", \"score\"=>0.95787}, {\"mid\"=>\"/m/0jbk\", \"description\"=>\"animal\", \"score\"=>0.95659435}, {\"mid\"=>\"/m/09686\", \"description\"=>\"vertebrate\", \"score\"=>0.9112013}, {\"mid\"=>\"/m/0gjnf\", \"description\"=>\"carp\", \"score\"=>0.64078552}, {\"mid\"=>\"/m/04g07\", \"description\"=>\"koi\", \"score\"=>0.60961068}, {\"mid\"=>\"/m/0cqnw\", \"description\"=>\"perch\", \"score\"=>0.53826624}]}]}"], ["created_at", "2016-06-30 20:25:37.465885"], ["updated_at", "2016-06-30 20:25:37.465885"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2650ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:25:37 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:26:52 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:27:05 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"THhBiVwSKb5byA+oYmb1GR7TbUSwyQ2pETS5hK7oe5MR2uZl5WJqfMbxDetX/z62IyUrodzllZnJdRbdF3XeCA==", "art"=>{"image"=>"https://ucarecdn.com/61d15832-1687-42c1-afe0-5634cb6eeff5/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/61d15832-1687-42c1-afe0-5634cb6eeff5/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/068hy\", \"description\"=>\"pet\", \"score\"=>0.99192387}, {\"mid\"=>\"/m/015p6\", \"description\"=>\"bird\", \"score\"=>0.98793644}, {\"mid\"=>\"/m/01c4rd\", \"description\"=>\"beak\", \"score\"=>0.9720301}, {\"mid\"=>\"/m/0gv1x\", \"description\"=>\"parrot\", \"score\"=>0.9683643}, {\"mid\"=>\"/m/0jbk\", \"description\"=>\"animal\", \"score\"=>0.95830464}, {\"mid\"=>\"/m/0gv35\", \"description\"=>\"macaw\", \"score\"=>0.95719385}, {\"mid\"=>\"/m/01g5v\", \"description\"=>\"blue\", \"score\"=>0.92426318}, {\"mid\"=>\"/m/09686\", \"description\"=>\"vertebrate\", \"score\"=>0.91725671}, {\"mid\"=>\"/m/035qhg\", \"description\"=>\"fauna\", \"score\"=>0.66665065}, {\"mid\"=>\"/m/089v3\", \"description\"=>\"zoo\", \"score\"=>0.55711019}]}]}"], ["created_at", "2016-06-30 20:27:16.261942"], ["updated_at", "2016-06-30 20:27:16.261942"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10504ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:27:16 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+  [1m[35mArt Load (0.4ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:28:57 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:29:09 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pl1SRJ8AZ8Rb7RV+i3ExreRcRRxVEAoISelR4lsMyu1j//WoJnAkBsbUFz2+6PoC2aoD+Tk8kjiRqP674pFvdg==", "art"=>{"image"=>"https://ucarecdn.com/9c471d1c-9633-4f85-af36-8b50d7813204/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/9c471d1c-9633-4f85-af36-8b50d7813204/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/06ntj\", \"description\"=>\"sports\", \"score\"=>0.93771482}, {\"mid\"=>\"/m/02vzx9\", \"description\"=>\"player\", \"score\"=>0.93737572}, {\"mid\"=>\"/m/018w8\", \"description\"=>\"basketball\", \"score\"=>0.8830899}, {\"mid\"=>\"/m/01445t\", \"description\"=>\"athlete\", \"score\"=>0.87630814}, {\"mid\"=>\"/m/06nb_j\", \"description\"=>\"basketball moves\", \"score\"=>0.84835279}, {\"mid\"=>\"/m/02h664x\", \"description\"=>\"basketball player\", \"score\"=>0.84210527}, {\"mid\"=>\"/m/03fyrh\", \"description\"=>\"greco roman wrestling\", \"score\"=>0.65067136}, {\"mid\"=>\"/m/0gl2ny2\", \"description\"=>\"football player\", \"score\"=>0.63470376}]}]}"], ["created_at", "2016-06-30 20:29:17.430979"], ["updated_at", "2016-06-30 20:29:17.430979"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7467ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:29:17 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.5ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `vision' for nil:NilClass):
+    37:     </div>
+    38:     <div class="card-reveal">
+    39:       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    40:       <%= @art_tags.vision %>
+    41:     </div>
+    42:   </div>
+    43:   </div>
+  app/views/arts/index.html.erb:40:in `block in _app_views_arts_index_html_erb__2429610096033732819_70100910876880'
+  app/views/arts/index.html.erb:28:in `_app_views_arts_index_html_erb__2429610096033732819_70100910876880'
+  app/controllers/arts_controller.rb:9:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:30:53 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:30:57 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:31:11 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0wy3zjtV0pRO4G27SR4ZKx8AV+Nu0IwZwCPXVehB0dOOrhAigiWRVtPZb/h8h9KEIvYRBgL8FCkYYngMUdx0SA==", "art"=>{"image"=>"https://ucarecdn.com/cc20c5eb-249a-4b67-98d5-6252ba46e554/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/cc20c5eb-249a-4b67-98d5-6252ba46e554/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/02wbm\", \"description\"=>\"food\", \"score\"=>0.82035506}, {\"mid\"=>\"/m/0cdn1\", \"description\"=>\"hamburger\", \"score\"=>0.71636826}, {\"mid\"=>\"/m/025t7sq\", \"description\"=>\"tiki\", \"score\"=>0.65421647}, {\"mid\"=>\"/m/02q08p0\", \"description\"=>\"dish\", \"score\"=>0.56183153}]}]}"], ["created_at", "2016-06-30 20:31:19.616626"], ["updated_at", "2016-06-30 20:31:19.616626"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8079ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:31:19 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:32:21 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:32:34 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UHbAl1KZvmbed+eiAB3UeelN/OeSQavsisMzMbxRsKMN1Gd76+n9pENO5eE1hB/W1Lu6Av5tM9xSgpxoBcwVOA==", "art"=>{"image"=>"https://ucarecdn.com/8f48dd59-628c-4be7-9c5d-513e3a6250d7/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/8f48dd59-628c-4be7-9c5d-513e3a6250d7/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/02wbm\", \"description\"=>\"food\", \"score\"=>0.9526363}, {\"mid\"=>\"/m/02q08p0\", \"description\"=>\"dish\", \"score\"=>0.94914383}, {\"mid\"=>\"/m/068_x\", \"description\"=>\"pizza cheese\", \"score\"=>0.94282848}, {\"mid\"=>\"/m/04scj\", \"description\"=>\"meat\", \"score\"=>0.90548068}, {\"mid\"=>\"/m/0kdzn\", \"description\"=>\"sausage\", \"score\"=>0.89112365}, {\"mid\"=>\"/m/018dy5\", \"description\"=>\"pepperoni\", \"score\"=>0.82780814}, {\"mid\"=>\"/m/0krfg\", \"description\"=>\"meal\", \"score\"=>0.82425267}, {\"mid\"=>\"/m/0663v\", \"description\"=>\"pizza\", \"score\"=>0.82343626}, {\"mid\"=>\"/m/09y2k2\", \"description\"=>\"italian food\", \"score\"=>0.63573}, {\"mid\"=>\"/m/0pqdc\", \"description\"=>\"hors d oeuvre\", \"score\"=>0.54184365}]}]}"], ["created_at", "2016-06-30 20:32:40.861862"], ["updated_at", "2016-06-30 20:32:40.861862"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6612ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:32:40 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:33:50 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:34:05 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7wsc9gvIdHRecPxIZ6RFCpz265n4lyFDHS6WorrQJZ+yqbsasrg3tsNJ/gtSPY6loQCtfJS7uXPFbzn7A02ABA==", "art"=>{"image"=>"https://ucarecdn.com/144618c2-7092-4a70-9b17-26440a791958/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/144618c2-7092-4a70-9b17-26440a791958/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/034wh\", \"description\"=>\"graffiti\", \"score\"=>0.96931434}, {\"mid\"=>\"/m/06gfj\", \"description\"=>\"road\", \"score\"=>0.96292853}, {\"mid\"=>\"/m/019sc\", \"description\"=>\"black\", \"score\"=>0.942924}, {\"mid\"=>\"/m/06fvc\", \"description\"=>\"red\", \"score\"=>0.93863785}, {\"mid\"=>\"/m/01c8br\", \"description\"=>\"street\", \"score\"=>0.90540719}, {\"mid\"=>\"/m/0215n\", \"description\"=>\"cartoon\", \"score\"=>0.89327562}, {\"mid\"=>\"/m/09qqq\", \"description\"=>\"wall\", \"score\"=>0.89137471}, {\"mid\"=>\"/m/0jjw\", \"description\"=>\"art\", \"score\"=>0.86628515}, {\"mid\"=>\"/m/04rd7\", \"description\"=>\"mural\", \"score\"=>0.63250822}, {\"mid\"=>\"/m/07vwy6\", \"description\"=>\"street art\", \"score\"=>0.55555558}]}]}"], ["created_at", "2016-06-30 20:34:11.327629"], ["updated_at", "2016-06-30 20:34:11.327629"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5442ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:34:11 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:37:09 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:37:22 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6t82sXqT31W2ldPA8vSQdUAWbmOAxhXaBf9yaKQ5bkiCds2fJoMv8vjVQw2Uhnu6PYfXOIvgGewVlKQGw1AIg==", "art"=>{"image"=>"https://ucarecdn.com/263f7daf-7a40-4afc-bf6e-b86833df4d0b/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/263f7daf-7a40-4afc-bf6e-b86833df4d0b/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/01cgz\", \"description\"=>\"boxing\", \"score\"=>0.865403}, {\"mid\"=>\"/m/018w8\", \"description\"=>\"basketball\", \"score\"=>0.8626585}, {\"mid\"=>\"/m/02h664x\", \"description\"=>\"basketball player\", \"score\"=>0.84210527}, {\"mid\"=>\"/m/08fgwk\", \"description\"=>\"contact sport\", \"score\"=>0.81818181}, {\"mid\"=>\"/m/06nb_j\", \"description\"=>\"basketball moves\", \"score\"=>0.80453748}, {\"mid\"=>\"/m/0h8mhzd\", \"description\"=>\"sports uniform\", \"score\"=>0.78377479}, {\"mid\"=>\"/m/05kc29\", \"description\"=>\"combat sport\", \"score\"=>0.72727275}, {\"mid\"=>\"/m/06ntj\", \"description\"=>\"sports\", \"score\"=>0.71564507}, {\"mid\"=>\"/m/02h00q\", \"description\"=>\"jersey\", \"score\"=>0.70315504}, {\"mid\"=>\"/m/011l78\", \"description\"=>\"team\", \"score\"=>0.60715425}]}]}"], ["created_at", "2016-06-30 20:37:26.773121"], ["updated_at", "2016-06-30 20:37:26.773121"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4707ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:37:26 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+  [1m[35mArt Load (0.2ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+  [1m[35mArt Load (1.7ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
