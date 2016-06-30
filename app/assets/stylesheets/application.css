@@ -51,3 +51,8 @@ h4 {
 #contact {
   text-align: center;
 }
+
+
+.chip {
+  margin: 3px !important;
+}
