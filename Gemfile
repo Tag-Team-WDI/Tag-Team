@@ -58,4 +58,6 @@ gem 'awesome_print', require: 'ap'
 #for google auth
 gem 'google_cloud_vision'
 
+gem 'tempdir'
 
+gem 'pull_tempfile'
