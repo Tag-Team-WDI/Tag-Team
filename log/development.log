@@ -37543,3 +37543,2349 @@ Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.5ms)
   [1m[35mArt Load (0.2ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
   [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
   [1m[35mArt Load (1.7ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 13:51:50 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 13:52:03 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrswcwvUyIRfEw3VwGyCrN0gIq13v/GMxww/0YwaxQg/GZefsqSLRsIqD5b19UkD4NZkSBuTabwfTZCINYdgkw==", "art"=>{"image"=>"https://ucarecdn.com/cb34ebad-d1a7-4cc4-9124-2aa408bae0b2/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/cb34ebad-d1a7-4cc4-9124-2aa408bae0b2/"], ["user_id", 11], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/02vzx9\", \"description\"=>\"player\", \"score\"=>0.93748468}, {\"mid\"=>\"/m/01g317\", \"description\"=>\"person\", \"score\"=>0.9020381}, {\"mid\"=>\"/m/053hz1\", \"description\"=>\"cheering\", \"score\"=>0.80519331}, {\"mid\"=>\"/m/090f96\", \"description\"=>\"kick\", \"score\"=>0.78321368}, {\"mid\"=>\"/m/0gl2ny2\", \"description\"=>\"football player\", \"score\"=>0.71996838}, {\"mid\"=>\"/m/06ntj\", \"description\"=>\"sports\", \"score\"=>0.70791346}, {\"mid\"=>\"/m/0b0fq\", \"description\"=>\"photomontage\", \"score\"=>0.66727167}, {\"mid\"=>\"/m/04syw\", \"description\"=>\"monarch\", \"score\"=>0.61792713}, {\"mid\"=>\"/m/0bmgjqz\", \"description\"=>\"sport venue\", \"score\"=>0.5769074}, {\"mid\"=>\"/m/0pcq81q\", \"description\"=>\"soccer player\", \"score\"=>0.56709617}]}]}"], ["created_at", "2016-06-30 20:52:13.934314"], ["updated_at", "2016-06-30 20:52:13.934314"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10198ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 13:52:13 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1[0m
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:00:10 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 43ms (Views: 35.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:00:22 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nT2zd9EuYAV74Q009/2tnIwu6tEeItT9CnN4up5A3qPAnxSbaF4jx+bYD3fCZGYzsdisNHIOTM3SMtfjJ917OA==", "art"=>{"image"=>"https://ucarecdn.com/19fee6ea-1b79-4897-baee-2aa628d8679c/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 7472ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `art_tags' for #<ArtsController:0x007f8344d331b8>
+Did you mean?  @art_tags):
+  app/controllers/arts_controller.rb:35:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.9ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:01:02 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nT2zd9EuYAV74Q009/2tnIwu6tEeItT9CnN4up5A3qPAnxSbaF4jx+bYD3fCZGYzsdisNHIOTM3SMtfjJ917OA==", "art"=>{"image"=>"https://ucarecdn.com/19fee6ea-1b79-4897-baee-2aa628d8679c/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 2889ms (ActiveRecord: 0.5ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/arts_controller.rb:35:in `[]'
+  app/controllers/arts_controller.rb:35:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:01:41 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:01:45 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:01:56 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N+GRAUt7GhYxmPMr8jiP4CHkmwU7OX/sulZ1FLt5QzZqQzbt8gtZ1Kyh8WjHoURPHBLd4FcV59xiF9pNAuTmrQ==", "art"=>{"image"=>"https://ucarecdn.com/7a5fd97b-e6bc-4716-828a-43da06be7bfe/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 2487ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/arts_controller.rb:35:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.7ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:04:47 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N+GRAUt7GhYxmPMr8jiP4CHkmwU7OX/sulZ1FLt5QzZqQzbt8gtZ1Kyh8WjHoURPHBLd4FcV59xiF9pNAuTmrQ==", "art"=>{"image"=>"https://ucarecdn.com/7a5fd97b-e6bc-4716-828a-43da06be7bfe/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 2661ms (ActiveRecord: 0.5ms)
+
+TypeError (no implicit conversion of Hash into String):
+  app/controllers/arts_controller.rb:37:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.5ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:13:56 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:13:59 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:14:12 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6GODhO9R8qHUfbypJsR6Fi5GeM7Rttv8ufWcOBW1/HK1wSRoViGxY0lEvuoTXbG5E7A+K72aQ8xhtDNhrChZ6Q==", "art"=>{"image"=>""}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+Errno::ECONNREFUSED (Failed to open TCP connection to :80 (Connection refused - connect(2) for nil port 80)):
+  app/controllers/arts_controller.rb:32:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.7ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:14:41 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 14:14:41 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:14:46 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:14:46 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:15:00 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5RZjH8SMJOvkpjrfjVl3/08IeiJ2LIjtZh/fwiSFRia7VacvDPuvcaqmcD+mWtQ+fj71DBclJXlgP/ySUXejw==", "art"=>{"image"=>"https://ucarecdn.com/65cdacc9-f8b3-4669-ba68-3d4d55ca4cf6/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 3768ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/arts_controller.rb:37:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 14:15:31 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 51ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 14:15:41 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"amQuXm9bf7mume1gwYJs5qbfftGoSYE47oW75FweeiczHSFOrHqhl8eh7EtBLmJpohuk7RHNp46+nTtpHcmxsA==", "user"=>{"first_name"=>"Anthony", "last_name"=>"Schurz", "location"=>"esfnsl", "email"=>"anthony.schurz98@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'anthony.schurz98@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Anthony"], ["last_name", "Schurz"], ["email", "anthony.schurz98@gmail.com"], ["location", "esfnsl"], ["password_digest", "$2a$10$oJjai2g8xZSRKo.1j6hXA.j1zdNGonypuYRSkkXVHkPZNebd7qYyO"], ["created_at", "2016-06-30 21:15:41.316903"], ["updated_at", "2016-06-30 21:15:41.316903"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 80ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/12" for ::1 at 2016-06-30 14:15:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts" WHERE "arts"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (28.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:15:45 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:15:58 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiI+Iy2FiW0Qx8N3xD5HgKIvabeU8HYO5zVAozLnT8MHWzEz7qRXQ3n/wlxEkkkPpuuziy10ULi3LcAuczCEVA==", "art"=>{"image"=>"https://ucarecdn.com/3b3b27ea-3870-4475-9e83-e2291d39b795/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/3b3b27ea-3870-4475-9e83-e2291d39b795/"], ["user_id", 12], ["vision", "{\"responses\"=>[{\"labelAnnotations\"=>[{\"mid\"=>\"/m/02wbm\", \"description\"=>\"food\", \"score\"=>0.9526363}, {\"mid\"=>\"/m/02q08p0\", \"description\"=>\"dish\", \"score\"=>0.94914383}, {\"mid\"=>\"/m/068_x\", \"description\"=>\"pizza cheese\", \"score\"=>0.94282848}, {\"mid\"=>\"/m/04scj\", \"description\"=>\"meat\", \"score\"=>0.90548062}, {\"mid\"=>\"/m/0kdzn\", \"description\"=>\"sausage\", \"score\"=>0.89112371}, {\"mid\"=>\"/m/018dy5\", \"description\"=>\"pepperoni\", \"score\"=>0.82780814}, {\"mid\"=>\"/m/0krfg\", \"description\"=>\"meal\", \"score\"=>0.82425338}, {\"mid\"=>\"/m/0663v\", \"description\"=>\"pizza\", \"score\"=>0.82343614}, {\"mid\"=>\"/m/09y2k2\", \"description\"=>\"italian food\", \"score\"=>0.63572997}, {\"mid\"=>\"/m/0pqdc\", \"description\"=>\"hors d oeuvre\", \"score\"=>0.54184365}]}]}"], ["created_at", "2016-06-30 21:16:04.283114"], ["updated_at", "2016-06-30 21:16:04.283114"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5754ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:16:04 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:20:35 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:20:56 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iW9cSQw7Fodd8NmVujiR9EYVzliJtGRbZzdikEoyK4/QFlNZzxrIqTTI2L46lJ97QtEUZDAwQu03L+IdC+XgGA==", "art"=>{"image"=>"https://ucarecdn.com/0dba1454-e227-40a0-b9ec-6b8e93d14198/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/0dba1454-e227-40a0-b9ec-6b8e93d14198/"], ["user_id", 12], ["vision", "pet"], ["created_at", "2016-06-30 21:21:01.621917"], ["updated_at", "2016-06-30 21:21:01.621917"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4876ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:21:01 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:26:10 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:26:13 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:26:53 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sgYFVDlyqg4qDTxis82YnEiq20HSXIiSIZehzVvMKyvsRcFk8QUhlGQNdoKYzjtdeZxUb7NVJQYnt4KdLj7Ow==", "art"=>{"image"=>"https://ucarecdn.com/65b827e1-1b38-4ca6-a3ff-a1c531c95d5c/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/65b827e1-1b38-4ca6-a3ff-a1c531c95d5c/"], ["user_id", 12], ["vision", "[{\"mid\"=>\"/m/068hy\", \"description\"=>\"pet\", \"score\"=>0.99041516}, {\"mid\"=>\"/m/0bt9lr\", \"description\"=>\"dog\", \"score\"=>0.98766196}, {\"mid\"=>\"/m/04rky\", \"description\"=>\"mammal\", \"score\"=>0.96341223}, {\"mid\"=>\"/m/0jbk\", \"description\"=>\"animal\", \"score\"=>0.95558661}, {\"mid\"=>\"/m/01t032\", \"description\"=>\"golden retriever\", \"score\"=>0.92838442}, {\"mid\"=>\"/m/09686\", \"description\"=>\"vertebrate\", \"score\"=>0.89893621}, {\"mid\"=>\"/m/01lrl\", \"description\"=>\"carnivoran\", \"score\"=>0.88672549}, {\"mid\"=>\"/m/05mqq3\", \"description\"=>\"snout\", \"score\"=>0.82375377}, {\"mid\"=>\"/m/0d7s3w\", \"description\"=>\"puppy\", \"score\"=>0.77890337}, {\"mid\"=>\"/m/0kpmf\", \"description\"=>\"dog breed\", \"score\"=>0.77777779}]"], ["created_at", "2016-06-30 21:26:59.451354"], ["updated_at", "2016-06-30 21:26:59.451354"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5892ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:26:59 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:28:38 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 35ms (Views: 27.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:28:48 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NU2NetyoU73nxmw7h233bvPg/hC1LkKdo/ne3kfsUmNsNIJqH4mNk47+bRAHwfnh9yQkLAyqZCvz4V5TBjuZ9A==", "art"=>{"image"=>"https://ucarecdn.com/1a39729a-d07d-405f-bbf8-870ed149f684/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/1a39729a-d07d-405f-bbf8-870ed149f684/"], ["user_id", 12], ["vision", "animal"], ["created_at", "2016-06-30 21:28:53.936412"], ["updated_at", "2016-06-30 21:28:53.936412"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5403ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:28:53 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:33:58 -0700
+
+SyntaxError (/Users/anthonyschurz/WDI29/Tag-Team/app/controllers/arts_controller.rb:38: syntax error, unexpected '|', expecting ')'
+      description_arry.push(|tag|["description"])
+                             ^
+/Users/anthonyschurz/WDI29/Tag-Team/app/controllers/arts_controller.rb:38: syntax error, unexpected ')', expecting keyword_end
+/Users/anthonyschurz/WDI29/Tag-Team/app/controllers/arts_controller.rb:84: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/arts_controller.rb:38: syntax error, unexpected '|', expecting ')'
+  app/controllers/arts_controller.rb:38: syntax error, unexpected ')', expecting keyword_end
+  app/controllers/arts_controller.rb:84: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.8ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:34:17 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 32ms (Views: 26.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 14:34:17 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:34:17 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 14:34:17 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 14:34:17 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 14:34:18 -0700
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:34:35 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tznm/Mm4Bb/r0ql8mj4nbj3i6pcZmb6Hq3rtE/xAr2sWQOnsCpnbkYLqqFcakinhOSYwq6AdmDH7Ym2evZdk/A==", "art"=>{"image"=>"https://ucarecdn.com/ea87db52-4b10-4397-99d8-3e5028e38a09/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 500 Internal Server Error in 4279ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `description_arry' for #<ArtsController:0x007f8347ab4830>
+Did you mean?  @description_arry):
+  app/controllers/arts_controller.rb:38:in `block in create'
+  app/controllers/arts_controller.rb:37:in `each'
+  app/controllers/arts_controller.rb:37:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.9ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:35:09 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tznm/Mm4Bb/r0ql8mj4nbj3i6pcZmb6Hq3rtE/xAr2sWQOnsCpnbkYLqqFcakinhOSYwq6AdmDH7Ym2evZdk/A==", "art"=>{"image"=>"https://ucarecdn.com/ea87db52-4b10-4397-99d8-3e5028e38a09/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/ea87db52-4b10-4397-99d8-3e5028e38a09/"], ["user_id", 12], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"russell terrier\", \"jack russell terrier\", \"vertebrate\", \"carnivoran\", \"terrier\", \"dog breed\"]"], ["created_at", "2016-06-30 21:35:18.632240"], ["updated_at", "2016-06-30 21:35:18.632240"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9013ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:35:18 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:35:23 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:35:23 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:35:34 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKjdJYSMXGNK6d4CWNEARJAjElTcYrijJqzF73HYeSlh0dI1R62CTSPR3ynYfQ7LlOfIaGXmnhV2tEViMA+yvg==", "art"=>{"image"=>"https://ucarecdn.com/266ce588-14ff-41db-b2be-c505cedf7656/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/266ce588-14ff-41db-b2be-c505cedf7656/"], ["user_id", 12], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"russell terrier\", \"jack russell terrier\", \"vertebrate\", \"carnivoran\", \"terrier\", \"dog breed\"]"], ["created_at", "2016-06-30 21:35:38.706793"], ["updated_at", "2016-06-30 21:35:38.706793"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4259ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:35:38 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=dog" for ::1 at 2016-06-30 14:37:24 -0700
+Processing by ArtsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dog"}
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=dog" for ::1 at 2016-06-30 14:39:03 -0700
+Processing by ArtsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dog"}
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    37:     </div>
+    38:     <div class="card-reveal">
+    39:       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    40:       <%= art.vision.each %>
+    41:     </div>
+    42:   </div>
+    43:   </div>
+  app/views/arts/index.html.erb:40:in `block in _app_views_arts_index_html_erb__2429610096033732819_70100938360480'
+  app/views/arts/index.html.erb:28:in `_app_views_arts_index_html_erb__2429610096033732819_70100938360480'
+  app/controllers/arts_controller.rb:11:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.6ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=dog" for ::1 at 2016-06-30 14:39:12 -0700
+Processing by ArtsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dog"}
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 14:39:12 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 14:43:07 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 14:43:21 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUocUuKMkwZDc76z1UFPnnKZmNHgNvDMNIZ39QjDkxvoMxNCIa1NKCpLv5hV7UERdl1C7Vmy1npknvd4SRRYjA==", "art"=>{"image"=>"https://ucarecdn.com/b8f27c29-e775-4cf9-b83d-99911ec2110e/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/b8f27c29-e775-4cf9-b83d-99911ec2110e/"], ["user_id", 12], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"golden retriever\", \"vertebrate\", \"carnivoran\", \"snout\", \"puppy\", \"dog breed\"]"], ["created_at", "2016-06-30 21:43:26.601293"], ["updated_at", "2016-06-30 21:43:26.601293"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5495ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:43:26 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    37:     </div>
+    38:     <div class="card-reveal">
+    39:       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    40:       <%= art.vision[0] %>
+    41:     </div>
+    42:   </div>
+    43:   </div>
+  app/views/arts/index.html.erb:40:in `block in _app_views_arts_index_html_erb__2429610096033732819_70100879847380'
+  app/views/arts/index.html.erb:28:in `_app_views_arts_index_html_erb__2429610096033732819_70100879847380'
+  app/controllers/arts_controller.rb:11:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:43:48 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    37:     </div>
+    38:     <div class="card-reveal">
+    39:       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    40:       <%= art.vision.first %>
+    41:     </div>
+    42:   </div>
+    43:   </div>
+  app/views/arts/index.html.erb:40:in `block in _app_views_arts_index_html_erb__2429610096033732819_70100890178360'
+  app/views/arts/index.html.erb:28:in `_app_views_arts_index_html_erb__2429610096033732819_70100890178360'
+  app/controllers/arts_controller.rb:11:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 14:45:03 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:33:51 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:34:07 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pn3Nt1MVvNjrCGnN8RiQepwoohLNbFlX5s4wwMeido5nBMKnkDRi9oIwaOZxtJ71mOx4LnTof+G21rBNhnW9GQ==", "art"=>{"image"=>"https://ucarecdn.com/65cfb618-5f10-4702-8bf0-2f65f098d56e/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/65cfb618-5f10-4702-8bf0-2f65f098d56e/"], ["user_id", 12], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"vertebrate\", \"olde english bulldogge\", \"carnivoran\", \"puppy\", \"flooring\", \"american pit bull terrier\"]"], ["created_at", "2016-06-30 22:34:12.268970"], ["updated_at", "2016-06-30 22:34:12.268970"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4904ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 15:34:12 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 12]]
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 15:51:49 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:51:49 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:51:53 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:52:06 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFhMXcuucuKlmBJjzKBgZjm7tmXYHQPsMaf7MGZKIrl+jomKc7+fgZsY19mdeQX14QY9H8GWPuLwTB3OTqZBJg==", "art"=>{"image"=>"https://ucarecdn.com/8facc9ac-c1d1-4d53-97d6-7f8f815d2ef8/"}, "commit"=>"Create Post"}
+Completed 500 Internal Server Error in 4711ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/arts_controller.rb:42:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 15:52:23 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:52:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3CIl3G3eIcNo60/UqVtX/FHIazQL2VyVQoKXYW9lWWtpk1AyaaV5DMjaIUDfAjMKfqq1smkWHyU4eyjrVH2+g==", "user"=>{"first_name"=>"Anthony", "last_name"=>"Schurz", "location"=>"asfl", "email"=>"anthony.schurz243@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'anthony.schurz243@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Anthony"], ["last_name", "Schurz"], ["email", "anthony.schurz243@gmail.com"], ["location", "asfl"], ["password_digest", "$2a$10$cVujUuUpEWdJal1KZXYlCOpg9XUJ4wMzb/XBEOiDfHftWqkRkwOBu"], ["created_at", "2016-06-30 22:52:34.430644"], ["updated_at", "2016-06-30 22:52:34.430644"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 69ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/13" for ::1 at 2016-06-30 15:52:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts" WHERE "arts"."user_id" = ?  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:52:38 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:52:48 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h/Tm0ZbG1FLO8w7BzJmIeCUJoayM0azUhXINVBZjj0txIiMGLtc5MfBzy3udQO3r/bQq1pVakdpEmeuqPo/s1A==", "art"=>{"image"=>"https://ucarecdn.com/b6130dc8-6a8b-48dd-b2b0-187408a02899/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 500 Internal Server Error in 10128ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'user_id' for Tag.):
+  app/controllers/arts_controller.rb:45:in `block in create'
+  app/controllers/arts_controller.rb:44:in `each'
+  app/controllers/arts_controller.rb:44:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.9ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-30 15:53:40 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:53:44 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:53:56 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FkjRyHshL/qb3dAXXFfEF1kavg0KrhITxAwr2S87RJTgnhQfwzDCmaVdFa0NjqGEgac1dxMlLx0F580nB9cnCw==", "art"=>{"image"=>"https://ucarecdn.com/9b020811-fdcd-4e73-bbdb-64e367655fb6/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 500 Internal Server Error in 4105ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'user_id' for Tag.):
+  app/controllers/arts_controller.rb:45:in `block in create'
+  app/controllers/arts_controller.rb:44:in `each'
+  app/controllers/arts_controller.rb:44:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.4ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:54:23 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FkjRyHshL/qb3dAXXFfEF1kavg0KrhITxAwr2S87RJTgnhQfwzDCmaVdFa0NjqGEgac1dxMlLx0F580nB9cnCw==", "art"=>{"image"=>"https://ucarecdn.com/9b020811-fdcd-4e73-bbdb-64e367655fb6/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 3114ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'tag' for Tag.):
+  app/controllers/arts_controller.rb:45:in `block in create'
+  app/controllers/arts_controller.rb:44:in `each'
+  app/controllers/arts_controller.rb:44:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:54:26 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:54:37 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1xnwMAL5vV4aKmoplKJpfXV3VZclySlf3kGdnMjaZzZiqIXeBoLlkbobBL3i+w2LWhWLEUcGau+kuCIW88KAw==", "art"=>{"image"=>"https://ucarecdn.com/8245dccf-0614-48e0-b582-37f15e60f15c/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 500 Internal Server Error in 3600ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'tag' for Tag.):
+  app/controllers/arts_controller.rb:45:in `block in create'
+  app/controllers/arts_controller.rb:44:in `each'
+  app/controllers/arts_controller.rb:44:in `create'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.0ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:55:30 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1xnwMAL5vV4aKmoplKJpfXV3VZclySlf3kGdnMjaZzZiqIXeBoLlkbobBL3i+w2LWhWLEUcGau+kuCIW88KAw==", "art"=>{"image"=>"https://ucarecdn.com/8245dccf-0614-48e0-b582-37f15e60f15c/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "pet"], ["created_at", "2016-06-30 22:55:33.661912"], ["updated_at", "2016-06-30 22:55:33.661912"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "dog"], ["created_at", "2016-06-30 22:55:33.665518"], ["updated_at", "2016-06-30 22:55:33.665518"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "mammal"], ["created_at", "2016-06-30 22:55:33.668785"], ["updated_at", "2016-06-30 22:55:33.668785"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "animal"], ["created_at", "2016-06-30 22:55:33.671678"], ["updated_at", "2016-06-30 22:55:33.671678"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "russell terrier"], ["created_at", "2016-06-30 22:55:33.674396"], ["updated_at", "2016-06-30 22:55:33.674396"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "jack russell terrier"], ["created_at", "2016-06-30 22:55:33.676810"], ["updated_at", "2016-06-30 22:55:33.676810"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "vertebrate"], ["created_at", "2016-06-30 22:55:33.679738"], ["updated_at", "2016-06-30 22:55:33.679738"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "carnivoran"], ["created_at", "2016-06-30 22:55:33.684411"], ["updated_at", "2016-06-30 22:55:33.684411"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "terrier"], ["created_at", "2016-06-30 22:55:33.687525"], ["updated_at", "2016-06-30 22:55:33.687525"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "dog breed"], ["created_at", "2016-06-30 22:55:33.690695"], ["updated_at", "2016-06-30 22:55:33.690695"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/8245dccf-0614-48e0-b582-37f15e60f15c/"], ["user_id", 13], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"russell terrier\", \"jack russell terrier\", \"vertebrate\", \"carnivoran\", \"terrier\", \"dog breed\"]"], ["created_at", "2016-06-30 22:55:33.693187"], ["updated_at", "2016-06-30 22:55:33.693187"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3415ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 15:55:33 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:55:33 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:55:36 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:55:47 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OLjK79E5QIwiVFPG7cZSkf2FEGYkNY3r3Sr9hAitXQiNCb8B1UIYQ4JlPVKbnzZn0ufO4Eb6zlun00IOM7W6w==", "art"=>{"image"=>"https://ucarecdn.com/024cb602-8c05-4c82-8284-47ae6bd84836/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "pet"], ["created_at", "2016-06-30 22:55:51.364226"], ["updated_at", "2016-06-30 22:55:51.364226"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "dog"], ["created_at", "2016-06-30 22:55:51.368109"], ["updated_at", "2016-06-30 22:55:51.368109"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "mammal"], ["created_at", "2016-06-30 22:55:51.370540"], ["updated_at", "2016-06-30 22:55:51.370540"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "animal"], ["created_at", "2016-06-30 22:55:51.373365"], ["updated_at", "2016-06-30 22:55:51.373365"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "golden retriever"], ["created_at", "2016-06-30 22:55:51.376130"], ["updated_at", "2016-06-30 22:55:51.376130"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "vertebrate"], ["created_at", "2016-06-30 22:55:51.379331"], ["updated_at", "2016-06-30 22:55:51.379331"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "carnivoran"], ["created_at", "2016-06-30 22:55:51.383978"], ["updated_at", "2016-06-30 22:55:51.383978"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "snout"], ["created_at", "2016-06-30 22:55:51.387493"], ["updated_at", "2016-06-30 22:55:51.387493"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)  [["description", "puppy"], ["created_at", "2016-06-30 22:55:51.391983"], ["updated_at", "2016-06-30 22:55:51.391983"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "dog breed"], ["created_at", "2016-06-30 22:55:51.394894"], ["updated_at", "2016-06-30 22:55:51.394894"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/024cb602-8c05-4c82-8284-47ae6bd84836/"], ["user_id", 13], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"golden retriever\", \"vertebrate\", \"carnivoran\", \"snout\", \"puppy\", \"dog breed\"]"], ["created_at", "2016-06-30 22:55:51.397452"], ["updated_at", "2016-06-30 22:55:51.397452"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3870ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 15:55:51 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.6ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  ORDER BY "tags"."id" DESC LIMIT 1[0m
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 15:58:52 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 34ms (Views: 27.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 15:59:06 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J1T7rd4bB7NhnJxc5oD2uR/PxUQCnrzCdd1ojBUUgLPRgj56Zgrq0F8cWea3WZMqx3JOPhsVgcy0No5yPfjjLA==", "art"=>{"image"=>"https://ucarecdn.com/db2062d6-da6e-4bcb-a5df-3029997cee05/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/db2062d6-da6e-4bcb-a5df-3029997cee05/"], ["user_id", 13], ["vision", "[\"automobile\", \"vehicle\", \"sedan\", \"coupé\", \"land vehicle\", \"mode of transport\"]"], ["created_at", "2016-06-30 22:59:10.529089"], ["updated_at", "2016-06-30 22:59:10.529089"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 67], ["description", "automobile"], ["created_at", "2016-06-30 22:59:10.537321"], ["updated_at", "2016-06-30 22:59:10.537321"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 67], ["description", "vehicle"], ["created_at", "2016-06-30 22:59:10.540161"], ["updated_at", "2016-06-30 22:59:10.540161"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 67], ["description", "sedan"], ["created_at", "2016-06-30 22:59:10.543876"], ["updated_at", "2016-06-30 22:59:10.543876"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 67], ["description", "coupé"], ["created_at", "2016-06-30 22:59:10.547639"], ["updated_at", "2016-06-30 22:59:10.547639"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 67], ["description", "land vehicle"], ["created_at", "2016-06-30 22:59:10.551774"], ["updated_at", "2016-06-30 22:59:10.551774"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 67], ["description", "mode of transport"], ["created_at", "2016-06-30 22:59:10.557705"], ["updated_at", "2016-06-30 22:59:10.557705"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3824ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 15:59:10 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags"  ORDER BY "tags"."id" DESC LIMIT 1
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 67]]
+  [1m[35mArt Load (0.2ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 16:01:36 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 16:01:46 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38SGIyOZB8ehngFn52jtW+3mK4StsYsP0XD2TXzimwUpEkP0m4jqpJ8exN22sYjINVug/rQ6tgEQmxCzVA74mg==", "art"=>{"image"=>"https://ucarecdn.com/d884cd7b-8db6-4a33-9f1d-95a181036c8e/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/d884cd7b-8db6-4a33-9f1d-95a181036c8e/"], ["user_id", 13], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"russell terrier\", \"jack russell terrier\", \"vertebrate\", \"carnivoran\", \"terrier\", \"dog breed\"]"], ["created_at", "2016-06-30 23:01:50.363950"], ["updated_at", "2016-06-30 23:01:50.363950"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 68], ["description", "pet"], ["created_at", "2016-06-30 23:01:50.368546"], ["updated_at", "2016-06-30 23:01:50.368546"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 68], ["description", "dog"], ["created_at", "2016-06-30 23:01:50.371522"], ["updated_at", "2016-06-30 23:01:50.371522"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 68], ["description", "mammal"], ["created_at", "2016-06-30 23:01:50.374816"], ["updated_at", "2016-06-30 23:01:50.374816"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 68], ["description", "animal"], ["created_at", "2016-06-30 23:01:50.377393"], ["updated_at", "2016-06-30 23:01:50.377393"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 68], ["description", "russell terrier"], ["created_at", "2016-06-30 23:01:50.380312"], ["updated_at", "2016-06-30 23:01:50.380312"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 68], ["description", "jack russell terrier"], ["created_at", "2016-06-30 23:01:50.384109"], ["updated_at", "2016-06-30 23:01:50.384109"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 68], ["description", "vertebrate"], ["created_at", "2016-06-30 23:01:50.389449"], ["updated_at", "2016-06-30 23:01:50.389449"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 68], ["description", "carnivoran"], ["created_at", "2016-06-30 23:01:50.392829"], ["updated_at", "2016-06-30 23:01:50.392829"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 68], ["description", "terrier"], ["created_at", "2016-06-30 23:01:50.395832"], ["updated_at", "2016-06-30 23:01:50.395832"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 68], ["description", "dog breed"], ["created_at", "2016-06-30 23:01:50.399842"], ["updated_at", "2016-06-30 23:01:50.399842"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4262ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:01:50 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 28]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 29]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 30]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 31]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 32]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 33]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 34]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 35]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 36]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 37]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 38]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 39]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 40]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 41]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 42]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 43]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 44]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 45]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 46]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 47]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 48]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 49]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 50]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 51]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 52]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 53]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 54]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 55]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 56]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 57]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 58]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 59]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 60]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 61]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 62]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 63]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 64]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 65]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 66]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 67]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 68]]
+  Rendered arts/index.html.erb within layouts/application (39.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 16:02:37 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 16:02:47 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bwHyZGHH25fqiHqev4rJHDtdVN+ZasT5eiDS++/B5dOZ1zez2dY29NQIvyTuU6yP4+DfpYDh+fe7yzQFxy2GTA==", "art"=>{"image"=>"https://ucarecdn.com/a498dac6-5433-45c8-a5e4-0759a430f1f2/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/a498dac6-5433-45c8-a5e4-0759a430f1f2/"], ["user_id", 13], ["vision", "[\"sports equipment\", \"ball\", \"football player\", \"volleyball\", \"ball\"]"], ["created_at", "2016-06-30 23:02:50.584722"], ["updated_at", "2016-06-30 23:02:50.584722"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 69], ["description", "sports equipment"], ["created_at", "2016-06-30 23:02:50.589196"], ["updated_at", "2016-06-30 23:02:50.589196"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 69], ["description", "ball"], ["created_at", "2016-06-30 23:02:50.592293"], ["updated_at", "2016-06-30 23:02:50.592293"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 69], ["description", "football player"], ["created_at", "2016-06-30 23:02:50.595327"], ["updated_at", "2016-06-30 23:02:50.595327"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 69], ["description", "volleyball"], ["created_at", "2016-06-30 23:02:50.598228"], ["updated_at", "2016-06-30 23:02:50.598228"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 69], ["description", "ball"], ["created_at", "2016-06-30 23:02:50.601081"], ["updated_at", "2016-06-30 23:02:50.601081"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3165ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:02:50 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (12.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+  [1m[35mArt Load (0.3ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" ASC LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 28]]
+  [1m[35mArt Load (0.3ms)[0m  SELECT  "arts".* FROM "arts"  ORDER BY "arts"."id" DESC LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+
+
+Started GET "/" for ::1 at 2016-06-30 16:05:10 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (10.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:05:10 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:05:30 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.3ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:05:30 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:05:40 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 16:05:45 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 16:05:56 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U/Wy10eL5HHTGszqzeaUUIyogcn0hgpEDkSZWRtZPVilI3cA/5oJEu2aCVCcP/HDVBUKs+0NN0rPr3+nM7Vexw==", "art"=>{"image"=>"https://ucarecdn.com/ae6c9920-a7d4-451c-b3d8-771dc65251cd/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/ae6c9920-a7d4-451c-b3d8-771dc65251cd/"], ["user_id", 13], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"vertebrate\", \"olde english bulldogge\", \"carnivoran\", \"puppy\", \"flooring\", \"american pit bull terrier\"]"], ["created_at", "2016-06-30 23:06:00.713196"], ["updated_at", "2016-06-30 23:06:00.713196"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 70], ["description", "pet"], ["created_at", "2016-06-30 23:06:00.717614"], ["updated_at", "2016-06-30 23:06:00.717614"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 70], ["description", "dog"], ["created_at", "2016-06-30 23:06:00.720335"], ["updated_at", "2016-06-30 23:06:00.720335"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 70], ["description", "mammal"], ["created_at", "2016-06-30 23:06:00.722897"], ["updated_at", "2016-06-30 23:06:00.722897"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 70], ["description", "animal"], ["created_at", "2016-06-30 23:06:00.726013"], ["updated_at", "2016-06-30 23:06:00.726013"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 70], ["description", "vertebrate"], ["created_at", "2016-06-30 23:06:00.729718"], ["updated_at", "2016-06-30 23:06:00.729718"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 70], ["description", "olde english bulldogge"], ["created_at", "2016-06-30 23:06:00.735400"], ["updated_at", "2016-06-30 23:06:00.735400"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 70], ["description", "carnivoran"], ["created_at", "2016-06-30 23:06:00.738489"], ["updated_at", "2016-06-30 23:06:00.738489"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 70], ["description", "puppy"], ["created_at", "2016-06-30 23:06:00.742058"], ["updated_at", "2016-06-30 23:06:00.742058"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 70], ["description", "flooring"], ["created_at", "2016-06-30 23:06:00.746035"], ["updated_at", "2016-06-30 23:06:00.746035"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 70], ["description", "american pit bull terrier"], ["created_at", "2016-06-30 23:06:00.750589"], ["updated_at", "2016-06-30 23:06:00.750589"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4547ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:06:00 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.7ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:06:39 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:06:39 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:06:52 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `tags' for nil:NilClass):
+    37:     </div>
+    38:     <div class="card-reveal">
+    39:       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    40:       <%= art.vision.tags %>
+    41:     </div>
+    42:   </div>
+    43:   </div>
+  app/views/arts/index.html.erb:40:in `block in _app_views_arts_index_html_erb__2429610096033732819_70100916255740'
+  app/views/arts/index.html.erb:28:in `_app_views_arts_index_html_erb__2429610096033732819_70100916255740'
+  app/controllers/arts_controller.rb:11:in `index'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:07:05 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.4ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  Rendered arts/index.html.erb within layouts/application (10.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:07:05 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:09:09 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 28]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 29]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 30]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 31]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 32]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 33]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 34]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 35]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 36]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 37]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 38]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 39]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 40]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 41]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 42]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 43]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 44]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 45]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 46]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 47]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 48]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 49]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 50]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 51]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 52]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 53]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 54]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 55]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 56]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 57]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 58]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 59]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 60]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 61]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 62]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 63]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 64]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 65]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 66]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 68]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (29.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:09:09 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:13:37 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.4ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 28]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 29]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 30]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 31]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 32]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 33]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 34]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 35]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 36]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 37]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 38]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 39]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 40]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 41]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 42]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 43]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 44]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 45]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 46]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 47]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 48]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 49]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 50]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 51]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 52]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 53]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 54]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 55]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 56]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 57]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 58]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 59]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 60]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 61]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 62]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 63]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 64]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 65]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 66]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 67]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 68]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 69]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (25.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/application.self-05a6d0e4f1001ef23ac824a75aa5c2255f9ac1cff9f5080ca3acca35401bdd29.css?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:13:37 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:14:25 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.5ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 28]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 29]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 30]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 31]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 32]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 33]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 34]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 35]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 36]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 37]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 38]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 39]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 40]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 41]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 42]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 43]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 44]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 45]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 46]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 47]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 48]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 49]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 50]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 51]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 52]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 53]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 54]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 55]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 56]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 57]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 58]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 59]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 60]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 61]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 62]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 63]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 64]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 65]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 66]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 68]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (31.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 71ms (Views: 66.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/application.self-16bd8ea7aa80b757c76627e1db5e78a945a83e7d290f4606d2a4eca3a1a2bd7e.css?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:14:25 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:14:44 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 28]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 29]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 30]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 31]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 32]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 33]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 34]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 35]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 36]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 37]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 38]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 39]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 40]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 41]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 42]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 43]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 44]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 45]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 46]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 47]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 48]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 49]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 50]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 51]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 52]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 53]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 54]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 55]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 56]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 57]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 58]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 59]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 60]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 61]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 62]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 63]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 64]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 65]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 66]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 67]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 68]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 69]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (32.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/application.self-03ac22d49664521536a6cd6fb0324a92f46a29aa1a90b679d850fedd2a1d6e47.css?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:44 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:14:53 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 28]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 29]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 30]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 31]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 32]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 33]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 34]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 35]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 36]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 37]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 38]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 39]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 40]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 41]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 42]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 43]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 44]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 45]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 46]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 47]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 48]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 49]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 50]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 51]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 52]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 53]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 54]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 55]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 56]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 57]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 58]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 59]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 60]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 61]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 62]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 63]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 64]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 65]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 66]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 68]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (23.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/application.self-6cfe23cbec6a2dbf1fe73310afb6c6b78e6750c25d49ad5d780a2f64a592b926.css?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:14:53 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:15:17 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 28]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 29]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 30]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 31]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 32]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 33]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 34]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 35]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 36]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 37]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 38]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 39]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 40]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 41]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 42]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 43]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 44]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 45]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 46]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 47]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 48]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 49]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 50]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 51]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 52]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 53]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 54]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 55]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 56]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 57]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 58]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 59]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 60]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 61]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 62]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 63]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 64]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 65]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 66]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 67]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 68]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 69]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (26.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/application.self-6a1ddfd16dbc5d384cceee7e9798ff1f2c50fc032365d4b85164d4704b8c9b03.css?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:15:17 -0700
+
+
+Started GET "/" for ::1 at 2016-06-30 16:15:29 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 28]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 29]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 30]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 31]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 32]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 33]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 34]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 35]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 36]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 37]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 38]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 39]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 40]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 41]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 42]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 43]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 44]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 45]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 46]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 47]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 48]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 49]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 50]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 51]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 52]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 53]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 54]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 55]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 56]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 57]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 58]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 59]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 60]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 61]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 62]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 63]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 64]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 65]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 66]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 68]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 70]]
+  Rendered arts/index.html.erb within layouts/application (27.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/application.self-63fee83fe7444b6487ac462209d373490398228749117db20af72bafe9f96975.css?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 16:15:29 -0700
+
+
+Started GET "/arts/new" for ::1 at 2016-06-30 16:18:01 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-06-30 16:18:14 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TsFt0yecW/hvsw8iVE+caalpDq+LWm5p8Z9S6pn8v/i4F6gEn422m1EzypgFlvn6cdSF1ZLRU2cwdLQUsRDcZw==", "art"=>{"image"=>"https://ucarecdn.com/2d089608-edfe-4fcf-ae1b-360640b966fd/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/2d089608-edfe-4fcf-ae1b-360640b966fd/"], ["user_id", 13], ["vision", "[\"horse\", \"unicorn\", \"stallion\", \"mane\", \"fauna\", \"mare\", \"mythical creature\", \"fictional character\"]"], ["created_at", "2016-06-30 23:18:19.712691"], ["updated_at", "2016-06-30 23:18:19.712691"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 71], ["description", "horse"], ["created_at", "2016-06-30 23:18:19.716277"], ["updated_at", "2016-06-30 23:18:19.716277"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 71], ["description", "unicorn"], ["created_at", "2016-06-30 23:18:19.718777"], ["updated_at", "2016-06-30 23:18:19.718777"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 71], ["description", "stallion"], ["created_at", "2016-06-30 23:18:19.721192"], ["updated_at", "2016-06-30 23:18:19.721192"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 71], ["description", "mane"], ["created_at", "2016-06-30 23:18:19.723512"], ["updated_at", "2016-06-30 23:18:19.723512"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 71], ["description", "fauna"], ["created_at", "2016-06-30 23:18:19.726575"], ["updated_at", "2016-06-30 23:18:19.726575"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 71], ["description", "mare"], ["created_at", "2016-06-30 23:18:19.729074"], ["updated_at", "2016-06-30 23:18:19.729074"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 71], ["description", "mythical creature"], ["created_at", "2016-06-30 23:18:19.731708"], ["updated_at", "2016-06-30 23:18:19.731708"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 71], ["description", "fictional character"], ["created_at", "2016-06-30 23:18:19.735287"], ["updated_at", "2016-06-30 23:18:19.735287"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5083ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 16:18:19 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 28]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 29]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 30]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 31]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 32]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 33]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 34]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 35]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 36]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 37]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 38]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 39]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 40]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 41]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 42]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 43]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 44]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 45]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 46]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 47]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 48]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 49]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 50]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 51]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 52]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 53]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 54]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 55]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 56]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 57]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 58]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 59]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 60]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 61]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 62]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 63]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 64]]
+  [1m[36mTag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 65]]
+  [1m[35mTag Load (0.0ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 66]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 67]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 68]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 69]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 70]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 71]]
+  Rendered arts/index.html.erb within layouts/application (23.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 3.6ms)
