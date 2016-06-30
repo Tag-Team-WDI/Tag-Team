@@ -55,7 +55,10 @@ end
 
 gem 'awesome_print', require: 'ap'
 
-#for google auth
-gem 'google_cloud_vision'
+gem 'paperclip'
 
+gem 'picguard'
 
+gem 'google-api-client'
+
+gem "mini_magick"

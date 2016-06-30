@@ -11,7 +11,4 @@
 </div>
 
 
-<img class="responsive-img" id="profileImg" src= "<%= @art.image %>" class="profileImage">
-
-
-<h5><%= link_to "Edit", edit_art_path(@art.id) %></h5>
+<%= link_to image_tag(@art.image.url(:med)), @art.image.url %>

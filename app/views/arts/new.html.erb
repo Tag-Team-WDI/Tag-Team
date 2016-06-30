@@ -4,10 +4,10 @@
 
     <h1>New Art Page</h1>
 
- <%= form_for @art do |f| %>
-    <div class="image-uploadcare-button">
-    <h6 class="new-post-image-text-for-button">Add Your Own Art Image!</h6>
-    <%= f.hidden_field :image, role: "uploadcare-uploader" %>
+ <%= form_for @art, html: { multipart: true } do |f| %>
+  <div>
+    <h6>Add Your Own Art Image!</h6>
+    <%= f.file_field :image %>
   </div>
 
   <div class="new-post-button">
