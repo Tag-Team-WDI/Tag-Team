@@ -1,4 +1,6 @@
 require 'pull_tempfile'
+require 'json'
+
 
 class ArtsController < ApplicationController
 
@@ -30,7 +32,7 @@ def index
     @file = PullTempfile.pull_tempfile(url: art_image, original_filename: original_filename)
 
     @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
-    [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response
+    [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response["responses"][0]["labelAnnotations"][0]["description"]
 
     @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @art_tags})
 
