@@ -16,7 +16,12 @@ def index
     @art = Art.new
     render :new
   end
-
+# def create
+#      post_params = params.require(:post).permit(:title, :description, :image, :period_id, :post_date)
+#    @post = Post.create(post_params)
+#    @user = current_user
+#    @user.posts << @post
+#    redirect_to '/posts'
 
   def create
     @user = current_user

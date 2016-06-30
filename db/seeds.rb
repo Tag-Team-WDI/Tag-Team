@@ -16,6 +16,24 @@ User.create([
 Art.create!([
   {user_id: 1, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
   },
+  {user_id: 5, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  },
+   {user_id: 6, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  },
+   {user_id: 11, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  },
+   {user_id: 12, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  },
+   {user_id: 13, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  },
+  {user_id: 10,image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
+  },
+  {user_id: 9,image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
+  },
+  {user_id: 9,image:"http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"
+  },
+  {user_id: 1,image:"http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"
+  },
   {user_id: 2,image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
   },
   {user_id: 3,image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
