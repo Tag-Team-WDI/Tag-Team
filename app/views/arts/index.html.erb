@@ -2,8 +2,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-          
+
 <div class="container">
+  <div class="row">
   <nav>
    <div class="nav-wrapper">
      <form>
@@ -18,13 +19,15 @@
      </form>
    </div>
  </nav>
+ </div>
 
-<h1>This is the Home Page edit</h1>
+<h1>This is the Home Page</h1>
 <div class="row">
-<% @arts.each do |art| %>
 
+<% @arts.each do |art| %>
+<div class="col s12 m4 12">
  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
+    <div class="card-image waves-effect waves-block waves-light card-height">
       <img class="activator" src="<%= art.image %>">
     </div>
     <div class="card-content">
@@ -36,6 +39,8 @@
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
   </div>
+  </div>
   <% end %>
+
 </div>
->>>>>>> ShowPage
+</div>

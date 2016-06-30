@@ -22227,6 +22227,172 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
   Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2016-06-28 19:46:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__2275343036853307387_70361865939660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (145.1ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (185.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (366.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 19:46:30 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__2275343036853307387_70361865939660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (69.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.7ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 19:46:35 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
+  app/helpers/sessions_helper.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__2275343036853307387_70361865939660'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.2ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (145.7ms)
+
+
+Started GET "/" for ::1 at 2016-06-28 20:06:40 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 162ms (Views: 161.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/users.self-0cf37351c764c9dd800d3e27649c1d4f587cb725a0d95bcafcfdf0266693b273.css?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-28 20:06:40 -0700
+
+
+Started GET "/users" for ::1 at 2016-06-28 20:06:49 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/arts" for ::1 at 2016-06-28 20:06:57 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 87ms (Views: 65.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/arts/index" for ::1 at 2016-06-28 20:07:05 -0700
+Processing by ArtsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT  "arts".* FROM "arts" WHERE "arts"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Art with 'id'=index):
+  app/controllers/arts_controller.rb:28:in `show'
+
+
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.2ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.3ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/camilacrawford/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (197.3ms)
+=======
 Started GET "/" for ::1 at 2016-06-28 19:44:50 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by UsersController#index as HTML
@@ -22328,6 +22494,123 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
 >>>>>>> 65cd532b9efc72b88d55b7dfe575c90c75b86959
+<<<<<<< HEAD
+>>>>>>> 66752106a8581780a6077d40c9bf195c72365a64
+
+
+Started GET "/" for ::1 at 2016-06-29 09:59:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (16.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 2030ms (Views: 1211.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/users.self-0cf37351c764c9dd800d3e27649c1d4f587cb725a0d95bcafcfdf0266693b273.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 09:59:27 -0700
+
+
+Started GET "/" for ::1 at 2016-06-29 10:00:14 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 822ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/arts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/users.self-0cf37351c764c9dd800d3e27649c1d4f587cb725a0d95bcafcfdf0266693b273.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/application.self-1cfad6ead246696e1d2fbdf846ba153a3d9927c44a5b6e32773cae2a7b15e102.css?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 10:00:15 -0700
+
+
+Started GET "/arts" for ::1 at 2016-06-29 10:00:19 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (11.3ms)[0m  SELECT "arts".* FROM "arts"
+  Rendered arts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 108ms (Views: 79.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/users" for ::1 at 2016-06-29 10:21:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1096ms (Views: 276.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2016-06-29 10:21:14 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 758ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+=======
 <<<<<<< HEAD
 
 
@@ -36236,3 +36519,304 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 14:52:18 -0700
 >>>>>>> ShowPage
+>>>>>>> 81766f20293f92d3d87be7e08151d53e7693705d
+  [1m[36mActiveRecord::SchemaMigration Load (21.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArt Load (0.6ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 3]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 7]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 9]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 11]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 4]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 6]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (18.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 3]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$W4z7GZLSl9KtbvEQknrZjOifbOkli/R0D6AHSMIzZW83BNR.PN/Lm"], ["created_at", "2016-06-30 01:24:18.190031"], ["updated_at", "2016-06-30 01:24:18.190031"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$oDgbvd3I1/5bBFm9sstJE.exO7MOXVKsCnobvACD4O.nqpDDs8qLi"], ["created_at", "2016-06-30 01:24:18.290725"], ["updated_at", "2016-06-30 01:24:18.290725"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$jVKiGb/KZ1JCRkGd247VuefjvxENrBOLh/0EXr23iUaLvabUvpVOi"], ["created_at", "2016-06-30 01:24:18.393509"], ["updated_at", "2016-06-30 01:24:18.393509"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.396839"], ["updated_at", "2016-06-30 01:24:18.396839"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.399705"], ["updated_at", "2016-06-30 01:24:18.399705"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.402315"], ["updated_at", "2016-06-30 01:24:18.402315"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.404840"], ["updated_at", "2016-06-30 01:24:18.404840"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.409183"], ["updated_at", "2016-06-30 01:24:18.409183"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:24:18.412125"], ["updated_at", "2016-06-30 01:24:18.412125"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-30 01:24:18.415674"], ["updated_at", "2016-06-30 01:24:18.415674"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-30 01:24:18.419258"], ["updated_at", "2016-06-30 01:24:18.419258"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-30 01:24:18.422082"], ["updated_at", "2016-06-30 01:24:18.422082"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-30 01:24:18.425660"], ["updated_at", "2016-06-30 01:24:18.425660"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 2], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-30 01:24:18.428746"], ["updated_at", "2016-06-30 01:24:18.428746"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-30 01:24:18.432070"], ["updated_at", "2016-06-30 01:24:18.432070"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 4], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-30 01:24:18.435149"], ["updated_at", "2016-06-30 01:24:18.435149"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-30 01:24:18.438019"], ["updated_at", "2016-06-30 01:24:18.438019"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-30 01:24:18.442273"], ["updated_at", "2016-06-30 01:24:18.442273"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-30 01:24:18.445190"], ["updated_at", "2016-06-30 01:24:18.445190"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-30 01:24:18.448076"], ["updated_at", "2016-06-30 01:24:18.448076"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-30 01:24:18.451003"], ["updated_at", "2016-06-30 01:24:18.451003"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-30 01:24:18.454895"], ["updated_at", "2016-06-30 01:24:18.454895"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-30 01:24:18.458521"], ["updated_at", "2016-06-30 01:24:18.458521"]]
+  [1m[35m (15.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-30 01:24:18.477912"], ["updated_at", "2016-06-30 01:24:18.477912"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (24.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 13]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 15]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 17]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 19]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 21]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 22]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 23]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 25]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "arts" WHERE "arts"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "arts" WHERE "arts"."id" = ?  [["id", 27]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 7]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 9]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tags" WHERE "tags"."id" = ?  [["id", 11]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 6]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$vl0dMoXzCcCDmPIs.u41y.WqR1DkQqru.ATmJnun/XzhQx3BVM27O"], ["created_at", "2016-06-30 01:30:55.006919"], ["updated_at", "2016-06-30 01:30:55.006919"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$ikplT1Pbz7nFhq7NxrGjMupXBJwftYt8oZct0MhmDfjnQZehdvbp6"], ["created_at", "2016-06-30 01:30:55.102038"], ["updated_at", "2016-06-30 01:30:55.102038"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$apt5lTanh9p/zz8e76AWqOt0ZAL/npBoiOhLcJfza8L.eSUJaEcbi"], ["created_at", "2016-06-30 01:30:55.199926"], ["updated_at", "2016-06-30 01:30:55.199926"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.205220"], ["updated_at", "2016-06-30 01:30:55.205220"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.209424"], ["updated_at", "2016-06-30 01:30:55.209424"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.213261"], ["updated_at", "2016-06-30 01:30:55.213261"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 11], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.216689"], ["updated_at", "2016-06-30 01:30:55.216689"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 12], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.219365"], ["updated_at", "2016-06-30 01:30:55.219365"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 13], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"], ["created_at", "2016-06-30 01:30:55.222117"], ["updated_at", "2016-06-30 01:30:55.222117"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 10], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-30 01:30:55.225309"], ["updated_at", "2016-06-30 01:30:55.225309"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 9], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-30 01:30:55.228253"], ["updated_at", "2016-06-30 01:30:55.228253"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 9], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-30 01:30:55.230891"], ["updated_at", "2016-06-30 01:30:55.230891"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-30 01:30:55.233883"], ["updated_at", "2016-06-30 01:30:55.233883"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 2], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"], ["created_at", "2016-06-30 01:30:55.237978"], ["updated_at", "2016-06-30 01:30:55.237978"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"], ["created_at", "2016-06-30 01:30:55.240753"], ["updated_at", "2016-06-30 01:30:55.240753"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 4], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"], ["created_at", "2016-06-30 01:30:55.244405"], ["updated_at", "2016-06-30 01:30:55.244405"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"], ["created_at", "2016-06-30 01:30:55.247299"], ["updated_at", "2016-06-30 01:30:55.247299"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 6], ["image", "http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"], ["created_at", "2016-06-30 01:30:55.250461"], ["updated_at", "2016-06-30 01:30:55.250461"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "3D"], ["description", "man"], ["created_at", "2016-06-30 01:30:55.254694"], ["updated_at", "2016-06-30 01:30:55.254694"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "3D"], ["description", "Fishing"], ["created_at", "2016-06-30 01:30:55.258021"], ["updated_at", "2016-06-30 01:30:55.258021"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "3D"], ["description", "Cars"], ["created_at", "2016-06-30 01:30:55.261870"], ["updated_at", "2016-06-30 01:30:55.261870"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "3D"], ["description", "SnowMan"], ["created_at", "2016-06-30 01:30:55.265470"], ["updated_at", "2016-06-30 01:30:55.265470"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "3D"], ["description", "Woman"], ["created_at", "2016-06-30 01:30:55.268734"], ["updated_at", "2016-06-30 01:30:55.268734"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "3d"], ["description", "Tiger"], ["created_at", "2016-06-30 01:30:55.271571"], ["updated_at", "2016-06-30 01:30:55.271571"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (9.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
