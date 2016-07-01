@@ -14,44 +14,49 @@ User.create([
   ])
 
 Art.create!([
-  {user_id: 1, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  {user_id: 1, image:"http://streetartlondon.co.uk/tours/files/2014/01/23-Street-Art-London-Street-Art-Tour.jpg"
   },
-  {user_id: 5, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+  {user_id: 1, image:"http://thesource.com/wp-content/uploads/2014/02/NobodyLikesMe.jpg"
   },
-   {user_id: 6, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+   {user_id: 2, image:"https://modedeville.files.wordpress.com/2014/11/street-art-mariobros.jpg"
   },
-   {user_id: 11, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+   {user_id: 2, image:"https://res.cloudinary.com/streetartsf/image/upload/artworks/7307/MD-Clarion-DSC07250.jpg"
   },
-   {user_id: 12, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
+   {user_id: 3, image:"http://ww4.hdnux.com/photos/07/23/40/1914887/9/920x920.jpg"
   },
-   {user_id: 13, image:"http://www.nimball.com/uploads/1/4/4/9/144966/3291334.jpg"
-  },
-  {user_id: 10,image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
-  },
-  {user_id: 9,image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
-  },
-  {user_id: 9,image:"http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"
-  },
-  {user_id: 1,image:"http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"
-  },
-  {user_id: 2,image:"http://www.nimball.com/uploads/1/4/4/9/144966/6129264.jpg"
-  },
-  {user_id: 3,image:"http://www.nimball.com/uploads/1/4/4/9/144966/4936452.jpg"
-  },
-  {user_id: 4,image:"http://www.nimball.com/uploads/1/4/4/9/144966/994840.jpg"
-  },
-  {user_id: 5,image:"http://www.nimball.com/uploads/1/4/4/9/144966/1585557.jpg"
-  },
-  {user_id: 6,image:"http://www.nimball.com/uploads/1/4/4/9/144966/2809666.jpg"
+   {user_id: 3, image:"https://upworthy-production.s3.amazonaws.com/nugget/51a56ed73f9a60c870000944/attachments/Art_7.jpeg"
   }
   ])
 
 Tag.create([
-  {art_id: 1,category: "3D",description: "man"},
-  {art_id: 2,category: "3D",description: "Fishing"},
-  {art_id: 3,category: "3D",description: "Cars"},
-  {art_id: 4,category: "3D",description: "SnowMan"},
-  {art_id: 5,category: "3D",description: "Woman"},
-  {art_id: 6,category: "3d",description: "Tiger"}
-  ])
+  {art_id: 1,category: "Street Art",description: "elephant"},
+  {art_id: 1,category: "Street Art",description: "octopus"},
+  {art_id: 1,category: "Street Art",description: "turquoise"},
+  {art_id: 1,category: "Street Art",description: "graffiti"},
 
+  {art_id: 2,category: "Street Art",description: "boy"},
+  {art_id: 2,category: "Street Art",description: "orange"},
+  {art_id: 2,category: "Street Art",description: "street"},
+  {art_id: 2,category: "Street Art",description: "graffiti"},
+
+  {art_id: 3,category: "Street Art",description: "cartoon"},
+  {art_id: 3,category: "Street Art",description: "police"},
+  {art_id: 3,category: "Street Art",description: "mario"},
+  {art_id: 3,category: "Street Art",description: "graffiti"},
+
+  {art_id: 4,category: "Street Art",description: "bear"},
+  {art_id: 4,category: "Street Art",description: "fence"},
+  {art_id: 4,category: "Street Art",description: "street"},
+  {art_id: 4,category: "Street Art",description: "graffiti"},
+
+
+  {art_id: 5,category: "Street Art",description: "bike"},
+  {art_id: 5,category: "Street Art",description: "tree"},
+  {art_id: 5,category: "Street Art",description: "cactus"},
+  {art_id: 5,category: "Street Art",description: "graffiti"},
+
+  {art_id: 6,category: "Street Art",description: "olympics"},
+  {art_id: 6,category: "Street Art",description: "hoodie"},
+  {art_id: 6,category: "Street Art",description: "runner"},
+  {art_id: 6,category: "Street Art",description: "street"},
+  ])
