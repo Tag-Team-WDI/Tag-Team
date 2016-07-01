@@ -1,6 +1,6 @@
 class ArtsController < ApplicationController
 
-
+before_action :require_login, :only => [:edit, :show]
 
 def index
     @arts = Art.all

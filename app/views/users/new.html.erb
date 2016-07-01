@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col s12">
     <h1>Sign Up Page</h1>
-      <%= form_for @user do |f| %>
+      <%= form_for @user, url: users_path(@user), method: :patch do |f| %>
         <div>
           <%= f.text_field :first_name , placeholder: "First Name" %>
         </div>
@@ -17,6 +17,9 @@
         </div>
         <div>
           <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <div>
+          <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
         </div>
 
         <button class="btn waves-effect waves-light pink">

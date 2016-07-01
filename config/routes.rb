@@ -7,8 +7,13 @@ Rails.application.routes.draw do
   resources :users
 
   #session routes
+
+  #log in
+  # get "/users/new", to: "sessions#new"
   get "sign_in", to: "sessions#new"
+  #session begins upon sign up
   post "/sessions", to: "sessions#create"
+  get "/sign_up", to: "users#new"
   delete "/logout", to:"sessions#delete"
 
   #art routes
