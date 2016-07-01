@@ -61,3 +61,5 @@ gem 'google_cloud_vision'
 gem 'tempdir'
 
 gem 'pull_tempfile'
+
+gem 'dotenv'
