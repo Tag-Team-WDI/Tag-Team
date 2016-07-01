@@ -79,7 +79,8 @@ Ryan Rusnak out in SD for his feeback on the Google Vision API.
 Ryan's Github: https://github.com/RyanRusnak
 
 To Our Classmates and TAs for Their Support and Contributions
-
+### ERD
+![erd.jpeg](erd.jpeg)
 
 ### Wireframe
 
