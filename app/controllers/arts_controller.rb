@@ -6,9 +6,14 @@ class ArtsController < ApplicationController
 
 
 
-def index
-    @arts = Art.all
-    render :index
+  def index
+    if params[:search].present?
+      @query = params[:search]
+      @arts = Art.search(@query)
+    else
+      @arts = Art.all
+    end
+      render :index
   end
 
   def show
@@ -20,8 +25,6 @@ def index
     @art = Art.new
     render :new
   end
-
-
 
   def create
     # Define user

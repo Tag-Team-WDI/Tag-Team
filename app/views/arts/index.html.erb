@@ -10,9 +10,9 @@
      <form>
        <div class="input-field">
          <div class="row">
-            <%= form_tag "/arts", :method => 'get' do %>
-            <%= text_field_tag :search, params[:search]%>
-            <%= submit_tag "Search", :name => nil%>
+            <%= form_tag search_arts_path, :method => 'get' do %>
+            <%= text_field_tag :search %>
+            <%= submit_tag "Search" %>
             <% end %>
         </div>
        </div>
