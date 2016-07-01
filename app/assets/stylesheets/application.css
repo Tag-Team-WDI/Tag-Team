@@ -19,8 +19,9 @@
  }
 
 #errors {
-  padding-top: 10px;
-  color:red;
+  padding-top: 20px;
+  color:green;
+  font-size: 25px;
 }
 
 .founders {

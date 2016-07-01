@@ -9,12 +9,12 @@
 
    <!--   <div class="col s3"></div> -->
 
-<img class="responsive-img" id="profileImg" src= "<%= @user.image %>" class="profileImage">
+<img class="responsive-img" id="profileImg" src= "http://www.ourwang.com/finalwp/wp-content/uploads/2014/12/Ben-Hulan.jpg" class="profileImage">
 <!-- Add better button formatting below -->
-
 <div class="row">
-<div class="col m4"><%= button_to "Edit", edit_user_path(@user.id) %></div>
-<div class="col m4"><%= button_to "All Users", users_path(@user.id) %></div>
+<div class="col m4">
+
+</div>
 </div>
 
 
@@ -28,6 +28,12 @@
         <li><%= @user.location %></li>
         <li><%= @user.email %></li>
         <li><%= @user.created_at %></li>
+        <br>
+        <a href="/users/<%= @user.id %>/edit">
+          <button class="btn waves-effect waves-light green">
+            Edit
+          </button>
+        </a>
       </ul>
     </div>
   </div>
@@ -56,5 +62,3 @@
 
 </div>
 </div> <!-- container
-
-
