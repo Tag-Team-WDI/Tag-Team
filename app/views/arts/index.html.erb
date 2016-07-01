@@ -7,20 +7,15 @@
   <div class="row">
   <nav>
    <div class="nav-wrapper">
-     <form>
-       <div class="input-field">
-         <div class="row">
-            <%= form_tag search_arts_path, :method => 'get' do %>
-            <%= text_field_tag :search %>
-            <%= submit_tag "Search" %>
-            <% end %>
-        </div>
+
     <form>
       <div class="input-field">
-        <div class="row">
-           <%= form_tag search_arts_path, :method => 'get' do %>
-           <%= text_field_tag :search %>
-           <%= submit_tag "Search" %>
+        <div class="row #64b5f6 blue lighten-2">
+           <%= form_tag arts_path, :method => 'get' do %>
+           <label for="search"><i class="material-icons">search</i></label>
+           <div id="cursor">
+             <%= text_field_tag :search %>
+           </div>
            <% end %>
        </div>
       </div>
@@ -38,12 +33,12 @@
       <img class="activator" src="<%= art.image %>">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <span class="card-title activator grey-text text-darken-4"><%= art.tags.first.description %><i class="material-icons right">more_vert</i></span>
+      <p><a href="http://localhost:3000/users/<%= art.user_id %>"><%= art.user.first_name %></a></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-
+      <span class="card-title grey-text text-darken-4">Tags:<i class="material-icons right">close</i></span>
+      <br>
 
       <% art.tags.each do |tag| %>
       <div class="chip">

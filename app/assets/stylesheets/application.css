@@ -19,8 +19,9 @@
  }
 
 #errors {
-  padding-top: 10px;
-  color:red;
+  padding-top: 20px;
+  color:green;
+  font-size: 25px;
 }
 
 .founders {
@@ -62,4 +63,26 @@ h4 {
 
 #logo {
   height: 70px !important;
+  padding-left: 20px
+}
+
+#cursor {
+  padding-left: 30px;
+}
+
+.new_user {
+  margin: 0 30px 0 30px;
+}
+
+#signup {
+  margin-top: 30px;
+}
+
+#signin {
+  margin-top: 30px;
+}
+
+h3 {
+  text-align: center !important;
+  margin-top: 0
 }
