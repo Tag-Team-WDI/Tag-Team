@@ -1,3 +1,7 @@
+require 'pull_tempfile'
+require 'json'
+
+
 class ArtsController < ApplicationController
 
 before_action :require_login, :only => [:edit, :show]
@@ -16,24 +20,35 @@ def index
     @art = Art.new
     render :new
   end
-# def create
-#      post_params = params.require(:post).permit(:title, :description, :image, :period_id, :post_date)
-#    @post = Post.create(post_params)
-#    @user = current_user
-#    @user.posts << @post
-#    redirect_to '/posts'
+
+
 
   def create
+    # Define user
     @user = current_user
-
+    # Get art
+    art_image = art_params[:image]
+    original_filename = "no idea.png"
+    # Create tempfile
+    @file = PullTempfile.pull_tempfile(url: art_image, original_filename: original_filename)
+    # Create empty array for our art description
+    @description_array = [];
+    # Hit the vision API via the google cloud vision wrapper
     @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
-    [{ image: 'public/ducks.jpg', detection: 'LABEL_DETECTION', max_results: 10 }]).response
-
-    @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @art_tags})
+    [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response["responses"][0]["labelAnnotations"].each do |tag|
+      @description_array.push(tag["description"])
+    end
+    # Create new art
+    @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @description_array})
 
     if @art.save
+      @description_array.each do |value|
+        @tag = Tag.new({art_id: @art.id, description: value })
+        @tag.save
+      end
       redirect_to "/"
     end
+
 end
 
 
