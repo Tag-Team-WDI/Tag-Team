@@ -3,9 +3,6 @@ class ArtsController < ApplicationController
 require 'pull_tempfile'
 require 'json'
 
-
-before_action :require_login, only: :index
-
   def index
     if params[:search].present?
       @query = params[:search]
@@ -84,7 +81,7 @@ end
 end
 
 
-  private
+private
 
   def art_params
     params.require(:art).permit(:user_id, :image, :vision)
