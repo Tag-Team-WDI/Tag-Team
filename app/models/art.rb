@@ -6,4 +6,3 @@ class Art < ActiveRecord::Base
       return where("vision LIKE ?", query)
     end
   end
-end

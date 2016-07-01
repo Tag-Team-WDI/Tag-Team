@@ -19,8 +19,7 @@ Rails.application.routes.draw do
   #art routes
   resources :arts do
     get 'search', on: :collection
-
-  end
+    end
   #tags routes
   resources :tags
 
