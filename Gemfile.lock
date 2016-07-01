@@ -91,7 +91,6 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
-<<<<<<< HEAD
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -99,9 +98,7 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-=======
     pull_tempfile (0.2.0)
->>>>>>> 26761c2b2e9fd8bba5b67ea158bd0c5fd834c161
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -200,11 +197,8 @@ DEPENDENCIES
   google_cloud_vision
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
   pry-byebug
-=======
   pull_tempfile
->>>>>>> 26761c2b2e9fd8bba5b67ea158bd0c5fd834c161
   rails (= 4.2.6)
   rspec-rails
   sass-rails (~> 5.0)
