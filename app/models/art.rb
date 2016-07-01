@@ -1,4 +1,5 @@
 class Art < ActiveRecord::Base
+<<<<<<< HEAD
   has_many :tags
   def self.search(text)
     query = "%#{text}%"
