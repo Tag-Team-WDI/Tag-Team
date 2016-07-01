@@ -11,7 +11,7 @@ require 'json'
       @arts = Art.all.order(id: :desc)
     end
       render :index
-    end
+  end
 
   def show
     @art = Art.find(params[:id])
