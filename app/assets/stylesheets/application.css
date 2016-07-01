@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+ body {
+ 	background:#ffffff;
+ 	background: url("https://s-media-cache-ak0.pinimg.com/236x/b5/f4/97/b5f4974f044cd89e1f95633450ebf058.jpg") repeat;
+ }
 
 #errors {
   padding-top: 10px;
@@ -55,4 +58,8 @@ h4 {
 
 .chip {
   margin: 3px !important;
+}
+
+#logo {
+  height: 70px !important;
 }
