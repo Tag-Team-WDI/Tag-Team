@@ -5,11 +5,15 @@ require 'json'
 class ArtsController < ApplicationController
 
 
-
-def index
-    @arts = Art.all.order(id: :desc)
-    render :index
-  end
+  def index
+     if params[:search].present?
+       @query = params[:search]
+       @arts = Art.search(@query)
+     else
+       @arts = Art.all.order(id: :desc)
+     end
+       render :index
+   end
 
   def show
     @art = Art.find(params[:id])
