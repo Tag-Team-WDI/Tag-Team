@@ -12,9 +12,7 @@ Rails.application.routes.draw do
   delete "/logout", to:"sessions#delete"
 
   #art routes
-  resources :arts do
-    get 'search', on: :collection
-  end
+  resources :arts
   #tags routes
   resources :tags
 
