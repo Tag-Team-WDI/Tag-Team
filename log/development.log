@@ -47107,3 +47107,210 @@ Processing by ArtsController#index as HTML
   Rendered arts/index.html.erb within layouts/application (2.3ms)
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 10]]
 Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 20:12:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 14]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 13]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 11]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 10]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 334ms (Views: 318.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 20:12:29 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 71ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-06-30 20:12:32 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 14]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 2.2ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar, "vision" varchar) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629210926')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627174708')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627175101')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627175315')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160628024634')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629020421')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629180226')
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629180441')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629210555')
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "arts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar, "vision" varchar) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "art_id" integer, "category" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "password_digest" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image" varchar) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629210926')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627174708')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160627175101')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160627175315')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160628024634')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629020421')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629180226')
+  [1m[36m (6.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160629180441')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160629210555')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kidon@street.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Ankle"], ["email", "kidon@street.com"], ["location", "San FranPsycho"], ["image", "http://pickaface.net/includes/themes/clean/img/slide4.png"], ["password_digest", "$2a$10$NOmpHPG3ojygaThLZdH8aed2ynNh86.StTfmL6cDLB6615YRjQax2"], ["created_at", "2016-07-01 03:22:31.927912"], ["updated_at", "2016-07-01 03:22:31.927912"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'yoyo@spin.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cindy"], ["last_name", "Toe"], ["email", "yoyo@spin.com"], ["location", "Valley-Jo"], ["image", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnxhg4qZG-kVJlONQfbknfFoYsTlurgjZwY7xBC_mZUacc-RZc"], ["password_digest", "$2a$10$15VUT.v8nH.MKFATtaUiAebSB9zw.UAuAh8.V4Oyzu3DsCcQG3RG."], ["created_at", "2016-07-01 03:22:31.989801"], ["updated_at", "2016-07-01 03:22:31.989801"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'petes@shoelace.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "email", "location", "image", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ham"], ["last_name", "Finger"], ["email", "petes@shoelace.com"], ["location", "San-Jozie"], ["image", "http://pickaface.net/avatar/pickaface51f38ca9987be.png"], ["password_digest", "$2a$10$X7u7iFB.QJw36.KPnNbmZOjcThiO7PP1tTJvXZ4C8ogN23ZW/so56"], ["created_at", "2016-07-01 03:22:32.054634"], ["updated_at", "2016-07-01 03:22:32.054634"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["image", "http://streetartlondon.co.uk/tours/files/2014/01/23-Street-Art-London-Street-Art-Tour.jpg"], ["created_at", "2016-07-01 03:22:32.060454"], ["updated_at", "2016-07-01 03:22:32.060454"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["image", "http://thesource.com/wp-content/uploads/2014/02/NobodyLikesMe.jpg"], ["created_at", "2016-07-01 03:22:32.062715"], ["updated_at", "2016-07-01 03:22:32.062715"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 2], ["image", "https://modedeville.files.wordpress.com/2014/11/street-art-mariobros.jpg"], ["created_at", "2016-07-01 03:22:32.066233"], ["updated_at", "2016-07-01 03:22:32.066233"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["image", "https://res.cloudinary.com/streetartsf/image/upload/artworks/7307/MD-Clarion-DSC07250.jpg"], ["created_at", "2016-07-01 03:22:32.069792"], ["updated_at", "2016-07-01 03:22:32.069792"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 3], ["image", "http://ww4.hdnux.com/photos/07/23/40/1914887/9/920x920.jpg"], ["created_at", "2016-07-01 03:22:32.072310"], ["updated_at", "2016-07-01 03:22:32.072310"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("user_id", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["image", "https://upworthy-production.s3.amazonaws.com/nugget/51a56ed73f9a60c870000944/attachments/Art_7.jpeg"], ["created_at", "2016-07-01 03:22:32.075048"], ["updated_at", "2016-07-01 03:22:32.075048"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 1], ["category", "Street Art"], ["description", "elephant"], ["created_at", "2016-07-01 03:22:32.080834"], ["updated_at", "2016-07-01 03:22:32.080834"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "Street Art"], ["description", "octopus"], ["created_at", "2016-07-01 03:22:32.084338"], ["updated_at", "2016-07-01 03:22:32.084338"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 1], ["category", "Street Art"], ["description", "turquoise"], ["created_at", "2016-07-01 03:22:32.088799"], ["updated_at", "2016-07-01 03:22:32.088799"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 1], ["category", "Street Art"], ["description", "graffiti"], ["created_at", "2016-07-01 03:22:32.091846"], ["updated_at", "2016-07-01 03:22:32.091846"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "Street Art"], ["description", "boy"], ["created_at", "2016-07-01 03:22:32.095595"], ["updated_at", "2016-07-01 03:22:32.095595"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["category", "Street Art"], ["description", "orange"], ["created_at", "2016-07-01 03:22:32.098486"], ["updated_at", "2016-07-01 03:22:32.098486"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 2], ["category", "Street Art"], ["description", "street"], ["created_at", "2016-07-01 03:22:32.102535"], ["updated_at", "2016-07-01 03:22:32.102535"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 2], ["category", "Street Art"], ["description", "graffiti"], ["created_at", "2016-07-01 03:22:32.106364"], ["updated_at", "2016-07-01 03:22:32.106364"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 3], ["category", "Street Art"], ["description", "cartoon"], ["created_at", "2016-07-01 03:22:32.108938"], ["updated_at", "2016-07-01 03:22:32.108938"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "Street Art"], ["description", "police"], ["created_at", "2016-07-01 03:22:32.112048"], ["updated_at", "2016-07-01 03:22:32.112048"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 3], ["category", "Street Art"], ["description", "mario"], ["created_at", "2016-07-01 03:22:32.116182"], ["updated_at", "2016-07-01 03:22:32.116182"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 3], ["category", "Street Art"], ["description", "graffiti"], ["created_at", "2016-07-01 03:22:32.120005"], ["updated_at", "2016-07-01 03:22:32.120005"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "Street Art"], ["description", "bear"], ["created_at", "2016-07-01 03:22:32.123465"], ["updated_at", "2016-07-01 03:22:32.123465"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["category", "Street Art"], ["description", "fence"], ["created_at", "2016-07-01 03:22:32.127117"], ["updated_at", "2016-07-01 03:22:32.127117"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 4], ["category", "Street Art"], ["description", "street"], ["created_at", "2016-07-01 03:22:32.129382"], ["updated_at", "2016-07-01 03:22:32.129382"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 4], ["category", "Street Art"], ["description", "graffiti"], ["created_at", "2016-07-01 03:22:32.132052"], ["updated_at", "2016-07-01 03:22:32.132052"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 5], ["category", "Street Art"], ["description", "bike"], ["created_at", "2016-07-01 03:22:32.134361"], ["updated_at", "2016-07-01 03:22:32.134361"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "Street Art"], ["description", "tree"], ["created_at", "2016-07-01 03:22:32.136674"], ["updated_at", "2016-07-01 03:22:32.136674"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 5], ["category", "Street Art"], ["description", "cactus"], ["created_at", "2016-07-01 03:22:32.139656"], ["updated_at", "2016-07-01 03:22:32.139656"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 5], ["category", "Street Art"], ["description", "graffiti"], ["created_at", "2016-07-01 03:22:32.142159"], ["updated_at", "2016-07-01 03:22:32.142159"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "Street Art"], ["description", "olympics"], ["created_at", "2016-07-01 03:22:32.145571"], ["updated_at", "2016-07-01 03:22:32.145571"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 6], ["category", "Street Art"], ["description", "hoodie"], ["created_at", "2016-07-01 03:22:32.149883"], ["updated_at", "2016-07-01 03:22:32.149883"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["art_id", 6], ["category", "Street Art"], ["description", "runner"], ["created_at", "2016-07-01 03:22:32.152951"], ["updated_at", "2016-07-01 03:22:32.152951"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("art_id", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["art_id", 6], ["category", "Street Art"], ["description", "street"], ["created_at", "2016-07-01 03:22:32.155213"], ["updated_at", "2016-07-01 03:22:32.155213"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2016-06-30 20:22:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 299ms (Views: 288.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 20:22:54 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 81ms (Views: 72.3ms | ActiveRecord: 0.3ms)
