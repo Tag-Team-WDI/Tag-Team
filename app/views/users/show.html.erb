@@ -9,7 +9,8 @@
 
    <!--   <div class="col s3"></div> -->
 
-<img class="responsive-img" id="profileImg" src= "http://www.ourwang.com/finalwp/wp-content/uploads/2014/12/Ben-Hulan.jpg" class="profileImage">
+<!-- <img class="responsive-img" id="profileImg" src="{{@user.image}}" class="profileImage"> -->
+<%= image_tag(@user.image, class: "responsive-img", id: "profileImg") %>
 <!-- Add better button formatting below -->
 <div class="row">
 <div class="col m4">

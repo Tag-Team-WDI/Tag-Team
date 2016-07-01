@@ -1,4 +1,5 @@
 class Art < ActiveRecord::Base
+
  has_many :tags
  belongs_to :user
  def self.search(text)
@@ -7,4 +8,5 @@ class Art < ActiveRecord::Base
      return where("vision LIKE ?", query)
    end
  end
+
 end

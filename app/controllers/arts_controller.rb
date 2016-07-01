@@ -1,19 +1,17 @@
+class ArtsController < ApplicationController
+
 require 'pull_tempfile'
 require 'json'
 
-
-class ArtsController < ApplicationController
-
-
   def index
-     if params[:search].present?
-       @query = params[:search]
-       @arts = Art.search(@query)
-     else
-       @arts = Art.all.order(id: :desc)
-     end
-       render :index
-   end
+    if params[:search].present?
+      @query = params[:search]
+      @arts = Art.search(@query)
+    else
+      @arts = Art.all.order(id: :desc)
+    end
+      render :index
+  end
 
   def show
     @art = Art.find(params[:id])
@@ -24,8 +22,6 @@ class ArtsController < ApplicationController
     @art = Art.new
     render :new
   end
-
-
 
   def create
     # Define user
@@ -46,9 +42,11 @@ class ArtsController < ApplicationController
     @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @description_array})
 
     if @art.save
+      # login(@user)
       @description_array.each do |value|
         @tag = Tag.new({art_id: @art.id, description: value })
         @tag.save
+
       end
       redirect_to "/"
     end
@@ -83,7 +81,7 @@ end
 end
 
 
-  private
+private
 
   def art_params
     params.require(:art).permit(:user_id, :image, :vision)
