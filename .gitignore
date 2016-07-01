@@ -5,3 +5,4 @@ googleauth/*
 /.bundle/
 /doc/
 */sprockets/
+.env
