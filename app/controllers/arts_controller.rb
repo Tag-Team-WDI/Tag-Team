@@ -11,10 +11,10 @@ class ArtsController < ApplicationController
       @query = params[:search]
       @arts = Art.search(@query)
     else
-      @arts = Art.all
+      @arts = Art.all.order(id: :desc)
     end
       render :index
-  end
+    end
 
   def show
     @art = Art.find(params[:id])
