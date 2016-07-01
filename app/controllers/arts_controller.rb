@@ -1,10 +1,10 @@
+class ArtsController < ApplicationController
+
 require 'pull_tempfile'
 require 'json'
 
 
-class ArtsController < ApplicationController
-
-
+before_action :require_login, only: :index
 
   def index
     if params[:search].present?
@@ -45,9 +45,11 @@ class ArtsController < ApplicationController
     @art = Art.new({image: art_params[:image], user_id: @user.id, vision: @description_array})
 
     if @art.save
+      # login(@user)
       @description_array.each do |value|
         @tag = Tag.new({art_id: @art.id, description: value })
         @tag.save
+
       end
       redirect_to "/"
     end

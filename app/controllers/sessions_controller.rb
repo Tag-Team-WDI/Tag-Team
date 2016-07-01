@@ -5,18 +5,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user_params=params.require(:user).permit(:email, :password, :first_name, :last_name, :location)
+    user_params = params.require(:user).permit(:email, :password)
     @user = User.confirm(user_params)
     if @user
       login(@user)
       redirect_to "/users/#{@user.id}"
     else
+      flash[:error] = "Invalid email/password combination"
       redirect_to "/sign_in"
     end
   end
 
   def delete
-   logout
+   # logout
+   session.delete(:user_id)
+   @current_user = nil
    redirect_to users_path
   end
 
