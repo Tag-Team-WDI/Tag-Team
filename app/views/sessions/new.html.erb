@@ -1,4 +1,8 @@
 <div class="container">
+<<<<<<< HEAD
+=======
+  <div class="row #f5f5f5 grey lighten-4">
+>>>>>>> f91d6b5e754fac787e9f807cd40a272c44dcb931
 <%= form_for @user, url: "/sessions", method: "post" do |f| %>
   <div>
     <%= f.text_field :email, placeholder: "Email" %>
@@ -8,10 +12,13 @@
   </div>
 
 
-  <button class="btn waves-effect waves-light pink">
+  <button class="btn waves-effect waves-light red">
     <%= f.submit "Sign In" %>
     <i class="material-icons right">send</i>
   </button>
+  <br>
+  <br>
 
 <% end %>
+</div>
 </div>

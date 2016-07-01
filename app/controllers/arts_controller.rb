@@ -7,7 +7,7 @@ require 'json'
 before_action :require_login, only: :index
 
 def index
-    @arts = Art.all
+    @arts = Art.all.order(id: :desc)
     render :index
   end
 
