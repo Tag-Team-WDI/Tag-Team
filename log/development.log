@@ -54740,6 +54740,7 @@ Processing by ArtsController#index as HTML
 Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 2.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-07-01 13:52:12 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by ArtsController#index as HTML
@@ -54779,6 +54780,27 @@ Processing by ArtsController#index as HTML
   [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
   [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+=======
+Started DELETE "/logout" for ::1 at 2016-07-01 09:33:25 -0700
+Processing by SessionsController#delete as HTML
+  Parameters: {"authenticity_token"=>"rNKxNaBGNJUGMnk1SOarobx/fl6K7vMc/r/lmOZMwFW5Q8mMmWwi2I9uCBJa5W+SlGl7lwxns52apMSeVLUwjA=="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-07-01 09:33:25 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:33:26 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
   [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
   [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
@@ -54803,6 +54825,449 @@ Processing by ArtsController#index as HTML
   [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-07-01 09:33:30 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-01 09:33:33 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-01 09:33:47 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UdiqsgoAAtbIQYG3ZIOf8hV8MQtidbQy8Dn8UaqMuFFESdILMyoUm0Ed8JB2gFvBPWo0wuT89LOUIt1XGHVIiA==", "user"=>{"first_name"=>"an", "last_name"=>"sdkab", "location"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 68ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-01 09:33:47 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:34:01 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.3ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/4" for ::1 at 2016-07-01 09:43:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    22: 
+    23:     </div>
+    24:     <div class="col s12 m6">
+    25:       <p>Welcome <%= @user.first_name %></p>
+    26:       <ul>
+    27:         <li><%= @user.first_name %> <%= @user.last_name %></li>
+    28:         <li><%= @user.location %></li>
+  app/views/users/show.html.erb:25:in `_app_views_users_show_html_erb__2970334287970674559_70219394443860'
+  app/controllers/users_controller.rb:31:in `show'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.2ms)
+
+
+Started GET "/users/4" for ::1 at 2016-07-01 09:43:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    22: 
+    23:     </div>
+    24:     <div class="col s12 m6">
+    25:       <p>Welcome <%= @user.first_name %></p>
+    26:       <ul>
+    27:         <li><%= @user.first_name %> <%= @user.last_name %></li>
+    28:         <li><%= @user.location %></li>
+  app/views/users/show.html.erb:25:in `_app_views_users_show_html_erb__2970334287970674559_70219432395180'
+  app/controllers/users_controller.rb:31:in `show'
+
+
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.1ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/anthonyschurz/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started GET "/about" for ::1 at 2016-07-01 09:55:48 -0700
+Processing by HomeController#about as HTML
+  Rendered home/about.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:56:13 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/sign_in" for ::1 at 2016-07-01 09:56:42 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:56:44 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-01 09:56:45 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-01 09:57:01 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8G/o9zncnrpGjCb8rYwsZ4lTxfwmVMDYAbJZMT4oEt+UMca5c1kN2BGQbzgtfSCtjNK3nYQE4IEHehidgFQkg==", "user"=>{"first_name"=>"Vanessa", "last_name"=>"F", "location"=>"San Francisco", "email"=>"vanessarz@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'vanessarz@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "location", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Vanessa"], ["last_name", "F"], ["email", "vanessarz@gmail.com"], ["location", "San Francisco"], ["password_digest", "$2a$10$KNJX.2fbhPrWZ/wO.49n7...RePmQHAScnoibeizgYMmV4rrJt.HO"], ["created_at", "2016-07-01 16:57:01.832366"], ["updated_at", "2016-07-01 16:57:01.832366"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 68ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/8" for ::1 at 2016-07-01 09:57:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts" WHERE "arts"."user_id" = ?  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:57:11 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (17.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 09:57:25 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 09:57:36 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"baXVuO7rPPdUv9YMAPfBpS1LOvV/b+g3aI3eOTTbCgx4NK0B18Equt3jpysS9AWWBV0/PPnmqLYMlv8/hiL61Q==", "art"=>{"image"=>"https://ucarecdn.com/f750beaf-c46c-4880-ae55-e5db576b4791/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/f750beaf-c46c-4880-ae55-e5db576b4791/"], ["user_id", 8], ["vision", "[\"black\", \"art\", \"tattoo artist\", \"close up\", \"arm\", \"eye\", \"eyelash\", \"cosmetics\", \"chest\"]"], ["created_at", "2016-07-01 16:57:39.075144"], ["updated_at", "2016-07-01 16:57:39.075144"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 10], ["description", "black"], ["created_at", "2016-07-01 16:57:39.079738"], ["updated_at", "2016-07-01 16:57:39.079738"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 10], ["description", "art"], ["created_at", "2016-07-01 16:57:39.082067"], ["updated_at", "2016-07-01 16:57:39.082067"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 10], ["description", "tattoo artist"], ["created_at", "2016-07-01 16:57:39.084350"], ["updated_at", "2016-07-01 16:57:39.084350"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 10], ["description", "close up"], ["created_at", "2016-07-01 16:57:39.086561"], ["updated_at", "2016-07-01 16:57:39.086561"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 10], ["description", "arm"], ["created_at", "2016-07-01 16:57:39.088986"], ["updated_at", "2016-07-01 16:57:39.088986"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 10], ["description", "eye"], ["created_at", "2016-07-01 16:57:39.091444"], ["updated_at", "2016-07-01 16:57:39.091444"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 10], ["description", "eyelash"], ["created_at", "2016-07-01 16:57:39.093925"], ["updated_at", "2016-07-01 16:57:39.093925"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 10], ["description", "cosmetics"], ["created_at", "2016-07-01 16:57:39.096043"], ["updated_at", "2016-07-01 16:57:39.096043"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 10], ["description", "chest"], ["created_at", "2016-07-01 16:57:39.098894"], ["updated_at", "2016-07-01 16:57:39.098894"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2392ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:57:39 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 10]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 10]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (22.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 09:58:10 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 09:58:26 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lply+4BicypgHa0AHmF+LULcNLsgMrnaSrPW2O8x7g+DCApCuUhlZ+lB3CcMYroeasoxcqa7+VsuqPfeXcge1g==", "art"=>{"image"=>"https://ucarecdn.com/758c1817-d51c-41ae-b2c9-a5184f619c29/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/758c1817-d51c-41ae-b2c9-a5184f619c29/"], ["user_id", 8], ["vision", "[\"graffiti\", \"road\", \"pink\", \"cartoon\", \"art\", \"street\", \"sketch\", \"wall\", \"document\", \"drawing\"]"], ["created_at", "2016-07-01 16:58:30.664009"], ["updated_at", "2016-07-01 16:58:30.664009"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 11], ["description", "graffiti"], ["created_at", "2016-07-01 16:58:30.667959"], ["updated_at", "2016-07-01 16:58:30.667959"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 11], ["description", "road"], ["created_at", "2016-07-01 16:58:30.670215"], ["updated_at", "2016-07-01 16:58:30.670215"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 11], ["description", "pink"], ["created_at", "2016-07-01 16:58:30.672474"], ["updated_at", "2016-07-01 16:58:30.672474"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 11], ["description", "cartoon"], ["created_at", "2016-07-01 16:58:30.674674"], ["updated_at", "2016-07-01 16:58:30.674674"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 11], ["description", "art"], ["created_at", "2016-07-01 16:58:30.677171"], ["updated_at", "2016-07-01 16:58:30.677171"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 11], ["description", "street"], ["created_at", "2016-07-01 16:58:30.679233"], ["updated_at", "2016-07-01 16:58:30.679233"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 11], ["description", "sketch"], ["created_at", "2016-07-01 16:58:30.681328"], ["updated_at", "2016-07-01 16:58:30.681328"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 11], ["description", "wall"], ["created_at", "2016-07-01 16:58:30.683328"], ["updated_at", "2016-07-01 16:58:30.683328"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 11], ["description", "document"], ["created_at", "2016-07-01 16:58:30.685431"], ["updated_at", "2016-07-01 16:58:30.685431"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 11], ["description", "drawing"], ["created_at", "2016-07-01 16:58:30.687763"], ["updated_at", "2016-07-01 16:58:30.687763"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3777ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:58:30 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 11]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 10]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+>>>>>>> 46d10df7e18a1e9aca30b571ecaaaae10b1ff0aa
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+<<<<<<< HEAD
   Rendered arts/index.html.erb within layouts/application (71.4ms)
 Completed 200 OK in 443ms (Views: 439.5ms | ActiveRecord: 2.6ms)
 
@@ -54855,3 +55320,565 @@ Processing by ArtsController#index as HTML
   [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
   Rendered arts/index.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+=======
+  Rendered arts/index.html.erb within layouts/application (20.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 09:58:46 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 09:58:55 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f3oLRj+6A6e5un1irvjHalLaS13kgTO1qDBekJOEz89q63P/BpAV6jDmDEW8+wNZesxOlGIIczTMK3+WIX0/Fg==", "art"=>{"image"=>"https://ucarecdn.com/4dfd0c8e-55d8-41ec-9bf1-84e7b993d56c/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/4dfd0c8e-55d8-41ec-9bf1-84e7b993d56c/"], ["user_id", 8], ["vision", "[\"pet\", \"dog\", \"mammal\", \"animal\", \"labrador retriever\", \"vertebrate\", \"carnivoran\", \"puppy\", \"dog breed\", \"golden retriever\"]"], ["created_at", "2016-07-01 16:58:57.417263"], ["updated_at", "2016-07-01 16:58:57.417263"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 12], ["description", "pet"], ["created_at", "2016-07-01 16:58:57.421543"], ["updated_at", "2016-07-01 16:58:57.421543"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 12], ["description", "dog"], ["created_at", "2016-07-01 16:58:57.424196"], ["updated_at", "2016-07-01 16:58:57.424196"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 12], ["description", "mammal"], ["created_at", "2016-07-01 16:58:57.426344"], ["updated_at", "2016-07-01 16:58:57.426344"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 12], ["description", "animal"], ["created_at", "2016-07-01 16:58:57.428438"], ["updated_at", "2016-07-01 16:58:57.428438"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 12], ["description", "labrador retriever"], ["created_at", "2016-07-01 16:58:57.430766"], ["updated_at", "2016-07-01 16:58:57.430766"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 12], ["description", "vertebrate"], ["created_at", "2016-07-01 16:58:57.432821"], ["updated_at", "2016-07-01 16:58:57.432821"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 12], ["description", "carnivoran"], ["created_at", "2016-07-01 16:58:57.434831"], ["updated_at", "2016-07-01 16:58:57.434831"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 12], ["description", "puppy"], ["created_at", "2016-07-01 16:58:57.436839"], ["updated_at", "2016-07-01 16:58:57.436839"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 12], ["description", "dog breed"], ["created_at", "2016-07-01 16:58:57.438888"], ["updated_at", "2016-07-01 16:58:57.438888"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 12], ["description", "golden retriever"], ["created_at", "2016-07-01 16:58:57.441032"], ["updated_at", "2016-07-01 16:58:57.441032"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2436ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:58:57 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 12]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (31.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 09:59:18 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 09:59:26 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDqn3eSARPRXPiR7CuW3N4v15ttXcVJbXrg9Ak7WaxOxq99k3apSud5iVVwY5nMEo+PjEtH4Eto6oxwE/C+byg==", "art"=>{"image"=>"https://ucarecdn.com/875909b2-6b63-4956-aee4-dd0a901acb09/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/875909b2-6b63-4956-aee4-dd0a901acb09/"], ["user_id", 8], ["vision", "[\"automobile\", \"vehicle\", \"bmw 3 series\", \"grille\", \"sports car\", \"sedan\", \"bumper\", \"bmw 335\", \"land vehicle\", \"mode of transport\"]"], ["created_at", "2016-07-01 16:59:28.240925"], ["updated_at", "2016-07-01 16:59:28.240925"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 13], ["description", "automobile"], ["created_at", "2016-07-01 16:59:28.245195"], ["updated_at", "2016-07-01 16:59:28.245195"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 13], ["description", "vehicle"], ["created_at", "2016-07-01 16:59:28.247660"], ["updated_at", "2016-07-01 16:59:28.247660"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 13], ["description", "bmw 3 series"], ["created_at", "2016-07-01 16:59:28.249916"], ["updated_at", "2016-07-01 16:59:28.249916"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 13], ["description", "grille"], ["created_at", "2016-07-01 16:59:28.253154"], ["updated_at", "2016-07-01 16:59:28.253154"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 13], ["description", "sports car"], ["created_at", "2016-07-01 16:59:28.256036"], ["updated_at", "2016-07-01 16:59:28.256036"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 13], ["description", "sedan"], ["created_at", "2016-07-01 16:59:28.258448"], ["updated_at", "2016-07-01 16:59:28.258448"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 13], ["description", "bumper"], ["created_at", "2016-07-01 16:59:28.260699"], ["updated_at", "2016-07-01 16:59:28.260699"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 13], ["description", "bmw 335"], ["created_at", "2016-07-01 16:59:28.262929"], ["updated_at", "2016-07-01 16:59:28.262929"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 13], ["description", "land vehicle"], ["created_at", "2016-07-01 16:59:28.265556"], ["updated_at", "2016-07-01 16:59:28.265556"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 13], ["description", "mode of transport"], ["created_at", "2016-07-01 16:59:28.268214"], ["updated_at", "2016-07-01 16:59:28.268214"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1466ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 09:59:28 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.2ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (28.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=automobile" for ::1 at 2016-07-01 10:01:54 -0700
+Processing by ArtsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"automobile"}
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts" WHERE (vision LIKE '%automobile%')[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 13]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  Rendered arts/index.html.erb within layouts/application (7.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 10:06:49 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 13]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 12]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 11]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 10]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (39.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 10:33:55 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 10:34:16 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SBgi/ODh3k/q+QDo7hw1tPxIYs/Ny+hs8ygQL1ff6TVdiVpF2cvIAmOlcc/8H/GH1F5nBktCqO2XMzEp5SYZ7A==", "art"=>{"image"=>"https://ucarecdn.com/257e362c-b201-4640-90c7-204b179727b0/"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image", "https://ucarecdn.com/257e362c-b201-4640-90c7-204b179727b0/"], ["user_id", 8], ["vision", "[\"meal\", \"academic conference\", \"seminar\", \"lecture\"]"], ["created_at", "2016-07-01 17:34:19.648328"], ["updated_at", "2016-07-01 17:34:19.648328"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 14], ["description", "meal"], ["created_at", "2016-07-01 17:34:19.652831"], ["updated_at", "2016-07-01 17:34:19.652831"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 14], ["description", "academic conference"], ["created_at", "2016-07-01 17:34:19.655290"], ["updated_at", "2016-07-01 17:34:19.655290"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 14], ["description", "seminar"], ["created_at", "2016-07-01 17:34:19.657474"], ["updated_at", "2016-07-01 17:34:19.657474"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 14], ["description", "lecture"], ["created_at", "2016-07-01 17:34:19.659684"], ["updated_at", "2016-07-01 17:34:19.659684"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2872ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 10:34:19 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.2ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 14]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (25.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/arts/new" for ::1 at 2016-07-01 10:34:52 -0700
+Processing by ArtsController#new as HTML
+  Rendered arts/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/arts" for ::1 at 2016-07-01 10:35:11 -0700
+Processing by ArtsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pUjUokeOdIF2yUl9woEDdzQtYDU13H4Gl7sTHJ8ce2Cw2awbfqRizP+VOFrQgsdEHDtl/LNVPofzoDIaLeWLuQ==", "art"=>{"image"=>"https://ucarecdn.com/354b3459-8b68-4ea3-a3d0-05c83a52ccc0/"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "arts" ("image", "user_id", "vision", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["image", "https://ucarecdn.com/354b3459-8b68-4ea3-a3d0-05c83a52ccc0/"], ["user_id", 8], ["vision", "[\"academic conference\", \"seminar\", \"lecture\", \"meeting\"]"], ["created_at", "2016-07-01 17:35:14.416600"], ["updated_at", "2016-07-01 17:35:14.416600"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 15], ["description", "academic conference"], ["created_at", "2016-07-01 17:35:14.421250"], ["updated_at", "2016-07-01 17:35:14.421250"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 15], ["description", "seminar"], ["created_at", "2016-07-01 17:35:14.424630"], ["updated_at", "2016-07-01 17:35:14.424630"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["art_id", 15], ["description", "lecture"], ["created_at", "2016-07-01 17:35:14.427722"], ["updated_at", "2016-07-01 17:35:14.427722"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("art_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["art_id", 15], ["description", "meeting"], ["created_at", "2016-07-01 17:35:14.430602"], ["updated_at", "2016-07-01 17:35:14.430602"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2978ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 10:35:14 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.6ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 15]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 14]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (30.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-01 11:04:23 -0700
+Processing by ArtsController#index as HTML
+  [1m[36mArt Load (0.1ms)[0m  [1mSELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 15]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 15]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 14]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 13]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 12]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 11]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 10]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 9]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 7]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 6]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 5]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (35.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/arts.self-f58781ffea3a6c19854dcf6ac6353f5b7a1b923f93e553fdbfd294d646d1d972.css?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/tags.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/application.self-eb960382c756c446851f76547c9410525d238bfe9a25ec482bf54e83f28d4320.css?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/users.self-b42b4753067ea27f9ca2bda02934e601ddecf27eb5edeb9e8406fd66acccdce8.css?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/arts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/tags.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-01 11:04:23 -0700
+
+
+Started GET "/" for ::1 at 2016-07-01 11:52:38 -0700
+Processing by ArtsController#index as HTML
+  [1m[35mArt Load (0.1ms)[0m  SELECT "arts".* FROM "arts"  ORDER BY "arts"."id" DESC
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 15]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 14]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 13]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 12]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 11]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 10]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 9]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 8]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 7]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 6]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 5]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 4]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 3]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1  [["art_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?  [["art_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags" WHERE "tags"."art_id" = ?  ORDER BY "tags"."id" ASC LIMIT 1[0m  [["art_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."art_id" = ?[0m  [["art_id", 1]]
+  Rendered arts/index.html.erb within layouts/application (28.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 3.2ms)
+>>>>>>> 46d10df7e18a1e9aca30b571ecaaaae10b1ff0aa

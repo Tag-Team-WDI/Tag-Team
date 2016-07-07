@@ -649,3 +649,34 @@
   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  rollback transaction
   [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Tapioca"], ["last_name", "Juice"], ["email", "Tapioca@gmail.com"], ["password_digest", "$2a$04$Sbm4mWP3m6m5J52SX0Lh8./EEZRi.//DXcUi5VAvtvU26ZkuzsTbm"], ["created_at", "2016-07-01 17:03:10.841093"], ["updated_at", "2016-07-01 17:03:10.841093"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'breana@gaylord.org' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Valentina"], ["last_name", "Conroy"], ["password_digest", "$2a$04$57PMyltiFCo1NQGYNw2/ue0032d8Ux4DGVKYtaZZapd5.gnCo0RZy"], ["email", "breana@gaylord.org"], ["location", "South Karleeburgh"], ["created_at", "2016-07-01 17:03:11.134354"], ["updated_at", "2016-07-01 17:03:11.134354"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jerald_stanton@damore.co' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Garrick"], ["last_name", "Padberg"], ["password_digest", "$2a$04$6RVW1rXoTb3GbSQbdZuzj.PVU6eebcds6MzIV2yU.mQF7FTu1qAJq"], ["email", "jerald_stanton@damore.co"], ["location", "Port Tierraview"], ["created_at", "2016-07-01 17:03:11.142750"], ["updated_at", "2016-07-01 17:03:11.142750"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'viviane@wuckert.co' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("first_name", "last_name", "password_digest", "email", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "Fred"], ["last_name", "Homenick"], ["password_digest", "$2a$04$7riBuGF1fQYSCLwwIL9HxeeEiHm8dnO.8FEyhBUR7CZwFM2hCpTJq"], ["email", "viviane@wuckert.co"], ["location", "West Arturo"], ["created_at", "2016-07-01 17:03:11.150481"], ["updated_at", "2016-07-01 17:03:11.150481"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'EmailNoAtSymbol' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'Tapioca@gmail.com' LIMIT 1[0m
