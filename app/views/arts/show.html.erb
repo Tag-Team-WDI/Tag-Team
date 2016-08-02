@@ -1,17 +1,11 @@
-
+<!-- Edit page for the image that is uploaded by the user -->
 <div class="container">
   <div class="row">
-  <!--   <div class="col s3"></div> -->
     <div class="col s12">
-    <h1> Art Post Profile </h1>
-    <!-- <p>Welcome <%= @art.id %></p> -->
-  </div>
-   <!--   <div class="col s3"></div> -->
+      <h1> Art Post Profile </h1>
+    </div>
   </div>
 </div>
-
-
+<!-- Edit button that users can upload a new image -->
 <img class="responsive-img" id="profileImg" src= "<%= @art.image %>" class="profileImage">
-
-
 <h5><%= link_to "Edit", edit_art_path(@art.id) %></h5>
