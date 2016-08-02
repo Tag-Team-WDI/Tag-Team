@@ -1,29 +1,20 @@
 <div class="container">
-
- <h1>Users Index Page</h1>
+  <h1>Users Index Page</h1>
   <div class="row">
-
-<% @users.each do |user| %>
-
-          <div class="col s12 m4 12">
-            <div class="card">
-              <div class="card-image">
-
-              <a href='/users/<%= user.id %>'><img src="<%= user.image %>" class="indexUserImg" ></a>
-           <!--    <span class="card-title">Card Title</span> -->
-              </div> <!-- card-image -->
-              <div class="card-content">
-              <%= user.location %>
-              </div> <!-- card-content -->
-              <div class="card-action">
-                <a href='/users/<%= user.id %>'>Tagger Profile</a>
-              </div> <!-- card-action -->
-            </div> <!-- card -->
-          </div> <!-- col s12 m7 -->
-                  <% end %>
-<!--
-        button goes to add new art post
-        then when creates a post, redirected to arts ALL -->
-
-        </div> <!-- row -->
-</div>  <!-- container -->
+    <% @users.each do |user| %>
+    <div class="col s12 m4 12">
+      <div class="card">
+        <div class="card-image">
+          <a href='/users/<%= user.id %>'><img src="<%= user.image %>" class="indexUserImg" ></a>
+        </div>
+        <div class="card-content">
+          <%= user.location %>
+        </div>
+        <div class="card-action">
+          <a href='/users/<%= user.id %>'>Tagger Profile</a>
+        </div>
+      </div> 
+    </div> 
+    <% end %>
+  </div> 
+</div>  

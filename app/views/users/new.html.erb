@@ -1,36 +1,30 @@
 <div class="container">
   <div class="row #f5f5f5 grey lighten-4" id="signup">
     <div class="col s12">
-    <h2>Sign Up For Tag</h2>
+      <h2>Sign Up For Tag</h2>
       <%= form_for @user, url: users_path(@user), method: :post do |f| %>
-        <div>
-          <%= f.text_field :first_name , placeholder: "First Name" %>
-        </div>
-        <div>
-          <%= f.text_field :last_name , placeholder: "Last Name" %>
-        </div>
-        <div>
-          <%= f.text_field :location, placeholder: "Location" %>
-        </div>
-        <div>
-          <%= f.text_field :email, placeholder: "Email" %>
-        </div>
-        <div>
-          <%= f.password_field :password, placeholder: "Password" %>
-        </div>
-        <div>
-          <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
-        </div>
-        <br>
-        <button class="btn waves-effect waves-light red">
-
-          <%= f.submit "Sign Up" %>
-          <i class="material-icons right">send</i>
-        </button>
-      </br>
-      </br>
-
-
+      <div>
+        <%= f.text_field :first_name , placeholder: "First Name" %>
+      </div>
+      <div>
+        <%= f.text_field :last_name , placeholder: "Last Name" %>
+      </div>
+      <div>
+        <%= f.text_field :location, placeholder: "Location" %>
+      </div>
+      <div>
+        <%= f.text_field :email, placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <div>
+        <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+      </div><br>
+      <button class="btn waves-effect waves-light red">
+        <%= f.submit "Sign Up" %>
+        <i class="material-icons right">send</i>
+      </button></br></br>
       <% end %>
     </div>
   </div>
