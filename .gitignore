@@ -8,3 +8,4 @@ googleauth/*
 *.env
 *log/*
 *db/development.sqlite3
+.env
