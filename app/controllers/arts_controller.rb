@@ -1,7 +1,7 @@
 class ArtsController < ApplicationController
 
-require 'pull_tempfile'
-require 'json'
+  require 'pull_tempfile'
+  require 'json'
 
   def index
     if params[:search].present?
@@ -10,7 +10,7 @@ require 'json'
     else
       @arts = Art.all.order(id: :desc)
     end
-      render :index
+    render :index
   end
 
   def show
@@ -35,7 +35,7 @@ require 'json'
     @description_array = [];
     # Hit the vision API via the google cloud vision wrapper
     @art_tags = GoogleCloudVision::Classifier.new(ENV["API_KEY"],
-    [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response["responses"][0]["labelAnnotations"].each do |tag|
+      [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response["responses"][0]["labelAnnotations"].each do |tag|
       @description_array.push(tag["description"])
     end
     # Create new art
@@ -51,20 +51,10 @@ require 'json'
     end
   end
 
-
   def edit
     @art = Art.find(params[:id])
     render :edit
   end
-
-#   # def index
-#   #   @user = Art.all
-#   #   if params[:search]
-#   #     @arts = Art.search(params[:search]).order("created_at DESC")
-#   #   else
-#   #     @arts = Art.all.order('created_at DESC')
-#   #   end
-#   # end
 
   def update
     @art = Art.find(params[:id])
@@ -75,15 +65,11 @@ require 'json'
     else
       flash[:error] = @art.errors.full_messages.join(", ")
       redirect_to "/"
+    end
   end
-end
 
-
-private
-
+  private
   def art_params
     params.require(:art).permit(:user_id, :image, :vision)
   end
-
-
 end
