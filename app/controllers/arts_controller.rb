@@ -46,12 +46,10 @@ require 'json'
       @description_array.each do |value|
         @tag = Tag.new({art_id: @art.id, description: value })
         @tag.save
-
       end
       redirect_to "/"
     end
-
-end
+  end
 
 
   def edit
