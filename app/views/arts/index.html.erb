@@ -1,61 +1,53 @@
- <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <div class="container">
   <div class="row">
-  <nav>
-   <div class="nav-wrapper">
-
-    <form>
-      <div class="input-field">
-        <div class="row #64b5f6 blue lighten-2">
+    <nav>
+     <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <div class="row #64b5f6 blue lighten-2">
            <%= form_tag arts_path, :method => 'get' do %>
            <label for="search"><i class="material-icons">search</i></label>
            <div id="cursor">
              <%= text_field_tag :search %>
            </div>
            <% end %>
+         </div>
        </div>
-      </div>
-    </form>
+     </form>
    </div>
  </nav>
- </div>
+</div>
 
 <div class="row">
-
-<% @arts.each do |art| %>
-<div class="col s12 m4 12">
- <div class="card">
-    <div class="card-image waves-effect waves-block waves-light card-height">
-      <img class="activator" src="<%= art.image %>">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><%= art.tags.first.description %><i class="material-icons right">more_vert</i></span>
-      <p><a href="http://localhost:3000/users/<%= art.user_id %>"><%= art.user.first_name %></a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Tags:<i class="material-icons right">close</i></span>
-      <br>
-
-      <% art.tags.each do |tag| %>
-      <div class="chip">
-      <%= tag.description %>
-      <i class="material-icons">close</i>
+  <% @arts.each do |art| %>
+  <div class="col s12 m4 12">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light card-height">
+        <img class="activator" src="<%= art.image %>">
       </div>
-      <% end %>
-
-
-
-
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= art.tags.first.description %><i class="material-icons right">more_vert</i></span>
+        <p><a href="http://localhost:3000/users/<%= art.user_id %>"><%= art.user.first_name %></a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Tags:<i class="material-icons right">close</i></span>
+        <br>
+        <% art.tags.each do |tag| %>
+        <div class="chip">
+          <%= tag.description %>
+          <i class="material-icons">close</i>
+        </div>
+        <% end %>
+      </div>
     </div>
-  </div>
   </div>
   <% end %>
-
-  <a href="/arts/new"><button class="btn-floating btn-large waves-effect waves-light red" id="add-image-button" type="submit" name="action"><i class="material-icons">add</i></button></a>
-
 </div>
-</div>
+
+<% if current_user %>
+<a href="/arts/new"><button class="btn-floating btn-large waves-effect waves-light red" id="add-image-button" type="submit" name="action"><i class="material-icons">add</i></button></a>
+<% end %>

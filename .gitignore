@@ -5,3 +5,6 @@ googleauth/*
 /.bundle/
 /doc/
 */sprockets/
+*.env
+*log/*
+*db/development.sqlite3
