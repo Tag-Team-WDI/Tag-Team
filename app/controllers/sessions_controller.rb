@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  
   def new
     @user = User.new
     render :new
@@ -17,10 +18,9 @@ class SessionsController < ApplicationController
   end
 
   def delete
-   # logout
-   session.delete(:user_id)
-   @current_user = nil
-   redirect_to users_path
+    # logout
+    session.delete(:user_id)
+    @current_user = nil
+    redirect_to users_path
   end
-
 end
