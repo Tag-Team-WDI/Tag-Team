@@ -34,7 +34,7 @@ require 'json'
     # Create empty array for our art description
     @description_array = [];
     # Hit the vision API via the google cloud vision wrapper
-    @art_tags = GoogleCloudVision::Classifier.new("AIzaSyDZrCdlDY9Nj1abJZIYIjKWyYIwNj1o-Jg",
+    @art_tags = GoogleCloudVision::Classifier.new("AIzaSyB9IY63qUpdpmUBXtTo99uISgM6D-5Wi-U",
     [{ image: @file, detection: 'LABEL_DETECTION', max_results: 10 }]).response["responses"][0]["labelAnnotations"].each do |tag|
       @description_array.push(tag["description"])
     end
