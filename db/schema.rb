@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629210926) do
+ActiveRecord::Schema.define(version: 20160629210555) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "arts", force: :cascade do |t|
     t.integer  "user_id"
